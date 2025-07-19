@@ -1,0 +1,673 @@
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Base CSS */
+
+/* Cores customizadas */
+.bg-custom-black {
+    background-color: #070808;
+}
+
+.text-custom-color {
+    color: #f44336;
+}
+
+.bg-custom-color {
+    background-color: #f44336;
+}
+
+.border-custom-color {
+    border-color: #f44336;
+}
+
+.hover\:bg-custom-color:hover {
+    background-color: #f44336;
+}
+
+.hover\:text-custom-color:hover {
+    color: #070808;
+}
+
+/* Lazy Loading Styles */
+.lazy-image {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+}
+
+.lazy-image.loaded {
+    opacity: 1;
+    background: none;
+    animation: none;
+}
+
+@keyframes loading-shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Placeholder para imagens circulares (equipe) */
+.lazy-image[class*="rounded-full"] {
+    background: linear-gradient(45deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+    background-size: 200% 200%;
+}
+
+/* Placeholder para imagens de projetos */
+.project-item .lazy-image {
+    background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+    background-size: 200% 100%;
+}
+
+/* Placeholder para logos de empresas */
+.lazy-image[class*="bg-white"] {
+    background: linear-gradient(90deg, #f5f5f5 25%, #e5e5e5 50%, #f5f5f5 75%);
+    background-size: 200% 100%;
+}
+
+/* Estilos para itens das empresas */
+.company-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 2px solid #f44336;
+    border-radius: 0.5rem;
+    width: 160px;
+    height: 160px;
+}
+
+.company-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(244, 67, 54, 0.2);
+}
+
+.company-item img {
+    transition: all 0.3s ease;
+    object-fit: contain;
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+}
+
+.company-item:hover img {
+    border-color: #f44336;
+    transform: scale(1.05);
+}
+
+/* Responsividade para grid de empresas */
+@media (max-width: 640px) {
+    .company-item img {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+@media (min-width: 641px) {
+    .company-item img {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+/* Cards de planos */
+.plan-card {
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.plan-card:hover {
+    transform: scale(1.04) translateY(-10px);
+    box-shadow: 0 10px 25px rgba(244, 67, 54, 0.3);
+}
+
+/* Cards de depoimentos */
+.testimonial-card {
+    transition: all 0.3s ease;
+    min-height: 300px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(244, 67, 54, 0.1);
+}
+
+/* Controles do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+/* Projetos com overlay */
+.project-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 8, 8, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Títulos do hero */
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Seção hero com altura total */
+#home {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+}
+
+/* Imagem do hero com animação */
+.hero-image {
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 10px 15px rgba(244, 67, 54, 0.2));
+}
+
+/* Animações keyframe */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+    0%, 100% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes float-bounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.05); }
+}
+
+.float-bounce {
+    animation: float-bounce 3s ease-in-out infinite;
+}
+
+/* Background do hero */
+.hero-bg {
+    background: radial-gradient(circle at center, rgba(244, 67, 54, 0.1) 0%, rgba(7, 8, 8, 0.9) 70%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Efeito de blur para vídeo de background */
+.bg-blur {
+    filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navbar com transparência dinâmica */
+header.navbar-transparent {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: none !important;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+header.navbar-scrolled {
+    background: rgba(7, 8, 8, 0.85) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(244, 67, 54, 0.2) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Garantir que a navbar seja transparente inicialmente */
+.navbar-transparent {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Vídeo de fundo com transparência */
+.hero-bg video {
+    filter: brightness(0.8) contrast(1.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+}
+
+/* Overlay adicional para melhor legibilidade */
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(7, 8, 8, 0.4) 0%,
+        rgba(7, 8, 8, 0.2) 50%,
+        rgba(7, 8, 8, 0.4) 100%
+    );
+    pointer-events: none;
+}
+
+/* Botão do WhatsApp */
+.whatsapp-button {
+    animation: pulse-whatsapp 2s infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+.whatsapp-button:hover {
+    animation: none;
+    transform: scale(1.1);
+} 
+
+/* Animações de entrada CSS puro */
+.fade-in {
+    opacity: 0;
+    transform: none;
+    transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.fade-in.visible {
+    opacity: 1;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+} 
+
+/* Efeito de zoom suave para todos os cards */
+.card-hover-zoom {
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.card-hover-zoom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(244, 67, 54, 0.15);
+} 
+
+/* Animação flutuante para SVG na hero section */
+.floating-svg {
+  animation: floatY 3.5s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-32px); }
+  100% { transform: translateY(0); }
+} 
+
+/* Ajustes responsivos para mobile */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .plan-card {
+    margin-bottom: 1.5rem;
+  }
+  .floating-svg {
+    display: none !important;
+  }
+  .floating-buttons-container {
+    right: 1rem !important;
+    bottom: 1rem !important;
+    left: auto !important;
+    max-width: 100vw !important;
+  }
+  .fixed.right-6.bottom-6.flex {
+    right: 0.5rem !important;
+    bottom: 0.5rem !important;
+    left: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    z-index: 9999 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-width: 100vw !important;
+  }
+  #back-to-top {
+    /* Removido o !important que forçava visibilidade em mobile */
+  }
+  .whatsapp-button {
+    animation: none;
+  }
+  .project-item img {
+    height: 200px;
+  }
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .fade-in, .fade-up, .fade-right, .fade-left {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.floating-buttons-container {
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 50;
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(244, 67, 54, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(244, 67, 54, 0);
+  }
+}
+
+.pulse-white {
+  animation: pulse-white 2s infinite;
+}
+
+@keyframes pulse-white {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* Responsividade para seção de contato */
+@media (max-width: 768px) {
+    .contact-info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contact-info-item .icon {
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+    }
+    
+    .contact-info-item .content {
+        width: 100%;
+    }
+    
+    .contact-info-item p {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+/* Melhorias para emails longos */
+.contact-info-item .content p {
+    word-break: break-all;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Espaçamento otimizado para mobile */
+@media (max-width: 640px) {
+    .contact-info-item {
+        padding: 0.75rem 0;
+    }
+    
+    .contact-info-item .content h4 {
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .contact-info-item .content p {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+}
+
+/* Modal do WhatsApp */
+#whatsapp-modal {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+#whatsapp-modal.show {
+    display: flex !important;
+}
+
+#modal-content {
+    transform: scale(0.95);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#modal-content.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.contact-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.2);
+}
+
+.contact-option:active {
+    transform: translateY(0);
+}
+
+/* Animação de entrada do modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-enter {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Responsividade do modal */
+@media (max-width: 640px) {
+    #modal-content {
+        margin: 1rem;
+        max-width: calc(100vw - 2rem);
+    }
+    
+    .contact-option {
+        padding: 0.75rem;
+    }
+    
+    .contact-option h4 {
+        font-size: 0.875rem;
+    }
+    
+    .contact-option p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Animação da engrenagem */
+.robotic-arm-svg #arm-gear {
+  transform-origin: 165px 177px;
+  animation: gear-rotate 2s linear infinite;
+}
+@keyframes gear-rotate {
+  100% { transform: rotate(360deg); }
+}
+
+/* Animação do braço principal */
+.robotic-arm-svg #arm-main {
+  transform-origin: 120px 180px;
+  animation: arm-swing 2s ease-in-out infinite alternate;
+}
+@keyframes arm-swing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+/* Animação da garra */
+.robotic-arm-svg #arm-claw, .robotic-arm-svg #arm-claw2 {
+  transform-origin: 412px 225px;
+  animation: claw-move 1.5s ease-in-out infinite alternate;
+}
+@keyframes claw-move {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(15deg); }
+}
+
+.navbar {
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.navbar-transparent {
+    background: transparent;
+    box-shadow: none;
+}
+.navbar-solid {
+    background: #111;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.bg-black-opacity {
+    background: rgba(0, 0, 0, 0.50); /* ajuste a opacidade conforme desejado */
+}
+
+/* Mobile Menu Dialog Styles */
+#mobile-menu-dialog {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#mobile-menu-content {
+    border: 1px solid rgba(244, 67, 54, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.mobile-menu-link:hover {
+    border-color: #f44336;
+    transform: translateX(5px);
+}
+
+/* Animação de entrada do menu mobile */
+#mobile-menu-content.scale-100 {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#mobile-menu-content.scale-95 {
+    transform: scale(0.95);
+    opacity: 0;
+}
