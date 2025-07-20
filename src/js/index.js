@@ -10,21 +10,23 @@ AOS.init({
 
 // Navbar scroll detection
 function handleNavbarScroll() {
-    const navbar = document.querySelector('.navbar-transparent');
+    const navbar = document.getElementById('main-navbar');
     const scrollPosition = window.scrollY;
     
-    if (scrollPosition > 50) {
-        navbar.classList.add('navbar-scrolled');
-        navbar.classList.remove('navbar-transparent');
-    } else {
-        navbar.classList.remove('navbar-scrolled');
-        navbar.classList.add('navbar-transparent');
+    if (navbar) {
+        if (scrollPosition > 50) {
+            navbar.classList.add('navbar-scrolled');
+            navbar.classList.remove('navbar-transparent');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+            navbar.classList.add('navbar-transparent');
+        }
     }
 }
 
 // Executar uma vez no carregamento para garantir estado inicial
 document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.querySelector('.navbar-transparent');
+    const navbar = document.getElementById('main-navbar');
     if (navbar) {
         navbar.classList.add('navbar-transparent');
         navbar.classList.remove('navbar-scrolled');
@@ -254,15 +256,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            const destinatario = 'douglasheitinger@alphaautomationbr.com';
-            const assunto = encodeURIComponent('Contato pelo site - Alpha Automation');
-            const corpo = encodeURIComponent(
+            const to = 'douglasheitinger@alphaautomationbr.com';
+            const cc = 'natanel@alphaautomationbr.com, otavio.gomes@alphaautomationbr.com';    
+            const subject = encodeURIComponent('Contato pelo site - Alpha Automation');
+            const body = encodeURIComponent(
                 'Nome: ' + name + '\n' +
                 'E-mail: ' + email + '\n' +
                 'Telefone: ' + phone + '\n' +
                 'Mensagem: ' + message
             );
-            const mailto_link = 'mailto:'+destinatario+'?subject='+assunto+'&body='+corpo;
+            const mailto_link = 'mailto:'+to+'?subject='+subject+'&cc='+cc+'&body='+body;
             window.location.href = mailto_link;
         });
     }
