@@ -12,8 +12,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Favicon -->
     <link rel="icon" href="src/img/logo.png">
     <!-- Custom CSS -->
@@ -99,32 +97,38 @@
     <!-- Quem Somos Section -->
     <section id="about" class="py-16 px-6 bg-black-opacity relative z-10">
         <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4 text-custom-color">Quem Somos</h2>
-                <p class="text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                    Fundada em 2017, é uma empresa com diferenciais de qualidade, eficiência e experiência.
-                    Dispondo de profissionais atuantes a mais de 10 anos no mercado automobilístico nacional e internacional, com programação de Robôs e CLP's.
-                    Desenvolvendo soluções para startups, automatizações e aprimoramentos de processos, atendendo empresas que são referência em seus segmentos de atuação, buscando sempre aplicar os princípios de produtividade, qualidade e segurança aos projetos desenvolvidos.
-                    Com produtos e serviços voltados ao mercado automobilístico, bebidas entre outros, buscando sempre customizar seus projetos e adequando-os as reais necessidades do cliente.
-                </p>
-            </div>
-
-            <div class="flex justify-center mb-8">
-            <div class="flex flex-col sm:flex-row gap-8 items-center justify-center">
-                <div class="flex flex-col items-center">
-                    <img src="src/img/teams/team-01.png" alt="Douglas Heitinger" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-01.png" />
-                    <span class="text-lg font-semibold text-white">Douglas Heitinger</span>
-                    <span class="text-gray-400 text-sm">Gerente de Robótica</span>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <!-- Imagem flutuante code-robot.svg -->
+                <div class="md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
+                    <img src="src/img/code-robot.svg" alt="Code Robot" class="w-[500px] max-w-full floating-svg" style="min-width:200px;"/>
                 </div>
-                <div class="flex flex-col items-center">
-                    <img src="src/img/teams/team-02.png" alt="Natanel Nogueira" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-02.png" />
-                    <span class="text-lg font-semibold text-white">Natanel Nogueira</span>
-                    <span class="text-gray-400 text-sm">Gerente de Robótica</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img src="src/img/teams/team-03.png" alt="Otavio Gomes" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-03.png" />
-                    <span class="text-lg font-semibold text-white">Otavio Gomes</span>
-                    <span class="text-gray-400 text-sm">Gerente de Automação</span>
+                <div class="md:w-1/2">
+                    <div class="text-left mb-8 md:mb-0">
+                        <h2 class="text-3xl font-bold mb-4 text-custom-color">Quem Somos</h2>
+                        <p class="text-gray-300 max-w-4xl leading-relaxed">
+                            Fundada em 2017, é uma empresa com diferenciais de qualidade, eficiência e experiência.<br>
+                            Dispondo de profissionais atuantes a mais de 10 anos no mercado automobilístico nacional e internacional, com programação de Robôs e CLP's.<br>
+                            Desenvolvendo soluções para startups, automatizações e aprimoramentos de processos, atendendo empresas que são referência em seus segmentos de atuação, buscando sempre aplicar os princípios de produtividade, qualidade e segurança aos projetos desenvolvidos.<br>
+                            Com produtos e serviços voltados ao mercado automobilístico, bebidas entre outros, buscando sempre customizar seus projetos e adequando-os as reais necessidades do cliente.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-8 items-center justify-start mt-8">
+                        <div class="flex flex-col items-center">
+                            <img src="src/img/teams/team-01.png" alt="Douglas Heitinger" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-01.png" />
+                            <span class="text-lg font-semibold text-white">Douglas Heitinger</span>
+                            <span class="text-gray-400 text-sm">Gerente de Robótica</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="src/img/teams/team-02.png" alt="Natanel Nogueira" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-02.png" />
+                            <span class="text-lg font-semibold text-white">Natanel Nogueira</span>
+                            <span class="text-gray-400 text-sm">Gerente de Robótica</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="src/img/teams/team-03.png" alt="Otavio Gomes" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-03.png" />
+                            <span class="text-lg font-semibold text-white">Otavio Gomes</span>
+                            <span class="text-gray-400 text-sm">Gerente de Automação</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,7 +176,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Project 1 -->
                 <div class="project-item rounded-lg overflow-hidden fade-up card-hover-zoom">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy" data-src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80">
+                    <img src="src/img/projects/project-01.png" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="text-xl font-bold text-white mb-2">Projeto 01</h3>
                         <p class="text-gray-300 text-center px-4">Descrição do projeto</p>
@@ -182,7 +186,7 @@
                 
                 <!-- Project 2 -->
                 <div class="project-item rounded-lg overflow-hidden fade-up card-hover-zoom">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy" data-src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80">
+                    <img src="src/img/projects/project-02.png" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="text-xl font-bold text-white mb-2">Projeto 02</h3>
                         <p class="text-gray-300 text-center px-4">Descrição do projeto</p>
@@ -192,7 +196,7 @@
 
                 <!-- Project 3 -->
                 <div class="project-item rounded-lg overflow-hidden fade-up card-hover-zoom">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy" data-src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80">
+                    <img src="src/img/projects/project-03.png" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="text-xl font-bold text-white mb-2">Projeto 03</h3>
                         <p class="text-gray-300 text-center px-4">Descrição do projeto</p>
@@ -202,7 +206,7 @@
 
                 <!-- Project 4 -->
                 <div class="project-item rounded-lg overflow-hidden fade-up card-hover-zoom">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy" data-src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80">
+                    <img src="src/img/projects/project-04.png" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="text-xl font-bold text-white mb-2">Projeto 04</h3>
                         <p class="text-gray-300 text-center px-4">Descrição do projeto</p>

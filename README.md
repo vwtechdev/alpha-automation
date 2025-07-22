@@ -21,7 +21,6 @@ Landing-Page para Alpha Automation and Robotics, empresa especializada em automa
 ### 📧 Formulário de Contato
 
 *   **Validação**: Campos obrigatórios e formato de email
-*   **EmailJS**: Integração para envio de emails
 *   **Feedback**: Notificações de sucesso/erro
 *   **Estado de loading**: Indicadores visuais durante envio
 
@@ -35,7 +34,7 @@ Landing-Page para Alpha Automation and Robotics, empresa especializada em automa
 
 *   **HTML5**: Estrutura semântica
 *   **CSS3**: Tailwind CSS + Custom styles
-*   **JavaScript**: Vanilla JS + jQuery
+*   **JS**: Javascript
 *   **Animações**: AOS (Animate On Scroll)
 *   **Ícones**: Font Awesome
 
@@ -82,20 +81,10 @@ alpha-automation/
 
 ## 📊 Métricas de Performance
 
-*   **First Contentful Paint**: &lt; 1.5s
-*   **Largest Contentful Paint**: &lt; 2.5s
-*   **Cumulative Layout Shift**: &lt; 0.1
-*   **First Input Delay**: &lt; 100ms
-
-## 🎯 Próximas Melhorias
-
-*   Implementar PWA (Progressive Web App)
-*   Adicionar mais projetos na seção de portfólio
-*   Implementar blog/notícias
-*   Adicionar analytics (Google Analytics)
-*   Otimizar SEO com meta tags
-*   Implementar cache de imagens
-*   Adicionar testes automatizados
+*   **First Contentful Paint**: \< 1.5s
+*   **Largest Contentful Paint**: \< 2.5s
+*   **Cumulative Layout Shift**: \< 0.1
+*   **First Input Delay**: \< 100ms
 
 ## 📞 Contato
 
