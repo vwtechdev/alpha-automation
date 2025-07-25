@@ -16,25 +16,35 @@
     <link rel="icon" href="src/img/logo.png">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="src/css/base.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    
 </head>
 <body class="bg-custom-black text-white font-sans">
     <!-- Header/Navbar -->
     <header class="navbar navbar-transparent py-4 px-6 shadow-md fixed top-0 left-0 w-full z-50" id="main-navbar">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <div class="w-10 h-10 flex items-center justify-center mr-2">
-                    <img src="src/img/logo.png" alt="Alpha Automation and Robotics" class="w-full h-full object-cover" loading="eager">
+                <div class="w-26 h-14 flex items-center justify-center mr-2">
+                    <img src="src/img/logo-2.png" alt="Alpha Automation and Robotics" class="w-full h-full object-cover" loading="eager">
                 </div>
-                <h1 class="hidden md:block text-2xl font-bold"><span class="text-custom-color">Alpha</span> Automation and Robotics</h1>
             </div>
             <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition">Home</a>
-                <a href="#about" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition">Quem Somos</a>
-                <a href="#services" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition">Serviços</a>
-                <a href="#projects" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition">Projetos</a>
-                <a href="#companies" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition">Parcerias</a>
-                <a href="#contact" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition">Contato</a>
+                <a href="#home" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="home"></a>
+                <a href="#about" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="about"></a>
+                <a href="#services" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="services"></a>
+                <a href="#world-map" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="where"></a>
+                <a href="#customers" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="customers"></a>
+                <a href="#contact" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="contact"></a>
             </nav>
+            <div class="ml-4 flex items-center gap-2 language-switcher hidden md:flex">
+                <!-- Seletor de idiomas -->
+                <select id="language-select" class="language-select-custom bg-transparent backdrop-blur text-xl text-white border border-gray-600 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-custom-color" onchange="setLanguage(this.value)" title="Selecionar idioma">
+                    <option value="pt">🇧🇷 Português</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="it">🇮🇹 Italiano</option>
+                </select>
+            </div>
             <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
@@ -52,14 +62,20 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            
-            <div class="flex flex-col space-y-4">
-                <a href="#home" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center">Home</a>
-                <a href="#about" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center">Quem Somos</a>
-                <a href="#services" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center">Serviços</a>
-                <a href="#projects" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center">Projetos</a>
-                <a href="#companies" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center">Parcerias</a>
-                <a href="#contact" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center">Contato</a>
+            <div class="flex flex-col space-y-4 mb-4">
+                <a href="#home" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="home"></a>
+                <a href="#about" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="about"></a>
+                <a href="#services" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="services"></a>
+                <a href="#world-map" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="where"></a>
+                <a href="#customers" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="customers"></a>
+                <a href="#contact" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="contact"></a>
+            </div>
+            <div class="flex justify-center mb-2 md:hidden">
+                <select id="language-select-mobile" class="language-select-custom bg-transparent backdrop-blur text-xl text-white border border-gray-600 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-custom-color w-full" onchange="setLanguage(this.value)" title="Selecionar idioma">
+                    <option value="pt">🇧🇷 Português</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="it">🇮🇹 Italiano</option>
+                </select>
             </div>
         </div>
     </div>
@@ -67,7 +83,7 @@
     <div class="pt-24"></div>
 
     <!-- Hero Section -->
-    <section id="home" class="relative pt-32 pb-32 px-6 overflow-hidden min-h-screen fade-in">
+    <section id="home" class="relative pt-26 pb-26 md:pt-32 md:pb-32 px-6 overflow-hidden min-h-screen fade-in">
         <div class="absolute inset-0 z-0 hero-bg">
             <!-- Video de fundo -->
             <video autoplay loop muted playsinline class="fixed inset-0 w-full h-full object-cover opacity-80 bg-blur" style="z-index: -1;">
@@ -77,17 +93,17 @@
         </div>
 
         <div class="container mx-auto flex flex-col md:flex-row items-center relative z-10">
-            <div class="md:w-1/2 mb-16 md:mb-0" data-aos="fade-right" data-aos-delay="200">
-                <h2 class="hero-title font-bold mb-6">Automatização <span class="text-custom-color">&</span> Robótica</h2>
-                <p class="hero-subtitle text-gray-300 leading-relaxed">🚀 Oferecendo Soluções Inovadoras</p>
-                <p class="hero-subtitle text-gray-300 leading-relaxed">🤖 Automações e Otimização de Processos</p>
-                <p class="hero-subtitle mb-10 text-gray-300 leading-relaxed">🔐 Produtividade, Qualidade e Segurança</p>
+            <div class="md:w-1/2 mb-16 md:mb-0">
+                <h2 class="hero-title font-bold mb-6" data-i18n="hero_title"></h2>  
+                <p class="hero-subtitle text-gray-300 leading-relaxed" data-i18n="hero_subtitle" data-aos="fade-up" data-aos-delay="300"></p>
+                <p class="hero-subtitle text-gray-300 leading-relaxed" data-i18n="hero_subtitle_2" data-aos="fade-up" data-aos-delay="400"></p>
+                <p class="hero-subtitle mb-10 text-gray-300 leading-relaxed" data-i18n="hero_subtitle_3" data-aos="fade-up" data-aos-delay="500"></p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="#services" class="pulse-white bg-custom-color hover:bg-red-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center flex items-center justify-center gap-2">
-                        <i class="fas fa-robot"></i> Conheça nossos serviços
+                    <a href="#services" class="pulse-white bg-custom-color hover:bg-red-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl text-center flex items-center justify-center gap-2 cursor-pointer" data-aos="fade-up" data-aos-delay="600">
+                        <i class="fas fa-robot"></i> <span data-i18n="hero_button_services"></span>
                     </a>
-                    <a href="#contact" class="border border-custom-color hover:bg-custom-color hover:text-custom-black text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center flex items justify-center gap-2">
-                        <i class="fas fa-comment-dots"></i> Fale conosco
+                    <a href="#contact" class="border border-custom-color hover:bg-custom-color hover:text-custom-black text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl text-center flex items justify-center gap-2 cursor-pointer" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-comment-dots"></i> <span data-i18n="hero_button_contact"></span>
                     </a>
                 </div>
             </div>
@@ -95,38 +111,30 @@
     </section>
 
     <!-- Quem Somos Section -->
-    <section id="about" class="py-16 px-6 bg-black-opacity relative z-10">
+    <section id="about" class="py-16 px-6 bg-black-opacity relative z-10" data-aos="fade-up">
         <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-                <!-- Imagem flutuante code-robot.svg -->
-                <div class="md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
-                    <img src="src/img/code-robot.svg" alt="Code Robot" class="w-[500px] max-w-full floating-svg" style="min-width:200px;"/>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="text-left mb-8 md:mb-0">
-                        <h2 class="text-3xl font-bold mb-4 text-custom-color">Quem Somos</h2>
-                        <p class="text-gray-300 max-w-4xl leading-relaxed">
-                            Fundada em 2017, é uma empresa com diferenciais de qualidade, eficiência e experiência.<br>
-                            Dispondo de profissionais atuantes a mais de 10 anos no mercado automobilístico nacional e internacional, com programação de Robôs e CLP's.<br>
-                            Desenvolvendo soluções para startups, automatizações e aprimoramentos de processos, atendendo empresas que são referência em seus segmentos de atuação, buscando sempre aplicar os princípios de produtividade, qualidade e segurança aos projetos desenvolvidos.<br>
-                            Com produtos e serviços voltados ao mercado automobilístico, bebidas entre outros, buscando sempre customizar seus projetos e adequando-os as reais necessidades do cliente.
-                        </p>
+            <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-8" data-aos="zoom-in-up">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                    <!-- Imagem flutuante da Empresa -->
+                    <div class="md:w-1/2 flex justify-center items-center mb-8 md:mb-0" data-aos="fade-right">
+                        <img src="src/img/company.webp" alt="Alpha Automation and Robotics" class="w-[600px] max-w-full rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" style="min-width:200px;"/>
                     </div>
-                    <div class="flex flex-col sm:flex-row gap-8 items-center justify-start mt-8">
-                        <div class="flex flex-col items-center">
-                            <img src="src/img/teams/team-01.png" alt="Douglas Heitinger" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-01.png" />
-                            <span class="text-lg font-semibold text-white">Douglas Heitinger</span>
-                            <span class="text-gray-400 text-sm">Gerente de Robótica</span>
+                    <div class="md:w-1/2" data-aos="fade-left">
+                        <div class="text-left mb-8 md:mb-0">
+                            <h2 class="text-3xl font-bold mb-4" data-i18n="about_title" data-aos="fade-down"></h2>
+                            <p class="text-gray-300 max-w-4xl leading-relaxed" data-i18n="about_body" data-aos="fade-up"></p>  
                         </div>
-                        <div class="flex flex-col items-center">
-                            <img src="src/img/teams/team-02.png" alt="Natanel Nogueira" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-02.png" />
-                            <span class="text-lg font-semibold text-white">Natanel Nogueira</span>
-                            <span class="text-gray-400 text-sm">Gerente de Robótica</span>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <img src="src/img/teams/team-03.png" alt="Otavio Gomes" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-03.png" />
-                            <span class="text-lg font-semibold text-white">Otavio Gomes</span>
-                            <span class="text-gray-400 text-sm">Gerente de Automação</span>
+                        <div class="flex flex-col sm:flex-row gap-8 items-center justify-start mt-8">
+                            <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/teams/team-01.png" alt="Douglas Heitinger" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-01.png" />
+                                <span class="text-lg font-semibold text-white">Douglas Heitinger</span>
+                                <span class="text-gray-400 text-sm" data-i18n="team_01"></span>
+                            </div>
+                            <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
+                                <img src="src/img/teams/team-02.png" alt="Otavio Gomes" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-02.png" />
+                                <span class="text-lg font-semibold text-white">Otavio Gomes</span>
+                                <span class="text-gray-400 text-sm" data-i18n="team_02"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,233 +143,200 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 px-6 bg-black-opacity relative z-10">
+    <section id="services" class="py-16 px-6 bg-black-opacity relative z-10" data-aos="fade-up">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12">Nossos <span class="text-custom-color">Serviços</span></h2>
+            <h2 class="text-3xl font-bold text-center mb-12" data-i18n="services_title" data-aos="fade-down"></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition fade-up card-hover-zoom">
-                    <div class="text-custom-color text-4xl mb-4">
-                        <i class="fas fa-robot"></i>
+                <!-- Service 1 Card -->
+                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
+                        <img src="src/img/services/service-01.jpg" class="object-cover h-full w-full" loading="lazy">
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Programação de Robôs</h3>
-                    <p class="text-gray-300">Programação de robôs industriais, como ABB, Comau, Fanuc, KUKA, Motoman e Panasonic, seguindo padrões globais e setoriais, com foco na otimização do tempo de ciclo – on-line e off-line – oferecendo assistência técnica especializada para garantir eficiência e produtividade na produção.</p>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="inline-block bg-blue-100 text-blue-600 text-lg font-semibold px-3 py-1 rounded-full mb-3" data-i18n="service_01"></span>
+                        <p class="text-gray-400 mb-4 flex-1" data-i18n="service_01_body"></p>
+                    </div>
                 </div>
-                <!-- Service 2 -->
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition fade-up card-hover-zoom">
-                    <div class="text-custom-color text-4xl mb-4">
-                        <i class="fas fa-laptop-code"></i>
+                <!-- Service 2 Card -->
+                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
+                        <img src="src/img/services/service-02.jpg" class="object-cover h-full w-full" loading="lazy">
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Programação de CLP's</h3>
-                    <p class="text-gray-300">Programação de CLPs (Controladores Lógicos Programáveis) de marcas como Siemens, Rockwell, Mitsubishi e Schneider segue padrões globais e setoriais (GM, JEEP, Mercedes, entre outros), permitindo desenvolvimento em diversas linguagens de programação, como VB, C# e C++, para atender às necessidades de automação industrial com flexibilidade e eficiência.</p>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="inline-block bg-yellow-100 text-yellow-700 text-lg font-semibold px-3 py-1 rounded-full mb-3" data-i18n="service_02"></span>
+                        <p class="text-gray-400 mb-4 flex-1" data-i18n="service_02_body"></p>
+                    </div>
                 </div>
-                <!-- Service 3 -->
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition fade-up card-hover-zoom">
-                    <div class="text-custom-color text-4xl mb-4">
-                        <i class="fa-solid fa-cube"></i>
+                <!-- Service 3 Card -->
+                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
+                        <img src="src/img/services/service-03.jpg" class="object-cover h-full w-full" loading="lazy">
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Programação OFF-LINE</h3>
-                    <p class="text-gray-300">A programação OFF-LINE em softwares como Process Simulate e Robcad permite a criação, integração e ajustes de células robotizadas de forma virtual, sem a necessidade de interromper a produção real. Essas ferramentas simulam ambientes industriais, possibilitando a modelagem 3D de robôs, otimização de trajetórias e validação de processos, reduzindo tempo e custos enquanto aumentam a precisão e a segurança na implementação de sistemas automatizados.</p>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="inline-block bg-red-100 text-red-600 text-lg font-semibold px-3 py-1 rounded-full mb-3" data-i18n="service_03"></span>
+                        <p class="text-gray-400 mb-4 flex-1" data-i18n="service_03_body"></p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 px-6 bg-black-opacity relative z-10">
+    <!-- World Map Section -->
+    <section id="world-map" class="py-16 px-6 bg-black-opacity relative z-10" data-aos="fade-up">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4">Nossos <span class="text-custom-color">Projetos</span></h2>
-            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">Alguns dos projetos que desenvolvemos para nossos clientes satisfeitos.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project 1 -->
-                <div class="project-item rounded-lg overflow-hidden fade-up card-hover-zoom">
-                    <img src="src/img/projects/project-01.png" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy">
-                    <div class="project-overlay">
-                        <h3 class="text-xl font-bold text-white mb-2">Projeto 01</h3>
-                        <p class="text-gray-300 text-center px-4">Descrição do projeto</p>
-                        <a href="#" target="_blank" class="text-custom-color mt-4 hover:text-white text-center px-4">Saiba Mais</a>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-item rounded-lg overflow-hidden fade-up card-hover-zoom">
-                    <img src="src/img/projects/project-02.png" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy">
-                    <div class="project-overlay">
-                        <h3 class="text-xl font-bold text-white mb-2">Projeto 02</h3>
-                        <p class="text-gray-300 text-center px-4">Descrição do projeto</p>
-                        <a href="#" target="_blank" class="text-custom-color mt-4 hover:text-white text-center px-4">Saiba Mais</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-item rounded-lg overflow-hidden fade-up card-hover-zoom">
-                    <img src="src/img/projects/project-03.png" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy">
-                    <div class="project-overlay">
-                        <h3 class="text-xl font-bold text-white mb-2">Projeto 03</h3>
-                        <p class="text-gray-300 text-center px-4">Descrição do projeto</p>
-                        <a href="#" target="_blank" class="text-custom-color mt-4 hover:text-white text-center px-4">Saiba Mais</a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-item rounded-lg overflow-hidden fade-up card-hover-zoom">
-                    <img src="src/img/projects/project-04.png" alt="Projeto 01" class="w-full h-64 object-cover lazy-image" loading="lazy">
-                    <div class="project-overlay">
-                        <h3 class="text-xl font-bold text-white mb-2">Projeto 04</h3>
-                        <p class="text-gray-300 text-center px-4">Descrição do projeto</p>
-                        <a href="#" target="_blank" class="text-custom-color mt-4 hover:text-white text-center px-4">Saiba Mais</a>
-                    </div>
-                </div>
-                
+            <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-8" data-aos="zoom-in-up">
+                <h2 class="text-3xl font-bold text-center mb-4" data-i18n="where_title" data-aos="fade-down" data-aos-delay="500"></h2>
+                <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto" data-i18n="where_subtitle" data-aos="fade-up" data-aos-delay="600"></p>
+                <div id="map" class="flex justify-center items-center" style="width: 100%; height: 480px; margin: 0 auto; border-radius: 16px; overflow: hidden;"></div>
             </div>
         </div>
     </section>
 
-    <!-- Companies Section -->
-    <section id="companies" class="py-16 px-6 bg-black-opacity relative z-10">
+    <!-- Customers Section -->
+    <section id="customers" class="py-16 px-6 bg-black-opacity relative z-10" data-aos="fade-up">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4">Nossas <span class="text-custom-color">Parcerias</span></h2>
-            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">Principais Clientes Diretos e Indiretos que confiam em nossos serviços e produtos.</p>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-items-center max-w-6xl mx-auto">
-                <div class="company-item">
-                    <img src="src/img/companies/company-01.png" alt="Empresa Parceira 1" class="lazy-image" loading="lazy" data-src="src/img/companies/company-01.png" />
-                </div>
-                <div class="company-item">
-                    <img src="src/img/companies/company-02.png" alt="Empresa Parceira 2" class="lazy-image" loading="lazy" data-src="src/img/companies/company-02.png" />
-                </div>
-                <div class="company-item">
-                    <img src="src/img/companies/company-03.png" alt="Empresa Parceira 3" class="lazy-image" loading="lazy" data-src="src/img/companies/company-03.png" />
-                </div>
-                <div class="company-item">
-                    <img src="src/img/companies/company-04.png" alt="Empresa Parceira 4" class="lazy-image" loading="lazy" data-src="src/img/companies/company-04.png" />
-                </div>
-                <div class="company-item">
-                    <img src="src/img/companies/company-05.png" alt="Empresa Parceira 5" class="lazy-image" loading="lazy" data-src="src/img/companies/company-05.png" />
-                </div>
-                <div class="company-item">
-                    <img src="src/img/companies/company-06.png" alt="Empresa Parceira 6" class="lazy-image" loading="lazy" data-src="src/img/companies/company-06.png" />
-                </div>
-                <div class="company-item">
-                    <img src="src/img/companies/company-07.png" alt="Empresa Parceira 7" class="lazy-image" loading="lazy" data-src="src/img/companies/company-07.png" />
-                </div>
-                <div class="company-item">
-                    <img src="src/img/companies/company-08.png" alt="Empresa Parceira 8" class="lazy-image" loading="lazy" data-src="src/img/companies/company-08.png" />
-                </div>
-                <div class="company-item">
-                    <img src="src/img/companies/company-09.png" alt="Empresa Parceira 9" class="lazy-image" loading="lazy" data-src="src/img/companies/company-09.png" />
-                </div>
-                <div class="company-item">
-                    <img src="src/img/companies/company-10.png" alt="Empresa Parceira 10" class="lazy-image" loading="lazy" data-src="src/img/companies/company-10.png" />
-                </div>
-                <div class="company-item">
-                    <img src="src/img/companies/company-11.png" alt="Empresa Parceira 11" class="lazy-image" loading="lazy" data-src="src/img/companies/company-11.png" />
-                </div>
-                <div class="company-item">
-                    <img src="src/img/companies/company-12.png" alt="Empresa Parceira 12" class="lazy-image" loading="lazy" data-src="src/img/companies/company-12.png" />
-                </div>
+            <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-8" data-aos="zoom-in-up">
+                <h2 class="text-3xl font-bold text-center mb-4" data-i18n="customers_title" data-aos="fade-down" data-aos-delay="500"></h2>
+                <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto" data-i18n="customers_subtitle" data-aos="fade-up" data-aos-delay="600"></p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-7 justify-items-center max-w-4xl mx-auto">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="src/img/customers/customer-01.webp" alt="Empresa Parceira 1" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-01.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="src/img/customers/customer-02.webp" alt="Empresa Parceira 2" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-02.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="src/img/customers/customer-03.webp" alt="Empresa Parceira 3" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-03.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="src/img/customers/customer-04.webp" alt="Empresa Parceira 4" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-04.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="500">
+                        <img src="src/img/customers/customer-05.webp" alt="Empresa Parceira 5" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-05.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="600">
+                        <img src="src/img/customers/customer-06.webp" alt="Empresa Parceira 6" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-06.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="700">
+                        <img src="src/img/customers/customer-07.webp" alt="Empresa Parceira 7" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-07.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="800">
+                        <img src="src/img/customers/customer-08.webp" alt="Empresa Parceira 8" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-08.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="900">
+                        <img src="src/img/customers/customer-09.webp" alt="Empresa Parceira 9" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-09.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1000">
+                        <img src="src/img/customers/customer-10.webp" alt="Empresa Parceira 10" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-10.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1100">
+                        <img src="src/img/customers/customer-11.webp" alt="Empresa Parceira 11" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-11.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1200">
+                        <img src="src/img/customers/customer-12.webp" alt="Empresa Parceira 12" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-12.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1300">
+                        <img src="src/img/customers/customer-13.webp" alt="Empresa Parceira 13" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-13.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1400">
+                        <img src="src/img/customers/customer-14.webp" alt="Empresa Parceira 14" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-14.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1500">
+                        <img src="src/img/customers/customer-15.webp" alt="Empresa Parceira 15" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-15.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1600">
+                        <img src="src/img/customers/customer-16.webp" alt="Empresa Parceira 16" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-16.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1700">
+                        <img src="src/img/customers/customer-17.webp" alt="Empresa Parceira 17" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-17.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1800">
+                        <img src="src/img/customers/customer-18.webp" alt="Empresa Parceira 18" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-18.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1900">
+                        <img src="src/img/customers/customer-19.webp" alt="Empresa Parceira 19" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-19.webp" />
+                    </div>
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="2000">
+                        <img src="src/img/customers/customer-20.webp" alt="Empresa Parceira 20" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-20.webp" />
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-        <section id="contact" class="py-16 px-6 bg-black-opacity relative z-10">
+    <section id="contact" class="py-16 px-6 bg-black-opacity relative z-10" data-aos="fade-up">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4">Entre em <span class="text-custom-color">Contato</span></h2>
-            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">Preencha o formulário abaixo e nossa equipe entrará em contato em breve.</p>
-            
+            <h2 class="text-3xl font-bold text-center mb-4" data-i18n="contact_title" data-aos="fade-down" data-aos-delay="500"></h2>
+            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto" data-i18n="contact_subtitle" data-aos="fade-up" data-aos-delay="600"></p>
             <div class="flex flex-col lg:flex-row gap-12">
-                <div class="lg:w-1/2" data-aos="fade-right" data-aos-delay="100">
-                    <form id="contact-form" class="space-y-6 fade-right">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>
-                            <input type="text" name="user_name" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" placeholder="Seu nome" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">E-mail</label>
-                            <input type="email" name="user_email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" placeholder="seu@email.com" required>
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-300 mb-1">Telefone</label>
-                            <input type="tel" name="user_phone" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" placeholder="(00) 00000-0000">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Mensagem</label>
-                            <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" placeholder="Descreva sua mensagem" required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-custom-color hover:bg-red-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
-                            Enviar Mensagem
-                        </button>
-                    </form>
+                <div class="lg:w-1/2 contact-card hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-8 h-full">
+                        <form id="contact-form" class="space-y-6 fade-right">
+                            <div data-aos="fade-up">
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-1" data-i18n="contact_name"></label>
+                                <input type="text" name="user_name" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" data-i18n-placeholder="contact_name_placeholder" required>
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="100">
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-1" data-i18n="contact_email"></label>
+                                <input type="email" name="user_email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" data-i18n-placeholder="contact_email_placeholder" required>
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="200">
+                                <label for="phone" class="block text-sm font-medium text-gray-300 mb-1" data-i18n="contact_phone"></label>
+                                <input type="tel" name="user_phone" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" data-i18n-placeholder="contact_phone_placeholder" required>
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="300">
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-1" data-i18n="contact_message"></label>
+                                <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" data-i18n-placeholder="contact_message_placeholder" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-custom-color hover:bg-red-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300" data-i18n="contact_submit" data-aos="zoom-in"></button>
+                        </form>
+                    </div>
                 </div>
-                
-                <div class="lg:w-1/2" data-aos="fade-left" data-aos-delay="200">
-                    <div class="bg-gray-800 p-8 rounded-lg h-full fade-left">
-                        <h3 class="text-xl font-bold mb-6">Informações de Contato</h3>
-                        
+                <div class="lg:w-1/2 contact-card hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-8 h-full fade-left">
+                        <h3 class="text-xl font-bold mb-6" data-i18n="contact_info" data-aos="fade-down"></h3>
                         <div class="space-y-6">
-                            <div class="flex items-start contact-info-item">
+                            <div class="flex items-start contact-info-item" data-aos="fade-up">
                                 <div class="text-custom-color text-xl mr-4 mt-1 flex-shrink-0 icon">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="min-w-0 flex-1 content">
-                                    <h4 class="font-bold mb-1">Endereço</h4>
-                                    <p class="text-gray-300 text-sm">Rua Telmo Silva, 196, Parque do Itatiaia<br>Gravataí/RS - CEP 94197-148</p>
+                                    <h4 class="font-bold mb-1" data-i18n="contact_info_address"></h4>
+                                    <p class="text-gray-300 text-sm"  data-i18n="contact_info_street"></p>
                                 </div>
                             </div>
-                            
-                            <div class="flex items-start contact-info-item">
+                            <div class="flex items-start contact-info-item" data-aos="fade-up" data-aos-delay="100">
                                 <div class="text-custom-color text-xl mr-4 mt-1 flex-shrink-0 icon">
                                     <i class="fas fa-phone-alt"></i>
                                 </div>
                                 <div class="min-w-0 flex-1 content">
-                                    <h4 class="font-bold mb-1">Telefones</h4>
-                                    <p class="text-gray-300 text-sm">Douglas Heitinger | Gerente de Robótica</p>
+                                    <h4 class="font-bold mb-1"  data-i18n="contact_info_phone"></h4>
+                                    <p class="text-gray-300 text-sm">Douglas Heitinger</p>
+                                    <p class="text-gray-300 text-sm" data-i18n="team_01"></p>
                                     <p class="text-gray-300 text-sm">+55 (51) 9 95495-614</p>
                                     <br>
-
-                                    <p class="text-gray-300 text-sm">Natanel Nogueira | Gerente de Robótica</p>
-                                    <p class="text-gray-300 text-sm">+55 (31) 9 9287-1634</p>
-                                    <br>
-
-                                    <p class="text-gray-300 text-sm">Otavio Gomes | Gerente de Automação</p>
+                                    <p class="text-gray-300 text-sm">Otavio Gomes</p>
+                                    <p class="text-gray-300 text-sm" data-i18n="team_02"></p>
                                     <p class="text-gray-300 text-sm">+55 (83) 9 8117-2727</p>
                                 </div>
                             </div>
-                            
-                            <div class="flex items-start contact-info-item">
+                            <div class="flex items-start contact-info-item" data-aos="fade-up" data-aos-delay="200">
                                 <div class="text-custom-color text-xl mr-4 mt-1 flex-shrink-0 icon">
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="min-w-0 flex-1 content">
                                     <h4 class="font-bold mb-1">E-mail</h4>
                                     <p class="text-gray-300 text-sm break-all">douglasheitinger@alphaautomationbr.com</p>
-                                    <p class="text-gray-300 text-sm break-all">natanel@alphaautomationbr.com</p>
                                     <p class="text-gray-300 text-sm break-all">otavio.gomes@alphaautomationbr.com</p>
                                 </div>
                             </div>
-                            
-                            <div class="flex items-start contact-info-item">
+                            <div class="flex items-start contact-info-item" data-aos="fade-up" data-aos-delay="300">
                                 <div class="text-custom-color text-xl mr-4 mt-1 flex-shrink-0 icon">
                                     <i class="fas fa-clock"></i>
                                 </div>
                                 <div class="min-w-0 flex-1 content">
-                                    <h4 class="font-bold mb-1">Horário de Atendimento</h4>
-                                    <p class="text-gray-300 text-sm">Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                                    <h4 class="font-bold mb-1" data-i18n="contact_info_opening_hours"></h4>
+                                    <p class="text-gray-300 text-sm" data-i18n="contact_info_hours"></p>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-bold mb-4">Siga-nos nas redes sociais</h4>
-                            <div class="flex space-x-4">
-                                <a target="_blank" href="https://www.facebook.com/alpha-automation-and-robotics/" class="text-gray-300 hover:text-custom-color text-2xl transition">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a target="_blank" href="https://www.instagram.com/alpha-automation-and-robotics/" class="text-gray-300 hover:text-custom-color text-2xl transition">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -375,12 +350,11 @@
         <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center mb-6 md:mb-0">
-                    <img src="src/img/logo.png" alt="Alpha Automation and Robotics" class="w-10 h-10 mr-2" loading="eager">
-                    <p class="text-2xl font-bold"><span class="text-custom-color">Alpha</span> Automation and Robotics</p>
+                    <img src="src/img/logo-2.png" alt="Alpha Automation and Robotics" class="w-26 h-14 mr-2" loading="eager">
                 </div>
                 
                 <div class="flex flex-col items-center md:items-end">
-                    <p class="text-gray-400 mb-4 text-center md:text-right">© 2017 Alpha Automation and Robotics Ltda. Todos os direitos reservados.</p>
+                    <p class="text-gray-400 mb-4 text-center md:text-right" data-i18n="copyright">© 2017 Alpha Automation and Robotics Ltda. Todos os direitos reservados.</p>
                 </div>
             </div>
         </div>
@@ -389,12 +363,12 @@
     <!-- Floating Buttons -->
     <div class="fixed floating-buttons-container flex flex-col items-center space-y-3 z-50">
         <!-- Back to Top Button -->
-        <button id="back-to-top" class="bg-custom-color text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-red-600 hover:scale-110 group">
+        <button id="back-to-top" class="bg-custom-color text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-red-600 hover:scale-110 hover:shadow-2xl group cursor-pointer">
             <i class="fas fa-arrow-up transition-transform duration-300 group-hover:-translate-y-1"></i>
         </button>
         
         <!-- WhatsApp Button -->
-        <button id="whatsapp-button" class="pulse-animation bg-[#f44336] text-white w-14 h-14 rounded-full flex items-center justify-center group relative whatsapp-button">
+        <button id="whatsapp-button" class="pulse-animation bg-[#f44336] text-white w-14 h-14 rounded-full flex items-center justify-center group relative whatsapp-button hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer">
             <i class="fab fa-whatsapp text-2xl relative z-10"></i>
         </button>
     </div>
@@ -403,44 +377,34 @@
     <div id="whatsapp-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
         <div class="bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4" id="modal-content">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-white">Escolha um contato</h3>
+                <h3 class="text-xl font-bold text-white" data-i18n="contact_choose"></h3>
                 <button id="close-modal" class="text-gray-400 hover:text-white text-2xl focus:outline-none">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             
             <div class="space-y-4">
-                <button class="contact-option w-full bg-gray-700 hover:bg-gray-600 rounded-lg p-4 text-left transition-colors duration-200" data-phone="5551995495614" data-name="Douglas Heitinger">
+                <button class="contact-option w-full bg-gray-700 hover:bg-gray-600 rounded-lg p-4 text-left transition-colors duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer" data-phone="5551995495614" data-name="Douglas Heitinger">
                     <div class="flex items-center">
                         <div class="w-12 h-12 bg-custom-color rounded-full flex items-center justify-center mr-4">
                             <img src="src/img/teams/team-01.png" alt="Douglas Heitinger" class="w-full h-full object-cover rounded-full">
                         </div>
                         <div>
-                            <h4 class="font-bold text-white">Douglas Heitinger | Gerente de Robótica</h4>
+                            <h4 class="font-bold text-white">Douglas Heitinger</h4>
+                            <p class="text-gray-300 text-sm" data-i18n="team_01"></p>
                             <p class="text-gray-300 text-sm">+55 51 9 95495-614</p>
                         </div>
                     </div>
                 </button>
                 
-                <button class="contact-option w-full bg-gray-700 hover:bg-gray-600 rounded-lg p-4 text-left transition-colors duration-200" data-phone="5531992871634" data-name="Natanel Nogueira">
+                <button class="contact-option w-full bg-gray-700 hover:bg-gray-600 rounded-lg p-4 text-left transition-colors duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer" data-phone="5583981172727" data-name="Otavio Gomes">
                     <div class="flex items-center">
                         <div class="w-12 h-12 bg-custom-color rounded-full flex items-center justify-center mr-4">
-                            <img src="src/img/teams/team-02.png" alt="Natanel Nogueira" class="w-full h-full object-cover rounded-full">
+                            <img src="src/img/teams/team-02.png" alt="Otavio Gomes" class="w-full h-full object-cover rounded-full">
                         </div>
                         <div>
-                            <h4 class="font-bold text-white">Natanel Nogueira | Gerente de Robótica</h4>
-                            <p class="text-gray-300 text-sm">+55 31 9 9287-1634</p>
-                        </div>
-                    </div>
-                </button>
-                
-                <button class="contact-option w-full bg-gray-700 hover:bg-gray-600 rounded-lg p-4 text-left transition-colors duration-200" data-phone="5583981172727" data-name="Otavio Gomes">
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 bg-custom-color rounded-full flex items-center justify-center mr-4">
-                            <img src="src/img/teams/team-03.png" alt="Otavio Gomes" class="w-full h-full object-cover rounded-full">
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white">Otavio Gomes | Gerente de Automação</h4>
+                            <h4 class="font-bold text-white">Otavio Gomes</h4>
+                            <p class="text-gray-300 text-sm" data-i18n="team_02"></p>
                             <p class="text-gray-300 text-sm">+55 83 9 8117-2727</p>
                         </div>
                     </div>
@@ -455,5 +419,19 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->
     <script src="src/js/index.js"></script>
+    <!-- i18n JS -->
+    <script src="src/js/i18n.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <!-- World Map JS -->
+    <script src="src/js/world-map.js"></script>
+
+    <script>
+    // Sincroniza o seletor com o idioma salvo/local atual
+    document.addEventListener('DOMContentLoaded', function() {
+        var lang = localStorage.getItem('site-lang') || 'pt';
+        document.getElementById('language-select').value = lang;
+    });
+</script>
 </body>
 </html>

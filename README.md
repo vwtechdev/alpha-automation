@@ -45,17 +45,20 @@ alpha-automation/
 ├── index.html              # Página principal
 ├── src/
 │   ├── css/
-│   │   └── base.css       # Estilos customizados
+│   │   └── base.css        # Estilos customizados
 │   ├── js/
-│   │   └── index.js       # JavaScript principal
+│   │   ├── i18n.js         # JavaScript de Tradução
+│   │   ├── index.js        # JavaScript principal
+│   │   └── world-map.js    # JavaScript Mapa Mundo
 │   ├── img/
-│   │   ├── logo.png       # Logo da empresa
-│   │   ├── teams/         # Fotos da equipe
-│   │   ├── companies/     # Logos de parceiros
-│   │   └── projects/      # Imagens de projetos
+│   │   ├── logo.png        # Icon
+│   │   ├── logo-2.png      # Logo da empresa
+│   │   ├── services/       # Fotos de Serviços
+│   │   ├── teams/          # Fotos da equipe
+│   │   └── customers/      # Logos de clientes
 │   └── media/
-│       └── background.mp4 # Vídeo de fundo
-└── README.md              # Documentação
+│       └── background.mp4  # Vídeo de fundo
+└── README.md               # Documentação
 ```
 
 ## 🚀 Como Usar

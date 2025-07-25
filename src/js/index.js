@@ -113,6 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuContent = document.getElementById('mobile-menu-content');
     const closeMobileMenu = document.getElementById('close-mobile-menu');
     const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+    const whatsappButton = document.getElementById('whatsapp-button');
+    const backToTopButton = document.getElementById('back-to-top');
 
     // Abrir menu mobile
     if (menuToggle) {
@@ -127,6 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
             
             document.body.style.overflow = 'hidden';
+            // Oculta o botão do WhatsApp
+            if (whatsappButton) whatsappButton.style.display = 'none';
+            // Oculta o botão de voltar ao topo
+            if (backToTopButton) backToTopButton.style.display = 'none';
         });
     }
 
@@ -139,6 +145,10 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenuDialog.style.display = 'none';
             mobileMenuDialog.classList.add('hidden');
             document.body.style.overflow = '';
+            // Exibe o botão do WhatsApp novamente
+            if (whatsappButton) whatsappButton.style.display = '';
+            // Exibe o botão de voltar ao topo novamente
+            if (backToTopButton) backToTopButton.style.display = '';
         }, 300);
     }
 
@@ -167,6 +177,14 @@ document.addEventListener('DOMContentLoaded', function() {
             closeMobileMenuDialog();
         });
     });
+
+    // Fechar ao trocar idioma no seletor mobile
+    const languageSelectMobile = document.getElementById('language-select-mobile');
+    if (languageSelectMobile) {
+        languageSelectMobile.addEventListener('change', function() {
+            closeMobileMenuDialog();
+        });
+    }
 });
 
 // Back to Top Button
@@ -458,4 +476,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     window.addEventListener('scroll', updateNavbar);
     updateNavbar();
+}); 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const heroTitle = document.querySelector('h2.hero-title[data-i18n="hero_title"]');
+  if (heroTitle) {
+    setTimeout(() => {
+      let fullText = heroTitle.textContent || heroTitle.innerText;
+      heroTitle.textContent = "";
+      let i = 0;
+      function typeWriter() {
+        if (i < fullText.length) {
+          heroTitle.innerHTML = heroTitle.textContent + fullText.charAt(i) + '<span class="cursor"></span>';
+          i++;
+          setTimeout(typeWriter, 80);
+        } else {
+          // Garantir que o cursor piscando permaneça no final
+          heroTitle.innerHTML = fullText + '<span class="cursor"></span>';
+        }
+      }
+      typeWriter();
+    }, 200);
+  }
 }); 
