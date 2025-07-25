@@ -14,7 +14,7 @@ function handleNavbarScroll() {
     const scrollPosition = window.scrollY;
     
     if (navbar) {
-        if (scrollPosition > 50) {
+        if (scrollPosition > 0) {
             navbar.classList.add('navbar-scrolled');
             navbar.classList.remove('navbar-transparent');
         } else {
@@ -463,39 +463,48 @@ function handleScrollAnimations() {
 document.addEventListener('DOMContentLoaded', handleScrollAnimations);
 window.addEventListener('scroll', handleScrollAnimations); 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.getElementById('main-navbar');
-    function updateNavbar() {
-        if (window.scrollY < window.innerHeight * 0.7) {
-            navbar.classList.add('navbar-transparent');
-            navbar.classList.remove('navbar-solid');
-        } else {
-            navbar.classList.remove('navbar-transparent');
-            navbar.classList.add('navbar-solid');
-        }
-    }
-    window.addEventListener('scroll', updateNavbar);
-    updateNavbar();
-}); 
+ 
 
 document.addEventListener("DOMContentLoaded", function() {
   const heroTitle = document.querySelector('h2.hero-title[data-i18n="hero_title"]');
   if (heroTitle) {
+    // Aguardar um pouco mais para garantir que tudo esteja carregado
     setTimeout(() => {
+      // Obter o texto completo e armazenar em uma variável
       let fullText = heroTitle.textContent || heroTitle.innerText;
-      heroTitle.textContent = "";
+      
+      // Limpar completamente o elemento
+      heroTitle.innerHTML = "";
+      
       let i = 0;
+      let animationActive = true;
+      
       function typeWriter() {
+        // Verificar se a animação ainda está ativa
+        if (!animationActive) return;
+        
         if (i < fullText.length) {
-          heroTitle.innerHTML = heroTitle.textContent + fullText.charAt(i) + '<span class="cursor"></span>';
+          // Construir o texto progressivamente usando substring
+          let currentText = fullText.substring(0, i + 1);
+          
+          // Usar requestAnimationFrame para sincronizar com o refresh da tela
+          requestAnimationFrame(() => {
+            heroTitle.innerHTML = currentText + '<span class="cursor"></span>';
+          });
+          
           i++;
-          setTimeout(typeWriter, 80);
+          setTimeout(typeWriter, 10);
         } else {
-          // Garantir que o cursor piscando permaneça no final
-          heroTitle.innerHTML = fullText + '<span class="cursor"></span>';
+          // Finalizar a animação
+          requestAnimationFrame(() => {
+            heroTitle.innerHTML = fullText + '<span class="cursor"></span>';
+          });
+          animationActive = false;
         }
       }
+      
+      // Iniciar a animação
       typeWriter();
-    }, 200);
+    }, 300); // Aumentei o delay para garantir que tudo esteja carregado
   }
 }); 

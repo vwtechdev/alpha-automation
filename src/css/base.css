@@ -226,6 +226,13 @@ html, body {
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
   
+  .navbar-scrolled {
+      background: rgba(17, 17, 17, 0.90);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
   .navbar-transparent {
       background: transparent;
       box-shadow: none;

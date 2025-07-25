@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.alphaautomationbr.com/sitemap.xml
+
+# Crawl-delay para evitar sobrecarga do servidor
+Crawl-delay: 1
+
+# Permitir acesso a recursos importantes
+Allow: /src/css/
+Allow: /src/js/
+Allow: /src/img/
+
+# Bloquear acesso a arquivos desnecessários
+Disallow: /src/media/
+Disallow: *.log
+Disallow: *.tmp 
