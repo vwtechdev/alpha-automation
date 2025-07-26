@@ -165,10 +165,11 @@ html, body {
   }
   
   .hero-title {
-      font-size: 3.5rem;
-      line-height: 1.2;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  }
+    font-size: 3.5rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+}
   
   .hover\:bg-custom-color:hover {
       background-color: #f44336;
@@ -785,12 +786,12 @@ select.language-select-custom:-moz-focusring {
 }
 
 .service-card {
-  transition: transform 0.0001s cubic-bezier(0.4,0,0.2,1), box-shadow 0.0001s cubic-bezier(0.4,0,0.2,1);
+  transition: none !important;
 }
 .service-card:hover {
   transform: scale(1.10) !important;
   box-shadow: 0 10px 25px rgba(244, 67, 54, 0.15) !important;
-  z-index: 2;
+  z-index: 2 !important;
 }
 
 .country-zoom-hover {
@@ -810,7 +811,7 @@ select.language-select-custom:-moz-focusring {
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   padding: 12px;
-  transition: none;
+  transition: none !important;
 }
 .customer-item:hover {
   transform: scale(1.10) !important;
@@ -843,4 +844,43 @@ select.language-select-custom:-moz-focusring {
   51%, 100% {
     opacity: 0;
   }
+}
+
+/* Zoom instantâneo para service cards e customer items */
+.service-card {
+  transition: none !important;
+}
+
+.service-card:hover {
+  transform: scale(1.10) !important;
+  box-shadow: 0 10px 25px rgba(244, 67, 54, 0.15) !important;
+  z-index: 2 !important;
+}
+
+.customer-item {
+  transition: none !important;
+}
+
+.customer-item:hover {
+  transform: scale(1.10) !important;
+  box-shadow: 0 10px 25px rgba(244, 67, 54, 0.15) !important;
+  z-index: 2 !important;
+}
+
+/* Animações de fade in e fade out para cards */
+.fade-in-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-card.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }

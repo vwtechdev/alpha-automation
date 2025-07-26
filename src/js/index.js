@@ -228,27 +228,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         
         const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
         
-        if (targetElement) {
+        // Special handling for home link - go to top
+        if (targetId === '#home') {
             window.scrollTo({
-                top: targetElement.offsetTop - 80,
+                top: 0,
                 behavior: 'smooth'
             });
+        } else {
+            const targetElement = document.querySelector(targetId);
             
-            // Close mobile menu dialog if open
-            const mobileMenuDialog = document.getElementById('mobile-menu-dialog');
-            if (mobileMenuDialog && mobileMenuDialog.style.display === 'flex') {
-                const mobileMenuContent = document.getElementById('mobile-menu-content');
-                mobileMenuContent.classList.add('scale-95', 'opacity-0');
-                mobileMenuContent.classList.remove('scale-100', 'opacity-100');
-                
-                setTimeout(() => {
-                    mobileMenuDialog.style.display = 'none';
-                    mobileMenuDialog.classList.add('hidden');
-                    document.body.style.overflow = '';
-                }, 300);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
             }
+        }
+        
+        // Close mobile menu dialog if open
+        const mobileMenuDialog = document.getElementById('mobile-menu-dialog');
+        if (mobileMenuDialog && mobileMenuDialog.style.display === 'flex') {
+            const mobileMenuContent = document.getElementById('mobile-menu-content');
+            mobileMenuContent.classList.add('scale-95', 'opacity-0');
+            mobileMenuContent.classList.remove('scale-100', 'opacity-100');
+            
+            setTimeout(() => {
+                mobileMenuDialog.style.display = 'none';
+                mobileMenuDialog.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
         }
     });
 });
@@ -451,11 +460,24 @@ document.addEventListener('DOMContentLoaded', function() {
 // Animações de entrada CSS puro
 function handleScrollAnimations() {
     const animatedElements = document.querySelectorAll('.fade-in, .fade-up, .fade-right, .fade-left');
+    const fadeInCards = document.querySelectorAll('.fade-in-card');
     const windowHeight = window.innerHeight;
+    
     animatedElements.forEach(el => {
         const rect = el.getBoundingClientRect();
         if (rect.top < windowHeight - 60) {
             el.classList.add('visible');
+        }
+    });
+    
+    // Animações para cards com fade in
+    fadeInCards.forEach((card, index) => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < windowHeight - 60) {
+            // Delay escalonado para criar efeito cascata
+            setTimeout(() => {
+                card.classList.add('visible');
+            }, index * 100);
         }
     });
 }
@@ -465,46 +487,13 @@ window.addEventListener('scroll', handleScrollAnimations);
 
  
 
-document.addEventListener("DOMContentLoaded", function() {
+// Função para adicionar cursor ao título hero
+function addCursorToHeroTitle() {
   const heroTitle = document.querySelector('h2.hero-title[data-i18n="hero_title"]');
-  if (heroTitle) {
-    // Aguardar um pouco mais para garantir que tudo esteja carregado
-    setTimeout(() => {
-      // Obter o texto completo e armazenar em uma variável
-      let fullText = heroTitle.textContent || heroTitle.innerText;
-      
-      // Limpar completamente o elemento
-      heroTitle.innerHTML = "";
-      
-      let i = 0;
-      let animationActive = true;
-      
-      function typeWriter() {
-        // Verificar se a animação ainda está ativa
-        if (!animationActive) return;
-        
-        if (i < fullText.length) {
-          // Construir o texto progressivamente usando substring
-          let currentText = fullText.substring(0, i + 1);
-          
-          // Usar requestAnimationFrame para sincronizar com o refresh da tela
-          requestAnimationFrame(() => {
-            heroTitle.innerHTML = currentText + '<span class="cursor"></span>';
-          });
-          
-          i++;
-          setTimeout(typeWriter, 10);
-        } else {
-          // Finalizar a animação
-          requestAnimationFrame(() => {
-            heroTitle.innerHTML = fullText + '<span class="cursor"></span>';
-          });
-          animationActive = false;
-        }
-      }
-      
-      // Iniciar a animação
-      typeWriter();
-    }, 300); // Aumentei o delay para garantir que tudo esteja carregado
+  if (heroTitle && !heroTitle.querySelector('.cursor')) {
+    heroTitle.innerHTML = heroTitle.textContent + '<span class="cursor"></span>';
   }
-}); 
+}
+
+// Expor a função globalmente para ser chamada pelo sistema de i18n
+window.addCursorToHeroTitle = addCursorToHeroTitle; 

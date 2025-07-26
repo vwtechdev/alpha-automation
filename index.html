@@ -66,7 +66,7 @@
     <!-- Favicon -->
     <link rel="icon" href="src/img/logo.png">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/base.css?v=1.4">
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
     
@@ -219,7 +219,7 @@
     <header class="navbar navbar-transparent py-4 px-6 shadow-md fixed top-0 left-0 w-full z-50" id="main-navbar">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <div class="w-26 h-14 flex items-center justify-center mr-2">
+                <div class="w-46 h-16 flex items-center justify-center mr-2">
                     <img src="src/img/logo-2.png" alt="Alpha Automation and Robotics" class="w-full h-full object-cover" loading="eager">
                 </div>
             </div>
@@ -290,7 +290,7 @@
 
         <div class="container mx-auto flex flex-col md:flex-row items-center relative z-10">
             <div class="md:w-1/2 mb-16 md:mb-0">
-                <h2 class="hero-title font-bold mb-6" data-i18n="hero_title">Automação inteligente e soluções sob medida para sua indústria</h2>
+                <h2 class="hero-title font-bold mb-6" data-i18n="hero_title" data-aos="fade-left" data-aos-delay="200"><span class="cursor"></span></h2>
                 <p class="hero-subtitle text-gray-300 leading-relaxed" data-i18n="hero_subtitle" data-aos="fade-up" data-aos-delay="300"></p>
                 <p class="hero-subtitle text-gray-300 leading-relaxed" data-i18n="hero_subtitle_2" data-aos="fade-up" data-aos-delay="400"></p>
                 <p class="hero-subtitle mb-10 text-gray-300 leading-relaxed" data-i18n="hero_subtitle_3" data-aos="fade-up" data-aos-delay="500"></p>
@@ -307,20 +307,20 @@
     </section>
 
     <!-- Quem Somos Section -->
-    <section id="about" class="py-16 px-6 bg-black-opacity relative z-10" data-aos="fade-up">
+    <section id="about" class="py-24 px-12 bg-black-opacity relative z-10" data-aos="fade-up">
         <div class="container mx-auto">
-            <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-8" data-aos="zoom-in-up">
+            <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-12" data-aos="zoom-in-up">
                 <div class="flex flex-col md:flex-row items-center justify-center gap-12">
                     <!-- Imagem flutuante da Empresa -->
                     <div class="md:w-1/2 flex justify-center items-center mb-8 md:mb-0" data-aos="fade-right">
                         <img src="src/img/company.webp" alt="Alpha Automation and Robotics" class="w-[600px] max-w-full rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" style="min-width:200px;"/>
                     </div>
                     <div class="md:w-1/2" data-aos="fade-left">
-                        <div class="text-left mb-8 md:mb-0">
+                        <div class="text-center mb-8 md:mb-0">
                             <h2 class="text-3xl font-bold mb-4" data-i18n="about_title" data-aos="fade-down"></h2>
-                            <p class="text-gray-300 max-w-4xl leading-relaxed" data-i18n="about_body" data-aos="fade-up"></p>  
+                            <p class="text-gray-300 max-w-4xl leading-relaxed mx-auto" data-i18n="about_body" data-aos="fade-up"></p>  
                         </div>
-                        <div class="flex flex-col sm:flex-row gap-8 items-center justify-start mt-8">
+                        <div class="flex flex-col sm:flex-row gap-8 items-center justify-center mt-8">
                             <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="100">
                                 <img src="src/img/teams/team-01.png" alt="Douglas Heitinger" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-01.png" />
                                 <span class="text-lg font-semibold text-white">Douglas Heitinger</span>
@@ -339,36 +339,36 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 px-6 bg-black-opacity relative z-10" data-aos="fade-up">
+    <section id="services" class="py-24 px-12 bg-black-opacity relative z-10" data-aos="fade-up">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12" data-i18n="services_title" data-aos="fade-down"></h2>
+            <h2 class="text-3xl font-bold text-center mb-16" data-i18n="services_title" data-aos="fade-down"></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Service 1 Card -->
-                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
                         <img src="src/img/services/service-01.webp" class="object-cover h-full w-full" loading="lazy">
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
+                    <div class="px-8 py-6 flex-1 flex flex-col">
                         <span class="inline-block bg-blue-100 text-blue-600 text-lg font-semibold px-3 py-1 rounded-full mb-3" data-i18n="service_01"></span>
                         <p class="text-gray-400 mb-4 flex-1" data-i18n="service_01_body"></p>
                     </div>
                 </div>
                 <!-- Service 2 Card -->
-                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
                         <img src="src/img/services/service-02.webp" class="object-cover h-full w-full" loading="lazy">
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
+                    <div class="px-8 py-6 flex-1 flex flex-col">
                         <span class="inline-block bg-yellow-100 text-yellow-700 text-lg font-semibold px-3 py-1 rounded-full mb-3" data-i18n="service_02"></span>
                         <p class="text-gray-400 mb-4 flex-1" data-i18n="service_02_body"></p>
                     </div>
                 </div>
                 <!-- Service 3 Card -->
-                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="300">
                     <div class="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
                         <img src="src/img/services/service-03.webp" class="object-cover h-full w-full" loading="lazy">
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
+                    <div class="px-8 py-6 flex-1 flex flex-col">
                         <span class="inline-block bg-red-100 text-red-600 text-lg font-semibold px-3 py-1 rounded-full mb-3" data-i18n="service_03"></span>
                         <p class="text-gray-400 mb-4 flex-1" data-i18n="service_03_body"></p>
                     </div>
@@ -394,66 +394,55 @@
             <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-8" data-aos="zoom-in-up">
                 <h2 class="text-3xl font-bold text-center mb-4" data-i18n="customers_title" data-aos="fade-down" data-aos-delay="500"></h2>
                 <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto" data-i18n="customers_subtitle" data-aos="fade-up" data-aos-delay="600"></p>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-7 justify-items-center max-w-4xl mx-auto">
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center max-w-4xl mx-auto">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-01.webp" alt="Empresa Parceira 1" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-01.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-02.webp" alt="Empresa Parceira 2" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-02.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-03.webp" alt="Empresa Parceira 3" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-03.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-04.webp" alt="Empresa Parceira 4" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-04.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-05.webp" alt="Empresa Parceira 5" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-05.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-06.webp" alt="Empresa Parceira 6" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-06.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-07.webp" alt="Empresa Parceira 7" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-07.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-08.webp" alt="Empresa Parceira 8" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-08.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-09.webp" alt="Empresa Parceira 9" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-09.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1000">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-10.webp" alt="Empresa Parceira 10" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-10.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1100">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-11.webp" alt="Empresa Parceira 11" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-11.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1200">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-12.webp" alt="Empresa Parceira 12" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-12.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1300">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-13.webp" alt="Empresa Parceira 13" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-13.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1400">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-14.webp" alt="Empresa Parceira 14" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-14.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1500">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-15.webp" alt="Empresa Parceira 15" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-15.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1600">
+                    <div class="customer-item border-4 border-custom-color mb-2 bg-white cursor-pointer fade-in-card" data-aos="zoom-in" data-aos-delay="100">
                         <img src="src/img/customers/customer-16.webp" alt="Empresa Parceira 16" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-16.webp" />
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1700">
-                        <img src="src/img/customers/customer-17.webp" alt="Empresa Parceira 17" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-17.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1800">
-                        <img src="src/img/customers/customer-18.webp" alt="Empresa Parceira 18" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-18.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="1900">
-                        <img src="src/img/customers/customer-19.webp" alt="Empresa Parceira 19" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-19.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="2000">
-                        <img src="src/img/customers/customer-20.webp" alt="Empresa Parceira 20" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-20.webp" />
             </div>
         </div>
     </section>
@@ -491,15 +480,6 @@
                     <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-8 h-full fade-left">
                         <h3 class="text-xl font-bold mb-6" data-i18n="contact_info" data-aos="fade-down"></h3>
                         <div class="space-y-6">
-                            <div class="flex items-start contact-info-item" data-aos="fade-up">
-                                <div class="text-custom-color text-xl mr-4 mt-1 flex-shrink-0 icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="min-w-0 flex-1 content">
-                                    <h4 class="font-bold mb-1" data-i18n="contact_info_address"></h4>
-                                    <p class="text-gray-300 text-sm"  data-i18n="contact_info_street"></p>
-                                </div>
-                            </div>
                             <div class="flex items-start contact-info-item" data-aos="fade-up" data-aos-delay="100">
                                 <div class="text-custom-color text-xl mr-4 mt-1 flex-shrink-0 icon">
                                     <i class="fas fa-phone-alt"></i>
@@ -546,7 +526,7 @@
         <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center mb-6 md:mb-0">
-                    <img src="src/img/logo-2.png" alt="Alpha Automation and Robotics" class="w-26 h-14 mr-2" loading="eager">
+                    <img src="src/img/logo-2.png" alt="Alpha Automation and Robotics" class="w-46 h-16 mr-2" loading="eager">
                 </div>
                 
                 <div class="flex flex-col items-center md:items-end">
