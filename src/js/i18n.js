@@ -18,12 +18,16 @@ const translations = {
     team_01: "Gerente de Robótica",
     team_02: "Gerente de Automação",
     services_title: "Nossos\n Serviços",
-    service_01: "Programação de Robôs",
-    service_02: "Programação de CLP's",
-    service_03: "Programação OFF-LINE",
-    service_01_body: "ABB, Comau, Fanuc, KUKA, Motoman, Panasonic entre outros.\nStandards: Global (GM), Cars (Stellantis), Integra (Mercedes), entre outros\nOtimização do tempo de ciclo: on-line e off-line\nAssistência técnica à produção.",
-    service_02_body: "Siemens, Rockwell, Mitsubishi, Schneider entre outros.\nStandards: Global (GM), Cars (Stellantis), Integra (Mercedes), entre outros.\nProgramação em diversas linguagens: VB,C# e C++, entre outras.",
-    service_03_body: "Process Simulate e Robcad.\nCriação\nIntegração\nAjustes de células robotizadas.",
+    service_01: "Padrões Industriais",
+    service_02: "Programação de Robôs",
+    service_03: "Programação de CLP's",
+    service_04: "Programação OFF-LINE",
+    service_05: "Desenvolvimento Web",
+    service_01_body: "• Plataformas e Padrões Industriais\n	- Global (GM)\n	- Cars (Stellantis)\n	- Integra (Mercedes-Benz)\n	- Entre Outros\n\n• Otimização de Tempo de Ciclo\n	- On-line\n	- Off-line\n\n• Assistência Técnica à Produção",
+    service_02_body: "• Robôs industriais atendindidos\n	- ABB\n	- Comau\n	- Fanuc\n	- KUKA\n	- Motoman\n	- Panasonic\n	- Entre Outros",
+    service_03_body: "• Controladoras Lógicas Programável\n	- Siemens\n	- Rockwell\n	- Mitsubishi\n	- Schneider\n	- Entre Outros",
+    service_04_body: "• Programação OFF-LINE em softwares: Process Simulate e Robcad\n	- Criação\n	- Integração\n	- Ajustes de células robotizada",
+    service_05_body: "• Análise de Dados Industriais\n	- Gestão\n	- Tratamento de Dados\n	- Produção\n	- Manufatura\n	- Manutenção\n	- Entre Outros\n\n• Gestão de tratamento de dados com Power BI",
     where_title: "Onde\n Atuamos",
     where_subtitle: "Alguns dos países que atuamos.",
     customers_title: "Nossos\n Clientes",
@@ -55,10 +59,6 @@ const translations = {
     "Italy": "Itália",
     "Finland": "Finlândia",
     "Spain": "Espanha",
-    "language_pt": "🇧🇷 Português",
-    "language_en": "🇺🇸 Inglês",
-    "language_es": "🇪🇸 Espanhol",
-    "language_it": "🇮🇹 Italiano"
   },
   en: {
     home: "Home",
@@ -79,12 +79,16 @@ const translations = {
     team_01: "Robotics Manager",
     team_02: "Automation Manager",
     services_title: "Our\n Services",
-    service_01: "Robots Programming",
-    service_02: "PLC Programming",
-    service_03: "Offline Programming",
-    service_01_body: "ABB, Comau, Fanuc, KUKA, Motoman, Panasonic, among others.\nStandards: Global (GM), Cars (Stellantis), Integra (Mercedes), among others.\nCycle time optimization: Online and offline.\nTechnical support for production.",
-    service_02_body: "Siemens, Rockwell, Mitsubishi, Schneider, among others.\nStandards: Global (GM), Cars (Stellantis), Integra (Mercedes), among others.\nProgramming in multiple languages: VB, C#, and C++, among others.",
-    service_03_body: "Process Simulate and Robcad.\nCreation\nIntegration\nAdjustments of robotic cells.",
+    service_01: "Industrial Standards",
+    service_02: "Robots Programming",
+    service_03: "PLC Programming",
+    service_04: "Offline Programming",
+    service_05: "Web Development",
+    service_01_body: "• Industrial Platforms and Standards\n	- Global (GM)\n	- Cars (Stellantis)\n	- Integra (Mercedes-Benz)\n	- Among Others\n\n• Cycle Time Optimization\n	- Online\n	- Offline\n\n• Technical Support for Production",
+    service_02_body: "• Industrial robots served\n	- ABB\n	- Comau\n	- Fanuc\n	- KUKA\n	- Motoman\n	- Panasonic\n	- Among Others",
+    service_03_body: "• Programmable Logic Controllers\n	- Siemens\n	- Rockwell\n	- Mitsubishi\n	- Schneider\n	- Among Others",
+    service_04_body: "• OFF-LINE Programming in software: Process Simulate and Robcad\n	- Creation\n	- Integration\n	- Adjustments of robotic cells",
+    service_05_body: "• Industrial Data Analysis\n	- Management\n	- Data Processing\n	- Production\n	- Manufacturing\n	- Maintenance\n	- Among Others\n\n• Data processing management with Power BI",
     where_title: "Where\n We Operate",
     where_subtitle: "Some of the countries we operate in.",
     customers_title: "Our\n Clients",
@@ -100,7 +104,7 @@ const translations = {
     contact_info: "Contact Information",
     contact_info_phone: "Phones",
     contact_info_opening_hours: "Opening Hours",
-    contact_info_hours: "Monday to Friday: 8am to 6pm\Saturday: 8am to 6pm",
+    contact_info_hours: "Monday to Friday: 8am to 6pm\nSaturday: 8am to 6pm",
     // Placeholders
     contact_name_placeholder: "Enter your full name",
     contact_email_placeholder: "Enter your email",
@@ -116,10 +120,6 @@ const translations = {
     "Italy": "Italy",
     "Finland": "Finland",
     "Spain": "Spain",
-    "language_pt": "🇧🇷 Portuguese",
-    "language_en": "🇺🇸 English",
-    "language_es": "🇪🇸 Spanish",
-    "language_it": "🇮🇹 Italian"
   },
   it: {
     home: "Inizio",
@@ -140,12 +140,16 @@ const translations = {
     team_01: "Gestore della Robotica",
     team_02: "Gestore dell'Automazione",
     services_title: "I Nostri\n Servizi",
-    service_01: "Programmazione di Robot",
-    service_02: "Programmazione di CLP",
-    service_03: "Programmazione OFF-LINE",
-    service_01_body: "ABB, Comau, Fanuc, KUKA, Motoman, Panasonic, tra gli altri.\nStandard: Global (GM), Cars (Stellantis), Integra (Mercedes), tra gli altri.\nOttimizzazione del tempo di ciclo: online e offline.\nAssistenza tecnica alla produzione.",
-    service_02_body: "Siemens, Rockwell, Mitsubishi, Schneider, tra gli altri.\nStandard: Global (GM), Cars (Stellantis), Integra (Mercedes), tra gli altri.\nProgrammazione in diversi linguaggi: VB, C# e C++, tra gli altri.",
-    service_03_body: "Process Simulate e Robcad.\nCreazione\nIntegrazione\nRegolazione di celle robotizzate.",
+    service_01: "Standard Industriali",
+    service_02: "Programmazione di Robot",
+    service_03: "Programmazione di CLP",
+    service_04: "Programmazione OFF-LINE",
+    service_05: "Sviluppo Web",
+    service_01_body: "• Piattaforme e Standard Industriali\n	- Global (GM)\n	- Cars (Stellantis)\n	- Integra (Mercedes-Benz)\n	- Tra gli Altri\n\n• Ottimizzazione del Tempo di Ciclo\n	- Online\n	- Offline\n\n• Assistenza Tecnica alla Produzione",
+    service_02_body: "• Robot industriali serviti\n	- ABB\n	- Comau\n	- Fanuc\n	- KUKA\n	- Motoman\n	- Panasonic\n	- Tra gli Altri",
+    service_03_body: "• Controllori Logici Programmabili\n	- Siemens\n	- Rockwell\n	- Mitsubishi\n	- Schneider\n	- Tra gli Altri",
+    service_04_body: "• Programmazione OFF-LINE in software: Process Simulate e Robcad\n	- Creazione\n	- Integrazione\n	- Regolazione di celle robotizzate",
+    service_05_body: "• Analisi dei Dati Industriali\n	- Gestione\n	- Trattamento dei Dati\n	- Produzione\n	- Manifattura\n	- Manutenzione\n	- Tra gli Altri\n\n• Gestione del trattamento dei dati con Power BI",
     where_title: "Dove Operiamo",
     where_subtitle: "Alcuni dei paesi in cui operiamo.",
     customers_title: "I Nostri\n Clienti",
@@ -161,7 +165,7 @@ const translations = {
     contact_info: "Informazioni sui contatti",
     contact_info_phone: "Telefoni",
     contact_info_opening_hours: "Orari di apertura",
-    contact_info_hours: "Dal lunedì al venerdì: dalle 8:00 alle 18:00\Sabato: dalle 8:00 alle 18:00",
+    contact_info_hours: "Dal lunedì al venerdì: dalle 8:00 alle 18:00\nSabato: dalle 8:00 alle 18:00",
     // Placeholders
     contact_name_placeholder: "Inserisci il tuo nome completo",
     contact_email_placeholder: "Inserisci la tua email",
@@ -177,10 +181,6 @@ const translations = {
     "Italy": "Italia",
     "Finland": "Finlandia",
     "Spain": "Spagna",
-    "language_pt": "🇧🇷 Portoghese",
-    "language_en": "🇺🇸 Inglese",
-    "language_es": "🇪🇸 Spagnolo",
-    "language_it": "🇮🇹 Italiano"
   },
   es: {
     home: "Comenzar",
@@ -201,12 +201,16 @@ const translations = {
     team_01: "Gerente de Robótica",
     team_02: "Gerente de Automatización",
     services_title: "Nuestros\n Servicios",
-    service_01: "Programación de Robots",
-    service_02: "Programación de CLP's",
-    service_03: "Programación OFF-LINE",  
-    service_01_body: "ABB, Comau, Fanuc, KUKA, Motoman, Panasonic, entre otros.\nEstándares: Global (GM), Cars (Stellantis), Integra (Mercedes), entre otros.\nOptimización del tiempo de ciclo: en línea y fuera de línea.\nAsistencia técnica para la producción.",
-    service_02_body: "Siemens, Rockwell, Mitsubishi, Schneider, entre otros.\nEstándares: Global (GM), Cars (Stellantis), Integra (Mercedes), entre otros.\nProgramación en varios lenguajes: VB, C# y C++, entre otros.",
-    service_03_body: "Process Simulate y Robcad.\nCreación\nIntegración\nAjustes de células robotizadas.",
+    service_01: "Estándares Industriales",
+    service_02: "Programación de Robots",
+    service_03: "Programación de CLP's",
+    service_04: "Programación OFF-LINE",
+    service_05: "Desarrollo Web",  
+    service_01_body: "• Plataformas y Estándares Industriales\n	- Global (GM)\n	- Cars (Stellantis)\n	- Integra (Mercedes-Benz)\n	- Entre Otros\n\n• Optimización del Tiempo de Ciclo\n	- En línea\n	- Fuera de línea\n\n• Asistencia Técnica para la Producción",
+    service_02_body: "• Robots industriales atendidos\n	- ABB\n	- Comau\n	- Fanuc\n	- KUKA\n	- Motoman\n	- Panasonic\n	- Entre Otros",
+    service_03_body: "• Controladores Lógicos Programables\n	- Siemens\n	- Rockwell\n	- Mitsubishi\n	- Schneider\n	- Entre Otros",
+    service_04_body: "• Programación OFF-LINE en software: Process Simulate y Robcad\n	- Creación\n	- Integración\n	- Ajustes de células robotizadas",
+    service_05_body: "• Análisis de Datos Industriales\n	- Gestión\n	- Procesamiento de Datos\n	- Producción\n	- Manufactura\n	- Mantenimiento\n	- Entre Otros\n\n• Gestión de procesamiento de datos con Power BI",
     where_title: "Donde\n operamos",
     where_subtitle: "Algunos de los países en los que operamos.",
     customers_title: "Nuestros\n Clientes",
@@ -238,10 +242,6 @@ const translations = {
     "Italy": "Italia",
     "Finland": "Finlandia",
     "Spain": "España",
-    "language_pt": "🇧🇷 Portugués",
-    "language_en": "🇺🇸 Inglés",
-    "language_es": "🇪🇸 Español",
-    "language_it": "🇮🇹 Italiano"
   }
 };
 
@@ -250,9 +250,49 @@ function setLanguage(lang) {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
       // Se for um dos textos de serviço e contiver '\n', renderiza como lista
-      if ((key === 'service_01_body' || key === 'service_02_body' || key === 'service_03_body') && translations[lang][key].includes('\n')) {
-        const items = translations[lang][key].split('\n').map(item => `<li>${item}</li>`).join('');
-        el.innerHTML = `<ul class='list-disc list-inside space-y-1'>${items}</ul>`;
+      if ((key === 'service_01_body' || key === 'service_02_body' || key === 'service_03_body' || key === 'service_04_body' || key === 'service_05_body') && translations[lang][key].includes('\n')) {
+        const lines = translations[lang][key].split('\n');
+        let html = '';
+        let currentList = '';
+        
+        lines.forEach(line => {
+          if (line.trim() === '') {
+            // Linha vazia - fecha a lista atual se existir
+            if (currentList) {
+              html += currentList + '</ul>';
+              currentList = '';
+            }
+          } else if (line.startsWith('	-')) {
+            // Item de sublista (com tab)
+            if (currentList) {
+              currentList += `<li>${line.substring(2).trim()}</li>`;
+            } else {
+              currentList = `<ul class='list-disc list-inside space-y-1 ml-4'>`;
+              currentList += `<li>${line.substring(2).trim()}</li>`;
+            }
+          } else if (line.startsWith('•')) {
+            // Item principal
+            if (currentList) {
+              html += currentList + '</ul>';
+              currentList = '';
+            }
+            html += `<li class="mb-2 font-semibold">${line.substring(1).trim()}</li>`;
+          } else {
+            // Outros itens
+            if (currentList) {
+              html += currentList + '</ul>';
+              currentList = '';
+            }
+            html += `<li class="mb-2">${line}</li>`;
+          }
+        });
+        
+        // Fecha a última lista se existir
+        if (currentList) {
+          html += currentList + '</ul>';
+        }
+        
+        el.innerHTML = `<ul class='list-disc list-inside space-y-1'>${html}</ul>`;
       } else if (key === 'about_body' && translations[lang][key].includes('\n')) {
         el.innerHTML = translations[lang][key].split('\n').join('<br><br>');
       } else if (key === 'about_title' || key === 'services_title' || key === 'where_title' || key === 'customers_title' || key === 'contact_title') {

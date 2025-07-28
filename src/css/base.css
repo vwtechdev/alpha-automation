@@ -91,6 +91,14 @@ html, body {
       padding-right: 1rem;
   }
   
+  /* Reduz padding do container em mobile */
+  @media (max-width: 768px) {
+      .container {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+      }
+  }
+  
   .fade-in {
       opacity: 0;
       transform: none;
@@ -598,25 +606,35 @@ html, body {
   }
   
   /* Mobile Menu Dialog Styles */
-  #mobile-menu-dialog {
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-  }
-  
-  #mobile-menu-content {
-      border: 1px solid rgba(244, 67, 54, 0.3);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-  }
-  
-  #mobile-menu-content.scale-100 {
-      transform: scale(1);
-      opacity: 1;
-  }
-  
-  #mobile-menu-content.scale-95 {
-      transform: scale(0.95);
-      opacity: 0;
-  }
+#mobile-menu-dialog {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#mobile-menu-content {
+    border: 1px solid rgba(244, 67, 54, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+#mobile-menu-content.scale-100 {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#mobile-menu-content.scale-95 {
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+/* Ajustes para seletor de idiomas mobile */
+@media (max-width: 768px) {
+    #language-select-mobile {
+        font-size: 0.875rem;
+        padding: 0.25rem 0.5rem;
+        min-width: 60px;
+        max-width: 80px;
+    }
+}
   
   /* -------------------- IDs -------------------- */
   
@@ -801,6 +819,16 @@ select.language-select-custom:-moz-focusring {
   transform-origin: center;
 }
 
+/* Remove cursor pointer dos países do mapa */
+.leaflet-interactive {
+  cursor: default !important;
+}
+
+.highlighted-country,
+.regular-country {
+  cursor: default !important;
+}
+
 .customer-item {
   width: 140px;
   height: 140px;
@@ -825,25 +853,6 @@ select.language-select-custom:-moz-focusring {
   object-fit: contain;
   display: block;
   margin: 0 auto;
-}
-
-/* Cursor piscando para o typeWriter */
-.cursor {
-  display: inline-block;
-  width: 2px;
-  height: 1.2em;
-  background-color: #f44336;
-  margin-left: 2px;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0%, 50% {
-    opacity: 1;
-  }
-  51%, 100% {
-    opacity: 0;
-  }
 }
 
 /* Zoom instantâneo para service cards e customer items */

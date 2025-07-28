@@ -483,17 +483,4 @@ function handleScrollAnimations() {
 }
 
 document.addEventListener('DOMContentLoaded', handleScrollAnimations);
-window.addEventListener('scroll', handleScrollAnimations); 
-
- 
-
-// Função para adicionar cursor ao título hero
-function addCursorToHeroTitle() {
-  const heroTitle = document.querySelector('h2.hero-title[data-i18n="hero_title"]');
-  if (heroTitle && !heroTitle.querySelector('.cursor')) {
-    heroTitle.innerHTML = heroTitle.textContent + '<span class="cursor"></span>';
-  }
-}
-
-// Expor a função globalmente para ser chamada pelo sistema de i18n
-window.addCursorToHeroTitle = addCursorToHeroTitle; 
+window.addEventListener('scroll', handleScrollAnimations);

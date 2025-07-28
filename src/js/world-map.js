@@ -17,6 +17,19 @@ const defaultColor = '#070808';
 const borderColor = '#222';
 const hoverColor = '#FF0D0D';
 
+// Função para detectar dispositivo móvel
+function isMobileDevice() {
+  return window.innerWidth <= 768;
+}
+
+// Coordenadas do Brasil (centro aproximado)
+const brazilCenter = [-15.7801, -47.9292]; // Brasília
+const brazilZoom = 2; // Zoom para mostrar o Brasil inteiro
+
+// Coordenadas padrão para desktop
+const defaultCenter = [20, 0];
+const defaultZoom = 1;
+
 // Função para estilizar cada país
 function styleFeature(feature) {
   const name = feature.properties.ADMIN || feature.properties.name;
@@ -130,8 +143,14 @@ function updateMapTranslations() {
 
 // Inicialização do mapa
 let geojson;
+let map; // Declaração global da variável map
 document.addEventListener('DOMContentLoaded', function () {
-  const map = L.map('map', {
+  // Determina as configurações iniciais baseadas no dispositivo
+  const isMobile = isMobileDevice();
+  const initialCenter = isMobile ? brazilCenter : defaultCenter;
+  const initialZoom = isMobile ? brazilZoom : defaultZoom;
+
+  map = L.map('map', {
     zoomControl: true,
     attributionControl: false,
     scrollWheelZoom: false,
@@ -140,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
     boxZoom: false,
     keyboard: false,
     tap: false,
-  }).setView([20, 0], 2);
+  }).setView(initialCenter, initialZoom);
 
   // Adiciona um fundo escuro
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -160,6 +179,16 @@ document.addEventListener('DOMContentLoaded', function () {
       
       // Atualiza traduções após carregar o mapa
       updateMapTranslations();
+      
+      // Em dispositivos móveis, adiciona uma animação suave para focar no Brasil após o carregamento
+      if (isMobile) {
+        setTimeout(() => {
+          map.setView(brazilCenter, brazilZoom, {
+            animate: true,
+            duration: 1.5
+          });
+        }, 500);
+      }
     });
 });
 
@@ -177,4 +206,27 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(updateMapTranslations, 200);
     });
   }
+});
+
+// Listener para redimensionamento da janela
+window.addEventListener('resize', function() {
+  // Aguarda um pouco para que o redimensionamento termine
+  setTimeout(() => {
+    const isMobile = isMobileDevice();
+    if (map && geojson) {
+      if (isMobile) {
+        // Se mudou para mobile, foca no Brasil
+        map.setView(brazilCenter, brazilZoom, {
+          animate: true,
+          duration: 1.0
+        });
+      } else {
+        // Se mudou para desktop, volta para a visualização global
+        map.setView(defaultCenter, defaultZoom, {
+          animate: true,
+          duration: 1.0
+        });
+      }
+    }
+  }, 300);
 });
