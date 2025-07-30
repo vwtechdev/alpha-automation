@@ -18,16 +18,15 @@ const translations = {
     team_01: "Gerente de Robótica",
     team_02: "Gerente de Automação",
     services_title: "Nossos\n Serviços",
-    service_01: "Padrões Industriais",
-    service_02: "Programação de Robôs",
-    service_03: "Programação de CLP's",
-    service_04: "Programação OFF-LINE",
-    service_05: "Desenvolvimento Web",
-    service_01_body: "• Plataformas e Padrões Industriais\n	- Global (GM)\n	- Cars (Stellantis)\n	- Integra (Mercedes-Benz)\n	- Entre Outros\n\n• Otimização de Tempo de Ciclo\n	- On-line\n	- Off-line\n\n• Assistência Técnica à Produção",
-    service_02_body: "• Robôs industriais atendindidos\n	- ABB\n	- Comau\n	- Fanuc\n	- KUKA\n	- Motoman\n	- Panasonic\n	- Entre Outros",
-    service_03_body: "• Controladoras Lógicas Programável\n	- Siemens\n	- Rockwell\n	- Mitsubishi\n	- Schneider\n	- Entre Outros",
-    service_04_body: "• Programação OFF-LINE em softwares: Process Simulate e Robcad\n	- Criação\n	- Integração\n	- Ajustes de células robotizada",
-    service_05_body: "• Análise de Dados Industriais\n	- Gestão\n	- Tratamento de Dados\n	- Produção\n	- Manufatura\n	- Manutenção\n	- Entre Outros\n\n• Gestão de tratamento de dados com Power BI",
+    services_subtitle: "Atuamos com a Programação de Robos e CLP's em plataformas e padrões industriais: Global (GM), Cars (Stellantis), Integra (Mercedes-Benz), entre outras.\nRealizamos otimização de tempo de ciclo, on-line e off-line, garantindo eficiência e produtividade.\nOferecemos assistência técnica à produção com foco em performance e estabilidade de processos.\nUtilizamos softwares de programação off-line para: Criação, Integração e Ajustes de células robotizadas.\nContamos com expertise em análise de dados industriais, desenvolvendo aplicações web e dashboards em Power BI para gestão e tratamento de dados relacionados à produção, manufatura e manutenção.",
+    service_subtitle_01: "Programação de Robôs",
+    service_subtitle_02: "Programação de CLP's",
+    service_subtitle_03: "Programação OFF-LINE",
+    service_subtitle_04: "Desenvolvimento de Sistemas",
+    service_body_01: "• ABB\n• Comau\n• Fanuc\n• KUKA\n• Motoman\n• Panasonic\n• Entre Outros",
+    service_body_02: "• Siemens\n• Rockwell\n• Mitsubishi\n• Schneider\n• Entre Outros",
+    service_body_03: "• Process Simulate\n• Robcad",
+    service_body_04: "• Web\n• Power BI\n• VB\n• C#\n• C++\n• Entre Outros",
     where_title: "Onde\n Atuamos",
     where_subtitle: "Alguns dos países que atuamos.",
     customers_title: "Nossos\n Clientes",
@@ -79,16 +78,15 @@ const translations = {
     team_01: "Robotics Manager",
     team_02: "Automation Manager",
     services_title: "Our\n Services",
-    service_01: "Industrial Standards",
-    service_02: "Robots Programming",
-    service_03: "PLC Programming",
-    service_04: "Offline Programming",
-    service_05: "Web Development",
-    service_01_body: "• Industrial Platforms and Standards\n	- Global (GM)\n	- Cars (Stellantis)\n	- Integra (Mercedes-Benz)\n	- Among Others\n\n• Cycle Time Optimization\n	- Online\n	- Offline\n\n• Technical Support for Production",
-    service_02_body: "• Industrial robots served\n	- ABB\n	- Comau\n	- Fanuc\n	- KUKA\n	- Motoman\n	- Panasonic\n	- Among Others",
-    service_03_body: "• Programmable Logic Controllers\n	- Siemens\n	- Rockwell\n	- Mitsubishi\n	- Schneider\n	- Among Others",
-    service_04_body: "• OFF-LINE Programming in software: Process Simulate and Robcad\n	- Creation\n	- Integration\n	- Adjustments of robotic cells",
-    service_05_body: "• Industrial Data Analysis\n	- Management\n	- Data Processing\n	- Production\n	- Manufacturing\n	- Maintenance\n	- Among Others\n\n• Data processing management with Power BI",
+    services_subtitle: "We work with Robot Programming and PLCs on industrial platforms and standards: Global (GM), Cars (Stellantis), Integra (Mercedes-Benz), among others.\nWe perform cycle time optimization, online and offline, ensuring efficiency and productivity.\nWe offer technical production assistance with focus on performance and process stability.\nWe use offline programming software for: Creation, Integration and Adjustments of robotized cells.\nWe have expertise in industrial data analysis, developing web applications and Power BI dashboards for management and processing of data related to production, manufacturing and maintenance.",
+    service_subtitle_01: "Robots Programming",
+    service_subtitle_02: "PLC Programming",
+    service_subtitle_03: "OFF-LINE Programming",
+    service_subtitle_04: "System Development",
+    service_body_01: "• ABB\n• Comau\n• Fanuc\n• KUKA\n• Motoman\n• Panasonic\n• Among Others",
+    service_body_02: "• Siemens\n• Rockwell\n• Mitsubishi\n• Schneider\n• Among Others",
+    service_body_03: "• Process Simulate\n• Robcad",
+    service_body_04: "• Web\n• Power BI\n• VB\n• C#\n• C++\n• Among Others",
     where_title: "Where\n We Operate",
     where_subtitle: "Some of the countries we operate in.",
     customers_title: "Our\n Clients",
@@ -140,16 +138,15 @@ const translations = {
     team_01: "Gestore della Robotica",
     team_02: "Gestore dell'Automazione",
     services_title: "I Nostri\n Servizi",
-    service_01: "Standard Industriali",
-    service_02: "Programmazione di Robot",
-    service_03: "Programmazione di CLP",
-    service_04: "Programmazione OFF-LINE",
-    service_05: "Sviluppo Web",
-    service_01_body: "• Piattaforme e Standard Industriali\n	- Global (GM)\n	- Cars (Stellantis)\n	- Integra (Mercedes-Benz)\n	- Tra gli Altri\n\n• Ottimizzazione del Tempo di Ciclo\n	- Online\n	- Offline\n\n• Assistenza Tecnica alla Produzione",
-    service_02_body: "• Robot industriali serviti\n	- ABB\n	- Comau\n	- Fanuc\n	- KUKA\n	- Motoman\n	- Panasonic\n	- Tra gli Altri",
-    service_03_body: "• Controllori Logici Programmabili\n	- Siemens\n	- Rockwell\n	- Mitsubishi\n	- Schneider\n	- Tra gli Altri",
-    service_04_body: "• Programmazione OFF-LINE in software: Process Simulate e Robcad\n	- Creazione\n	- Integrazione\n	- Regolazione di celle robotizzate",
-    service_05_body: "• Analisi dei Dati Industriali\n	- Gestione\n	- Trattamento dei Dati\n	- Produzione\n	- Manifattura\n	- Manutenzione\n	- Tra gli Altri\n\n• Gestione del trattamento dei dati con Power BI",
+    services_subtitle: "Lavoriamo con la Programmazione di Robot e CLP su piattaforme e standard industriali: Global (GM), Cars (Stellantis), Integra (Mercedes-Benz), tra gli altri.\nEseguiamo ottimizzazione del tempo di ciclo, online e offline, garantendo efficienza e produttività.\nOffriamo assistenza tecnica alla produzione con focus su performance e stabilità dei processi.\nUtilizziamo software di programmazione offline per: Creazione, Integrazione e Regolazioni di celle robotizzate.\nAbbiamo competenze nell'analisi dei dati industriali, sviluppando applicazioni web e dashboard Power BI per la gestione e l'elaborazione di dati relativi a produzione, manifattura e manutenzione.",
+    service_subtitle_01: "Programmazione di Robot",
+    service_subtitle_02: "Programmazione di CLP",
+    service_subtitle_03: "Programmazione OFF-LINE",
+    service_subtitle_04: "Sviluppo di Sistemi",
+    service_body_01: "• ABB\n• Comau\n• Fanuc\n• KUKA\n• Motoman\n• Panasonic\n• Tra gli Altri",
+    service_body_02: "• Siemens\n• Rockwell\n• Mitsubishi\n• Schneider\n• Tra gli Altri",
+    service_body_03: "• Process Simulate\n• Robcad",
+    service_body_04: "• Web\n• Power BI\n• VB\n• C#\n• C++\n• Tra gli Altri",
     where_title: "Dove Operiamo",
     where_subtitle: "Alcuni dei paesi in cui operiamo.",
     customers_title: "I Nostri\n Clienti",
@@ -201,16 +198,15 @@ const translations = {
     team_01: "Gerente de Robótica",
     team_02: "Gerente de Automatización",
     services_title: "Nuestros\n Servicios",
-    service_01: "Estándares Industriales",
-    service_02: "Programación de Robots",
-    service_03: "Programación de CLP's",
-    service_04: "Programación OFF-LINE",
-    service_05: "Desarrollo Web",  
-    service_01_body: "• Plataformas y Estándares Industriales\n	- Global (GM)\n	- Cars (Stellantis)\n	- Integra (Mercedes-Benz)\n	- Entre Otros\n\n• Optimización del Tiempo de Ciclo\n	- En línea\n	- Fuera de línea\n\n• Asistencia Técnica para la Producción",
-    service_02_body: "• Robots industriales atendidos\n	- ABB\n	- Comau\n	- Fanuc\n	- KUKA\n	- Motoman\n	- Panasonic\n	- Entre Otros",
-    service_03_body: "• Controladores Lógicos Programables\n	- Siemens\n	- Rockwell\n	- Mitsubishi\n	- Schneider\n	- Entre Otros",
-    service_04_body: "• Programación OFF-LINE en software: Process Simulate y Robcad\n	- Creación\n	- Integración\n	- Ajustes de células robotizadas",
-    service_05_body: "• Análisis de Datos Industriales\n	- Gestión\n	- Procesamiento de Datos\n	- Producción\n	- Manufactura\n	- Mantenimiento\n	- Entre Otros\n\n• Gestión de procesamiento de datos con Power BI",
+    services_subtitle: "Trabajamos con la Programación de Robots y CLPs en plataformas y estándares industriales: Global (GM), Cars (Stellantis), Integra (Mercedes-Benz), entre otros.\nRealizamos optimización de tiempo de ciclo, en línea y fuera de línea, garantizando eficiencia y productividad.\nOfrecemos asistencia técnica a la producción con enfoque en rendimiento y estabilidad de procesos.\nUtilizamos software de programación fuera de línea para: Creación, Integración y Ajustes de células robotizadas.\nContamos con experiencia en análisis de datos industriales, desarrollando aplicaciones web y dashboards en Power BI para gestión y procesamiento de datos relacionados con producción, manufactura y mantenimiento.",
+    service_subtitle_01: "Programación de Robots",
+    service_subtitle_02: "Programación de CLP's",
+    service_subtitle_03: "Programación OFF-LINE",
+    service_subtitle_04: "Desarrollo de Sistemas",
+    service_body_01: "• ABB\n• Comau\n• Fanuc\n• KUKA\n• Motoman\n• Panasonic\n• Entre Otros",
+    service_body_02: "• Siemens\n• Rockwell\n• Mitsubishi\n• Schneider\n• Entre Otros",
+    service_body_03: "• Process Simulate\n• Robcad",
+    service_body_04: "• Web\n• Power BI\n• VB\n• C#\n• C++\n• Entre Otros",
     where_title: "Donde\n operamos",
     where_subtitle: "Algunos de los países en los que operamos.",
     customers_title: "Nuestros\n Clientes",
@@ -250,47 +246,19 @@ function setLanguage(lang) {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
       // Se for um dos textos de serviço e contiver '\n', renderiza como lista
-      if ((key === 'service_01_body' || key === 'service_02_body' || key === 'service_03_body' || key === 'service_04_body' || key === 'service_05_body') && translations[lang][key].includes('\n')) {
+      if ((key === 'service_body_01' || key === 'service_body_02' || key === 'service_body_03' || key === 'service_body_04') && translations[lang][key].includes('\n')) {
         const lines = translations[lang][key].split('\n');
         let html = '';
-        let currentList = '';
         
         lines.forEach(line => {
-          if (line.trim() === '') {
-            // Linha vazia - fecha a lista atual se existir
-            if (currentList) {
-              html += currentList + '</ul>';
-              currentList = '';
-            }
-          } else if (line.startsWith('	-')) {
-            // Item de sublista (com tab)
-            if (currentList) {
-              currentList += `<li>${line.substring(2).trim()}</li>`;
+          if (line.trim() !== '') {
+            if (line.startsWith('•')) {
+              html += `<li class="mb-2">${line.substring(1).trim()}</li>`;
             } else {
-              currentList = `<ul class='list-disc list-inside space-y-1 ml-4'>`;
-              currentList += `<li>${line.substring(2).trim()}</li>`;
+              html += `<li class="mb-2">${line}</li>`;
             }
-          } else if (line.startsWith('•')) {
-            // Item principal
-            if (currentList) {
-              html += currentList + '</ul>';
-              currentList = '';
-            }
-            html += `<li class="mb-2 font-semibold">${line.substring(1).trim()}</li>`;
-          } else {
-            // Outros itens
-            if (currentList) {
-              html += currentList + '</ul>';
-              currentList = '';
-            }
-            html += `<li class="mb-2">${line}</li>`;
           }
         });
-        
-        // Fecha a última lista se existir
-        if (currentList) {
-          html += currentList + '</ul>';
-        }
         
         el.innerHTML = `<ul class='list-disc list-inside space-y-1'>${html}</ul>`;
       } else if (key === 'about_body' && translations[lang][key].includes('\n')) {
@@ -300,6 +268,8 @@ function setLanguage(lang) {
         const lines = text.split('\n');
         const html = lines.map(line => `<span>${line}</span>`).join('<span class="text-custom-color">');
         el.innerHTML = html;
+      } else if (key === 'services_subtitle' && translations[lang][key].includes('\n')) {
+        el.innerHTML = translations[lang][key].split('\n').join('<br><br>');
       } else {
         el.textContent = translations[lang][key];
       }
@@ -335,4 +305,4 @@ document.addEventListener('DOMContentLoaded', () => {
       window.addCursorToHeroTitle();
     }
   }, 500); // Delay para o carregamento inicial
-}); 
+});   
