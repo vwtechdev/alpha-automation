@@ -235,6 +235,7 @@
                 <a href="#home" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="home"></a>
                 <a href="#about" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="about"></a>
                 <a href="#services" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="services"></a>
+                <a href="#projects" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="projects"></a>
                 <a href="#world-map" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="where"></a>
                 <a href="#customers" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="customers"></a>
                 <a href="#contact" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="contact"></a>
@@ -279,6 +280,7 @@
                 <a href="#home" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="home"></a>
                 <a href="#about" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="about"></a>
                 <a href="#services" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="services"></a>
+                <a href="#projects" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="projects"></a>
                 <a href="#world-map" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="where"></a>
                 <a href="#customers" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="customers"></a>
                 <a href="#contact" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="contact"></a>
@@ -410,6 +412,56 @@
                 <h2 class="text-3xl font-bold text-center mb-4" data-i18n="where_title" data-aos="fade-down" data-aos-delay="500"></h2>
                 <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto" data-i18n="where_subtitle" data-aos="fade-up" data-aos-delay="600"></p>
                 <div id="map" class="flex justify-center items-center" style="width: 100%; height: 480px; margin: 0 auto; border-radius: 16px; overflow: hidden;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-6 md:px-12 lg:px-16 bg-black-opacity relative z-10" data-aos="fade-up">
+        <div class="container mx-auto">
+            <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-6 md:p-10 lg:p-12" data-aos="zoom-in-up">
+                <h2 class="text-3xl font-bold text-center mb-4" data-i18n="projects_title" data-aos="fade-down" data-aos-delay="400"></h2>
+                <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto" data-i18n="projects_subtitle" data-aos="fade-up" data-aos-delay="400"></p>
+
+                <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                    <!-- Texto do lado esquerdo -->
+                    <div class="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
+                        <h6 class="text-2xl font-bold mb-4 text-white" data-i18n="projects_body_title" data-aos="fade-right" data-aos-delay="400"></h6>
+                        <p class="text-gray-300 mb-4 leading-relaxed" data-i18n="projects_body" data-aos="fade-right" data-aos-delay="400"></p>
+                    </div>
+                    
+                    <!-- Carrossel de imagens no lado direito -->
+                    <div class="lg:w-1/2 w-full">
+                        <div class="carousel-container overflow-hidden rounded-xl max-w-2xl mx-auto lg:max-w-none">
+                            <div class="carousel-track flex transition-transform duration-500 ease-in-out" id="projects-carousel-track">
+                                <!-- Project Image 1 -->
+                                <div class="carousel-slide min-w-full flex-shrink-0">
+                                    <img src="src/img/projects/project-01.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
+                                </div>
+                                <!-- Project Image 2 -->
+                                <div class="carousel-slide min-w-full flex-shrink-0">
+                                    <img src="src/img/projects/project-02.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
+                                </div>
+                                <!-- Project Image 3 -->
+                                <div class="carousel-slide min-w-full flex-shrink-0">
+                                    <img src="src/img/projects/project-03.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
+                                </div>
+                                <!-- Project Image 4 -->
+                                <div class="carousel-slide min-w-full flex-shrink-0">
+                                    <img src="src/img/projects/project-04.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
+                                </div>
+                                <!-- Project Image 5 -->
+                                <div class="carousel-slide min-w-full flex-shrink-0">
+                                    <img src="src/img/projects/project-05.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
+                                </div>
+                                <!-- Project Image 6 -->
+                                <div class="carousel-slide min-w-full flex-shrink-0">
+                                    <img src="src/img/projects/project-06.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

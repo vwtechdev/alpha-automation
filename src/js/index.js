@@ -484,3 +484,80 @@ function handleScrollAnimations() {
 
 document.addEventListener('DOMContentLoaded', handleScrollAnimations);
 window.addEventListener('scroll', handleScrollAnimations);
+
+// Projects Carousel Functionality
+let currentProjectIndex = 0;
+const totalProjects = 6;
+
+function updateProjectCarousel() {
+    const track = document.getElementById('projects-carousel-track');
+    
+    if (track) {
+        // Mover o carrossel
+        track.style.transform = `translateX(-${currentProjectIndex * 100}%)`;
+    }
+}
+
+function nextProject() {
+    currentProjectIndex = (currentProjectIndex + 1) % totalProjects;
+    updateProjectCarousel();
+}
+
+// Auto-play do carrossel
+let carouselInterval;
+
+function startCarouselAutoPlay() {
+    carouselInterval = setInterval(() => {
+        nextProject();
+    }, 4000); // Muda a cada 4 segundos
+}
+
+function stopCarouselAutoPlay() {
+    if (carouselInterval) {
+        clearInterval(carouselInterval);
+    }
+}
+
+// Inicializar carrossel quando o DOM estiver pronto
+document.addEventListener('DOMContentLoaded', function() {
+    const carouselContainer = document.querySelector('.carousel-container');
+    
+    if (carouselContainer) {
+        // Iniciar auto-play
+        startCarouselAutoPlay();
+        
+        // Pausar auto-play quando o mouse estiver sobre o carrossel
+        carouselContainer.addEventListener('mouseenter', stopCarouselAutoPlay);
+        carouselContainer.addEventListener('mouseleave', startCarouselAutoPlay);
+        
+        // Inicializar o carrossel
+        updateProjectCarousel();
+    }
+});
+
+// Projects Section Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const projectCard = document.querySelector('.projects-layout');
+    
+    if (projectCard) {
+        // Adicionar efeito de hover suave
+        projectCard.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-4px)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        
+        projectCard.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+        
+        // Adicionar animação de entrada
+        projectCard.style.opacity = '0';
+        projectCard.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            projectCard.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            projectCard.style.opacity = '1';
+            projectCard.style.transform = 'translateY(0)';
+        }, 100);
+    }
+});

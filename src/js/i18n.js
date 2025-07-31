@@ -43,6 +43,12 @@ const translations = {
     contact_info_phone: "Telefones",
     contact_info_opening_hours: "Horário de Atendimento",
     contact_info_hours: "Segunda a Sexta: 8h às 18h\nSábado: 8h às 18h",
+    // Projects Section
+    projects: "Projetos",
+    projects_title: "Nossos\n Projetos",
+    projects_subtitle: "Alguns dos projetos que desenvolvemos para nossos clientes satisfeitos.",
+    projects_body_title: "PLC Scrapper – Monitoramento Inteligente da Produção Automotiva",
+    projects_body: "O PLC Scrapper é uma solução da Alpha Automation para monitoramento inteligente da produção automotiva, oferecendo visibilidade em tempo real dos processos industriais. Conectado diretamente aos PLCs das máquinas, permite coleta instantânea de dados, geração de alertas e visualizações personalizadas por meio de dashboards intuitivos. Com funcionamento local via intranet, o sistema garante segurança e autonomia, além de funcionalidades como análise de falhas, comparativo produção vs meta e histórico detalhado de cada veículo produzido. A ferramenta contribui para reduzir paradas, aumentar a produtividade e apoiar decisões rápidas e precisas.",
     // Placeholders
     contact_name_placeholder: "Digite seu nome completo",
     contact_email_placeholder: "Digite seu e-mail",
@@ -103,6 +109,12 @@ const translations = {
     contact_info_phone: "Phones",
     contact_info_opening_hours: "Opening Hours",
     contact_info_hours: "Monday to Friday: 8am to 6pm\nSaturday: 8am to 6pm",
+    // Projects Section
+    projects: "Projects",
+    projects_title: "Our\n Projects",
+    projects_subtitle: "Some of the projects we have developed for our satisfied customers.",
+    projects_body_title: "PLC Scrapper – Intelligent Automotive Production Monitoring",
+    projects_body: "The PLC Scrapper is an Alpha Automation solution for intelligent automotive production monitoring, offering real-time visibility of industrial processes. Connected directly to machine PLCs, it enables instant data collection, alert generation and personalized visualizations through intuitive dashboards. With local operation via intranet, the system ensures security and autonomy, plus features such as failure analysis, production vs target comparison and detailed history of each vehicle produced. The tool helps reduce downtime, increase productivity and support quick and accurate decisions.",
     // Placeholders
     contact_name_placeholder: "Enter your full name",
     contact_email_placeholder: "Enter your email",
@@ -163,6 +175,11 @@ const translations = {
     contact_info_phone: "Telefoni",
     contact_info_opening_hours: "Orari di apertura",
     contact_info_hours: "Dal lunedì al venerdì: dalle 8:00 alle 18:00\nSabato: dalle 8:00 alle 18:00",
+    // Projects Section
+    projects: "Progetti",
+    projects_title: "I Nostri\n Progetti",
+    projects_subtitle: "Alcuni dei progetti che abbiamo sviluppato per i nostri clienti soddisfatti.",
+    projects_body: "PLC Scrapper è una soluzione Alpha Automation per il monitoraggio intelligente della produzione automobilistica, offrendo visibilità in tempo reale dei processi industriali. Connesso direttamente ai CLP delle macchine, consente raccolta istantanea di dati, generazione di allarmi e visualizzazioni personalizzate tramite dashboard intuitivi. Con funzionamento locale tramite intranet, il sistema garantisce sicurezza e autonomia, oltre a funzionalità come analisi dei guasti, confronto produzione vs obiettivo e cronologia dettagliata di ogni veicolo prodotto. Lo strumento contribuisce a ridurre i tempi di fermo, aumentare la produttività e supportare decisioni rapide e precise.",
     // Placeholders
     contact_name_placeholder: "Inserisci il tuo nome completo",
     contact_email_placeholder: "Inserisci la tua email",
@@ -223,6 +240,12 @@ const translations = {
     contact_info_phone: "Teléfonos",
     contact_info_opening_hours: "Horario de apertura",
     contact_info_hours: "Lunes a viernes: 8 a 18 h\nSábado: 8 a 18 h.",
+    // Projects Section
+    projects: "Proyectos",
+    projects_title: "Nuestros\n Proyectos",
+    projects_subtitle: "Algunos de los proyectos que hemos desarrollado para nuestros clientes satisfechos.",
+    projects_body_title: "PLC Scrapper – Monitoreo Inteligente de la Producción Automotriz",
+    projects_body: "PLC Scrapper es una solución de Alpha Automation para el monitoreo inteligente de la producción automotriz, ofreciendo visibilidad en tiempo real de los procesos industriales. Conectado directamente a los PLCs de las máquinas, permite recolección instantánea de datos, generación de alertas y visualizaciones personalizadas a través de dashboards intuitivos. Con funcionamiento local vía intranet, el sistema garantiza seguridad y autonomía, además de funcionalidades como análisis de fallas, comparativo producción vs meta e historial detallado de cada vehículo producido. La herramienta contribuye a reducir paradas, aumentar la productividad y apoyar decisiones rápidas y precisas.",
     // Placeholders
     contact_name_placeholder: "Ingrese su nombre completo",
     contact_email_placeholder: "Ingrese su email",
@@ -261,15 +284,13 @@ function setLanguage(lang) {
         });
         
         el.innerHTML = `<ul class='list-disc list-inside space-y-1'>${html}</ul>`;
-      } else if (key === 'about_body' && translations[lang][key].includes('\n')) {
+      } else if (key === 'about_body' || key === 'services_subtitle' || key === 'projects_subtitle' || key === 'projects_body' && translations[lang][key].includes('\n')) {
         el.innerHTML = translations[lang][key].split('\n').join('<br><br>');
-      } else if (key === 'about_title' || key === 'services_title' || key === 'where_title' || key === 'customers_title' || key === 'contact_title') {
+      } else if (key === 'about_title' || key === 'services_title' || key === 'projects_title' || key === 'where_title' || key === 'customers_title' || key === 'contact_title') {
         const text = translations[lang][key];
         const lines = text.split('\n');
         const html = lines.map(line => `<span>${line}</span>`).join('<span class="text-custom-color">');
         el.innerHTML = html;
-      } else if (key === 'services_subtitle' && translations[lang][key].includes('\n')) {
-        el.innerHTML = translations[lang][key].split('\n').join('<br><br>');
       } else {
         el.textContent = translations[lang][key];
       }
