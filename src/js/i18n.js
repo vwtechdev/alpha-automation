@@ -18,14 +18,14 @@ const translations = {
     team_01: "Gerente de Robótica",
     team_02: "Gerente de Automação",
     services_title: "Nossos\n Serviços",
-    services_subtitle: "Atuamos com a Programação de Robos e CLP's em plataformas e padrões industriais: Global (GM), Cars (Stellantis), Integra (Mercedes-Benz), entre outras.\nRealizamos otimização de tempo de ciclo, on-line e off-line, garantindo eficiência e produtividade.\nOferecemos assistência técnica à produção com foco em performance e estabilidade de processos.\nUtilizamos softwares de programação off-line para: Criação, Integração e Ajustes de células robotizadas.\nContamos com expertise em análise de dados industriais, desenvolvendo aplicações web e dashboards em Power BI para gestão e tratamento de dados relacionados à produção, manufatura e manutenção.",
+    services_subtitle: "• Programamos Robôs e CLPs em padrões industriais (GM, Stellantis, Mercedes-Benz, Entre Outros)\n• Otimização do tempo de ciclo on-line/off-line e assistência técnica à produção\n• Programação em sofwares para criação, integração e ajustes de células robotizadas\n• Análise de dados industriais com Power BI e desenvolvimento de sistemas",
     service_subtitle_01: "Programação de Robôs",
     service_subtitle_02: "Programação de CLP's",
     service_subtitle_03: "Programação OFF-LINE",
     service_subtitle_04: "Desenvolvimento de Sistemas",
     service_body_01: "• ABB\n• Comau\n• Fanuc\n• KUKA\n• Motoman\n• Panasonic\n• Entre Outros",
     service_body_02: "• Siemens\n• Rockwell\n• Mitsubishi\n• Schneider\n• Entre Outros",
-    service_body_03: "• Process Simulate\n• Robcad",
+    service_body_03: "• Process Simulate\n• Robcad\n• Robottudio\n• Robotguide\n• Entre Outros",
     service_body_04: "• Web\n• Power BI\n• VB\n• C#\n• C++\n• Entre Outros",
     where_title: "Onde\n Atuamos",
     where_subtitle: "Alguns dos países que atuamos.",
@@ -47,8 +47,9 @@ const translations = {
     projects: "Projetos",
     projects_title: "Nossos\n Projetos",
     projects_subtitle: "Alguns dos projetos que desenvolvemos para nossos clientes satisfeitos.",
-    projects_body_title: "PLC Scrapper – Monitoramento Inteligente da Produção Automotiva",
-    projects_body: "O PLC Scrapper é uma solução da Alpha Automation para monitoramento inteligente da produção automotiva, oferecendo visibilidade em tempo real dos processos industriais. Conectado diretamente aos PLCs das máquinas, permite coleta instantânea de dados, geração de alertas e visualizações personalizadas por meio de dashboards intuitivos. Com funcionamento local via intranet, o sistema garante segurança e autonomia, além de funcionalidades como análise de falhas, comparativo produção vs meta e histórico detalhado de cada veículo produzido. A ferramenta contribui para reduzir paradas, aumentar a produtividade e apoiar decisões rápidas e precisas.",
+    projects_body_title: "PLC Scrapper",
+    projects_body_subtitle: "Monitoramento Inteligente da Produção Automotiva",
+    projects_body: "O PLC Scrapper é uma solução da Alpha Automation para monitoramento em tempo real da produção automotiva. Conectado aos PLCs das máquinas, permite coleta de dados, alertas instantâneos e dashboards personalizados. Opera localmente via intranet, com foco em segurança, eficiência e apoio à tomada de decisões.",
     // Placeholders
     contact_name_placeholder: "Digite seu nome completo",
     contact_email_placeholder: "Digite seu e-mail",
@@ -84,14 +85,14 @@ const translations = {
     team_01: "Robotics Manager",
     team_02: "Automation Manager",
     services_title: "Our\n Services",
-    services_subtitle: "We work with Robot Programming and PLCs on industrial platforms and standards: Global (GM), Cars (Stellantis), Integra (Mercedes-Benz), among others.\nWe perform cycle time optimization, online and offline, ensuring efficiency and productivity.\nWe offer technical production assistance with focus on performance and process stability.\nWe use offline programming software for: Creation, Integration and Adjustments of robotized cells.\nWe have expertise in industrial data analysis, developing web applications and Power BI dashboards for management and processing of data related to production, manufacturing and maintenance.",
+    services_subtitle: "• We program Robots and PLCs in industrial standards (GM, Stellantis, Mercedes-Benz, Among Others)\n• Online/offline cycle time optimization and technical production assistance\n• Programming in software for creation, integration and adjustments of robotized cells\n• Industrial data analysis with Power BI and system development",
     service_subtitle_01: "Robots Programming",
     service_subtitle_02: "PLC Programming",
     service_subtitle_03: "OFF-LINE Programming",
     service_subtitle_04: "System Development",
     service_body_01: "• ABB\n• Comau\n• Fanuc\n• KUKA\n• Motoman\n• Panasonic\n• Among Others",
     service_body_02: "• Siemens\n• Rockwell\n• Mitsubishi\n• Schneider\n• Among Others",
-    service_body_03: "• Process Simulate\n• Robcad",
+    service_body_03: "• Process Simulate\n• Robcad\n• Robottudio\n• Robotguide\n• Among Others",
     service_body_04: "• Web\n• Power BI\n• VB\n• C#\n• C++\n• Among Others",
     where_title: "Where\n We Operate",
     where_subtitle: "Some of the countries we operate in.",
@@ -113,8 +114,9 @@ const translations = {
     projects: "Projects",
     projects_title: "Our\n Projects",
     projects_subtitle: "Some of the projects we have developed for our satisfied customers.",
-    projects_body_title: "PLC Scrapper – Intelligent Automotive Production Monitoring",
-    projects_body: "The PLC Scrapper is an Alpha Automation solution for intelligent automotive production monitoring, offering real-time visibility of industrial processes. Connected directly to machine PLCs, it enables instant data collection, alert generation and personalized visualizations through intuitive dashboards. With local operation via intranet, the system ensures security and autonomy, plus features such as failure analysis, production vs target comparison and detailed history of each vehicle produced. The tool helps reduce downtime, increase productivity and support quick and accurate decisions.",
+    projects_body_title: "PLC Scrapper",
+    projects_body_subtitle: "Intelligent Automotive Production Monitoring",
+    projects_body: "The PLC Scrapper is an Alpha Automation solution for real-time automotive production monitoring. Connected to machine PLCs, it enables data collection, instant alerts and personalized dashboards. Operates locally via intranet, with focus on security, efficiency and decision-making support.",
     // Placeholders
     contact_name_placeholder: "Enter your full name",
     contact_email_placeholder: "Enter your email",
@@ -150,14 +152,14 @@ const translations = {
     team_01: "Gestore della Robotica",
     team_02: "Gestore dell'Automazione",
     services_title: "I Nostri\n Servizi",
-    services_subtitle: "Lavoriamo con la Programmazione di Robot e CLP su piattaforme e standard industriali: Global (GM), Cars (Stellantis), Integra (Mercedes-Benz), tra gli altri.\nEseguiamo ottimizzazione del tempo di ciclo, online e offline, garantendo efficienza e produttività.\nOffriamo assistenza tecnica alla produzione con focus su performance e stabilità dei processi.\nUtilizziamo software di programmazione offline per: Creazione, Integrazione e Regolazioni di celle robotizzate.\nAbbiamo competenze nell'analisi dei dati industriali, sviluppando applicazioni web e dashboard Power BI per la gestione e l'elaborazione di dati relativi a produzione, manifattura e manutenzione.",
+    services_subtitle: "• Programmiamo Robot e CLP in standard industriali (GM, Stellantis, Mercedes-Benz, Tra gli Altri)\n• Ottimizzazione del tempo di ciclo online/offline e assistenza tecnica alla produzione\n• Programmazione in software per creazione, integrazione e regolazioni di celle robotizzate\n• Analisi dei dati industriali con Power BI e sviluppo di sistemi",
     service_subtitle_01: "Programmazione di Robot",
     service_subtitle_02: "Programmazione di CLP",
     service_subtitle_03: "Programmazione OFF-LINE",
     service_subtitle_04: "Sviluppo di Sistemi",
     service_body_01: "• ABB\n• Comau\n• Fanuc\n• KUKA\n• Motoman\n• Panasonic\n• Tra gli Altri",
     service_body_02: "• Siemens\n• Rockwell\n• Mitsubishi\n• Schneider\n• Tra gli Altri",
-    service_body_03: "• Process Simulate\n• Robcad",
+    service_body_03: "• Process Simulate\n• Robcad\n• Robottudio\n• Robotguide\n• Tra gli Altri",
     service_body_04: "• Web\n• Power BI\n• VB\n• C#\n• C++\n• Tra gli Altri",
     where_title: "Dove Operiamo",
     where_subtitle: "Alcuni dei paesi in cui operiamo.",
@@ -179,7 +181,9 @@ const translations = {
     projects: "Progetti",
     projects_title: "I Nostri\n Progetti",
     projects_subtitle: "Alcuni dei progetti che abbiamo sviluppato per i nostri clienti soddisfatti.",
-    projects_body: "PLC Scrapper è una soluzione Alpha Automation per il monitoraggio intelligente della produzione automobilistica, offrendo visibilità in tempo reale dei processi industriali. Connesso direttamente ai CLP delle macchine, consente raccolta istantanea di dati, generazione di allarmi e visualizzazioni personalizzate tramite dashboard intuitivi. Con funzionamento locale tramite intranet, il sistema garantisce sicurezza e autonomia, oltre a funzionalità come analisi dei guasti, confronto produzione vs obiettivo e cronologia dettagliata di ogni veicolo prodotto. Lo strumento contribuisce a ridurre i tempi di fermo, aumentare la produttività e supportare decisioni rapide e precise.",
+    projects_body_title: "PLC Scrapper",
+    projects_body_subtitle: "Monitoraggio Inteligente della Produzione Automobilistica",
+    projects_body: "PLC Scrapper è una soluzione Alpha Automation per il monitoraggio in tempo reale della produzione automobilistica. Connesso ai CLP delle macchine, consente raccolta di dati, allarmi istantanei e dashboard personalizzati. Opera localmente tramite intranet, con focus su sicurezza, efficienza e supporto alle decisioni.",
     // Placeholders
     contact_name_placeholder: "Inserisci il tuo nome completo",
     contact_email_placeholder: "Inserisci la tua email",
@@ -215,14 +219,14 @@ const translations = {
     team_01: "Gerente de Robótica",
     team_02: "Gerente de Automatización",
     services_title: "Nuestros\n Servicios",
-    services_subtitle: "Trabajamos con la Programación de Robots y CLPs en plataformas y estándares industriales: Global (GM), Cars (Stellantis), Integra (Mercedes-Benz), entre otros.\nRealizamos optimización de tiempo de ciclo, en línea y fuera de línea, garantizando eficiencia y productividad.\nOfrecemos asistencia técnica a la producción con enfoque en rendimiento y estabilidad de procesos.\nUtilizamos software de programación fuera de línea para: Creación, Integración y Ajustes de células robotizadas.\nContamos con experiencia en análisis de datos industriales, desarrollando aplicaciones web y dashboards en Power BI para gestión y procesamiento de datos relacionados con producción, manufactura y mantenimiento.",
+    services_subtitle: "• Programamos Robots y CLPs en estándares industriales (GM, Stellantis, Mercedes-Benz, Entre Otros)\n• Optimización del tiempo de ciclo en línea/fuera de línea y asistencia técnica a la producción\n• Programación en software para creación, integración y ajustes de células robotizadas\n• Análisis de datos industriales con Power BI y desarrollo de sistemas",
     service_subtitle_01: "Programación de Robots",
     service_subtitle_02: "Programación de CLP's",
     service_subtitle_03: "Programación OFF-LINE",
     service_subtitle_04: "Desarrollo de Sistemas",
     service_body_01: "• ABB\n• Comau\n• Fanuc\n• KUKA\n• Motoman\n• Panasonic\n• Entre Otros",
     service_body_02: "• Siemens\n• Rockwell\n• Mitsubishi\n• Schneider\n• Entre Otros",
-    service_body_03: "• Process Simulate\n• Robcad",
+    service_body_03: "• Process Simulate\n• Robcad\n• Robottudio\n• Robotguide\n• Entre Otros",
     service_body_04: "• Web\n• Power BI\n• VB\n• C#\n• C++\n• Entre Otros",
     where_title: "Donde\n operamos",
     where_subtitle: "Algunos de los países en los que operamos.",
@@ -244,8 +248,9 @@ const translations = {
     projects: "Proyectos",
     projects_title: "Nuestros\n Proyectos",
     projects_subtitle: "Algunos de los proyectos que hemos desarrollado para nuestros clientes satisfechos.",
-    projects_body_title: "PLC Scrapper – Monitoreo Inteligente de la Producción Automotriz",
-    projects_body: "PLC Scrapper es una solución de Alpha Automation para el monitoreo inteligente de la producción automotriz, ofreciendo visibilidad en tiempo real de los procesos industriales. Conectado directamente a los PLCs de las máquinas, permite recolección instantánea de datos, generación de alertas y visualizaciones personalizadas a través de dashboards intuitivos. Con funcionamiento local vía intranet, el sistema garantiza seguridad y autonomía, además de funcionalidades como análisis de fallas, comparativo producción vs meta e historial detallado de cada vehículo producido. La herramienta contribuye a reducir paradas, aumentar la productividad y apoyar decisiones rápidas y precisas.",
+    projects_body_title: "PLC Scrapper",
+    projects_body_subtitle: "Monitoreo Inteligente de la Producción Automotriz",
+    projects_body: "PLC Scrapper es una solución de Alpha Automation para el monitoreo en tiempo real de la producción automotriz. Conectado a los PLCs de las máquinas, permite recolección de datos, alertas instantáneas y dashboards personalizados. Opera localmente vía intranet, con enfoque en seguridad, eficiencia y apoyo a la toma de decisiones.",
     // Placeholders
     contact_name_placeholder: "Ingrese su nombre completo",
     contact_email_placeholder: "Ingrese su email",
@@ -284,8 +289,23 @@ function setLanguage(lang) {
         });
         
         el.innerHTML = `<ul class='list-disc list-inside space-y-1'>${html}</ul>`;
-      } else if (key === 'about_body' || key === 'services_subtitle' || key === 'projects_subtitle' || key === 'projects_body' && translations[lang][key].includes('\n')) {
+      } else if (key === 'about_body' || key === 'projects_subtitle' || key === 'projects_body' && translations[lang][key].includes('\n')) {
         el.innerHTML = translations[lang][key].split('\n').join('<br><br>');
+      } else if (key === 'services_subtitle' && translations[lang][key].includes('\n')) {
+        const lines = translations[lang][key].split('\n');
+        let html = '';
+        
+        lines.forEach(line => {
+          if (line.trim() !== '') {
+            if (line.startsWith('•')) {
+              html += `<li class="mb-2">${line.substring(1).trim()}</li>`;
+            } else {
+              html += `<li class="mb-2">${line}</li>`;
+            }
+          }
+        });
+        
+        el.innerHTML = `<ul class='list-disc list-inside space-y-1'>${html}</ul>`;
       } else if (key === 'about_title' || key === 'services_title' || key === 'projects_title' || key === 'where_title' || key === 'customers_title' || key === 'contact_title') {
         const text = translations[lang][key];
         const lines = text.split('\n');

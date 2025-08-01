@@ -509,7 +509,7 @@ let carouselInterval;
 function startCarouselAutoPlay() {
     carouselInterval = setInterval(() => {
         nextProject();
-    }, 4000); // Muda a cada 4 segundos
+    }, 2000); // Muda a cada 2 segundos
 }
 
 function stopCarouselAutoPlay() {
