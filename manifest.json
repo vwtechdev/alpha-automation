@@ -32,42 +32,42 @@
       "form_factor": "wide"
     }
   ],
-  "shortcuts": [
-    {
-      "name": "Serviços",
-      "short_name": "Serviços",
-      "description": "Ver nossos serviços de automação",
-      "url": "/#services",
-      "icons": [
+        "shortcuts": [
         {
-          "src": "src/img/logo.png",
-          "sizes": "96x96"
+          "name": "Serviços",
+          "short_name": "Serviços",
+          "description": "Ver nossos serviços de automação",
+          "url": "/#services",
+          "icons": [
+            {
+              "src": "src/img/logo-2.png",
+              "sizes": "96x96"
+            }
+          ]
+        },
+            {
+          "name": "Projetos",
+          "short_name": "Projetos",
+          "description": "Ver nossos projetos",
+          "url": "/#projects",
+          "icons": [
+            {
+              "src": "src/img/logo-2.png",
+              "sizes": "96x96"
+            }
+          ]
+        },
+            {
+          "name": "Contato",
+          "short_name": "Contato",
+          "description": "Entre em contato conosco",
+          "url": "/#contact",
+          "icons": [
+            {
+              "src": "src/img/logo-2.png",
+              "sizes": "96x96"
+            }
+          ]
         }
-      ]
-    },
-    {
-      "name": "Projetos",
-      "short_name": "Projetos",
-      "description": "Ver nossos projetos",
-      "url": "/#projects",
-      "icons": [
-        {
-          "src": "src/img/logo.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Contato",
-      "short_name": "Contato",
-      "description": "Entre em contato conosco",
-      "url": "/#contact",
-      "icons": [
-        {
-          "src": "src/img/logo.png",
-          "sizes": "96x96"
-        }
-      ]
-    }
   ]
 } 

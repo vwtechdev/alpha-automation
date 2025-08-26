@@ -346,4 +346,19 @@ document.addEventListener('DOMContentLoaded', () => {
       window.addCursorToHeroTitle();
     }
   }, 500); // Delay para o carregamento inicial
-});   
+});
+
+// Expor traduções globalmente para uso em outros arquivos
+if (typeof window !== 'undefined') {
+    window.translations = translations;
+}
+
+// Também expor como variável global para compatibilidade
+if (typeof window !== 'undefined') {
+    window.translations = translations;
+}
+
+// Função para verificar se as traduções estão prontas
+window.isTranslationsReady = function() {
+    return typeof translations !== 'undefined' && typeof window.translations !== 'undefined';
+};   

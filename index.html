@@ -3,7 +3,7 @@
 <head>
     <!-- Meta tags básicas -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
     <meta name="description" content="Alpha Automation and Robotics - Especialistas em automação industrial e robótica desde 2017. Programação de robôs, CLPs e soluções personalizadas para indústria.">
     <meta name="keywords" content="automação industrial, robótica, programação de robôs, CLP, automação, indústria 4.0, ABB, Fanuc, KUKA, Siemens, Rockwell">
     <meta name="author" content="Alpha Automation and Robotics">
@@ -15,7 +15,7 @@
     <meta property="og:description" content="Especialistas em automação industrial e robótica desde 2017. Programação de robôs, CLPs e soluções personalizadas para sua indústria.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.alphaautomationbr.com">
-    <meta property="og:image" content="https://www.alphaautomationbr.com/src/img/logo-02.png">
+    <meta property="og:image" content="https://www.alphaautomationbr.com/src/img/logo-2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Alpha Automation and Robotics">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Alpha Automation and Robotics - Automação Industrial e Robótica">
     <meta name="twitter:description" content="Especialistas em automação industrial e robótica desde 2017. Programação de robôs, CLPs e soluções personalizadas.">
-    <meta name="twitter:image" content="https://www.alphaautomationbr.com/src/img/logo-02.png">
+    <meta name="twitter:image" content="https://www.alphaautomationbr.com/src/img/logo-2.png">
     
     <!-- Título da página (importante para SEO) -->
     <title>Alpha Automation and Robotics - Automação Industrial e Robótica | Desde 2017</title>
@@ -59,8 +59,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Favicon -->
@@ -77,7 +75,7 @@
       "@type": "Organization",
       "name": "Alpha Automation and Robotics",
       "url": "https://www.alphaautomationbr.com",
-      "logo": "https://www.alphaautomationbr.com/src/img/logo.png",
+      "logo": "https://www.alphaautomationbr.com/src/img/logo-2.png",
       "description": "Especialistas em automação industrial e robótica desde 2017. Programação de robôs, CLPs e soluções personalizadas para indústria.",
       "foundingDate": "2017",
       "address": {
@@ -221,96 +219,93 @@
     </script>
     
 </head>
-<body class="bg-custom-black text-white font-sans">
+<body class="bg-dark text-white">
     <!-- Header/Navbar -->
-    <header class="navbar navbar-transparent py-4 px-6 shadow-md fixed top-0 left-0 w-full z-50" id="main-navbar">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="w-46 h-16 flex items-center justify-center mr-2 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                    <img src="src/img/logo-2.png" alt="Alpha Automation and Robotics" class="w-full h-full object-cover hidden md:block" loading="eager">
-                    <img src="src/img/logo.png" alt="Alpha Automation and Robotics" class="w-full h-full object-cover md:hidden" loading="eager">
+    <header class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top" id="main-navbar">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="logo-container me-3" style="cursor: pointer;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <img src="src/img/logo-2.png" alt="Alpha Automation and Robotics" class="img-fluid" style="max-height: 60px; width: auto;" loading="eager">
                 </div>
             </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="home"></a>
-                <a href="#about" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="about"></a>
-                <a href="#services" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="services"></a>
-                <a href="#projects" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="projects"></a>
-                <a href="#world-map" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="where"></a>
-                <a href="#customers" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="customers"></a>
-                <a href="#contact" class="hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-3 py-2 rounded transition" data-i18n="contact"></a>
+            <nav class="navbar-nav d-none d-lg-flex ms-auto">
+                <a href="#home" class="nav-link px-3 py-2 mx-1" data-i18n="home"></a>
+                <a href="#about" class="nav-link px-3 py-2 mx-1" data-i18n="about"></a>
+                <a href="#services" class="nav-link px-3 py-2 mx-1" data-i18n="services"></a>
+                <a href="#projects" class="nav-link px-3 py-2 mx-1" data-i18n="projects"></a>
+                <a href="#world-map" class="nav-link px-3 py-2 mx-1" data-i18n="where"></a>
+                <a href="#customers" class="nav-link px-3 py-2 mx-1" data-i18n="customers"></a>
+                <a href="#contact" class="nav-link px-3 py-2 mx-1" data-i18n="contact"></a>
             </nav>
-            <div class="ml-4 flex items-center gap-2 language-switcher hidden md:flex">
+            <div class="d-none d-lg-flex align-items-center ms-4">
                 <!-- Seletor de idiomas -->
-                <select id="language-select" class="cursor-pointer language-select-custom bg-transparent backdrop-blur text-xl text-white border border-gray-600 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-custom-color" onchange="setLanguage(this.value)" title="Selecionar idioma">
-                    <option value="pt" class="cursor-pointer">🇧🇷</option>
-                    <option value="en" class="cursor-pointer">🇺🇸</option>
-                    <option value="es" class="cursor-pointer">🇪🇸</option>
-                    <option value="it" class="cursor-pointer">🇮🇹</option>
-                </select>
-            </div>
-            <!-- Controles mobile -->
-            <div class="md:hidden flex items-center space-x-3">
-                <!-- Seletor de idiomas mobile -->
-                <select id="language-select-mobile" class="language-select-custom bg-transparent backdrop-blur text-base text-white border border-gray-600 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-custom-color" onchange="setLanguage(this.value)" title="Selecionar idioma">
+                <select id="language-select" class="form-select form-select-sm language-select-custom bg-transparent text-white border border-secondary rounded px-2 py-1" onchange="setLanguage(this.value)" title="Selecionar idioma">
                     <option value="pt">🇧🇷</option>
                     <option value="en">🇺🇸</option>
                     <option value="es">🇪🇸</option>
                     <option value="it">🇮🇹</option>
                 </select>
-                <button class="text-white focus:outline-none" id="menu-toggle">
-                    <i class="fas fa-bars text-2xl"></i>
+            </div>
+            <!-- Controles mobile -->
+            <div class="d-lg-none d-flex align-items-center">
+                <!-- Seletor de idiomas mobile -->
+                <select id="language-select-mobile" class="form-select form-select-sm language-select-custom bg-transparent text-white rounded" onchange="setLanguage(this.value)" title="Selecionar idioma">
+                    <option value="pt">🇧🇷</option>
+                    <option value="en">🇺🇸</option>
+                    <option value="es">🇪🇸</option>
+                    <option value="it">🇮🇹</option>
+                </select>
+                <button class="btn btn-link text-white p-0" id="menu-toggle">
+                    <span class="hamburger-icon"></span>
                 </button>
             </div>
         </div>
-
     </header>
-    <div class="pt-24"></div>
 
     <!-- Mobile Menu Dialog -->
-    <div id="mobile-menu-dialog" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
-        <div class="bg-custom-black rounded-lg p-6 max-w-sm w-full mx-4 transform transition-all duration-200 scale-95 opacity-0" id="mobile-menu-content">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-white">Menu</h3>
-                <button id="close-mobile-menu" class="text-gray-400 hover:text-white text-2xl focus:outline-none">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="flex flex-col space-y-4 mb-4">
-                <a href="#home" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="home"></a>
-                <a href="#about" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="about"></a>
-                <a href="#services" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="services"></a>
-                <a href="#projects" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="projects"></a>
-                <a href="#world-map" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="where"></a>
-                <a href="#customers" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="customers"></a>
-                <a href="#contact" class="mobile-menu-link hover:text-custom-color hover:bg-custom-color hover:text-custom-black px-4 py-3 rounded transition text-center" data-i18n="contact"></a>
+    <div id="mobile-menu-dialog" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-card text-white">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5">Menu</h3>
+                    <button type="button" class="btn-close btn-close-white" id="close-mobile-menu" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column gap-3">
+                        <a href="#home" class="mobile-menu-link btn btn-outline-danger text-center" data-i18n="home"></a>
+                        <a href="#about" class="mobile-menu-link btn btn-outline-danger text-center" data-i18n="about"></a>
+                        <a href="#services" class="mobile-menu-link btn btn-outline-danger text-center" data-i18n="services"></a>
+                        <a href="#projects" class="mobile-menu-link btn btn-outline-danger text-center" data-i18n="projects"></a>
+                        <a href="#world-map" class="mobile-menu-link btn btn-outline-danger text-center" data-i18n="where"></a>
+                        <a href="#customers" class="mobile-menu-link btn btn-outline-danger text-center" data-i18n="customers"></a>
+                        <a href="#contact" class="mobile-menu-link btn btn-outline-danger text-center" data-i18n="contact"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </header>
-    <div class="pt-24"></div>
 
     <!-- Hero Section -->
-    <section id="home" class="relative pt-26 pb-26 md:pt-32 md:pb-32 px-6 overflow-hidden min-h-screen fade-in">
-        <div class="absolute inset-0 z-0 hero-bg">
+    <section id="home" class="position-relative pt-5 pb-5 overflow-hidden min-vh-100 fade-in">
+        <div class="position-absolute top-0 start-0 w-100 h-100 hero-bg" style="z-index: -1;">
             <!-- Video de fundo -->
-            <video autoplay loop muted playsinline class="fixed inset-0 w-full h-full object-cover opacity-80 bg-blur" style="z-index: -1;">
+            <video autoplay loop muted playsinline class="position-fixed top-0 start-0 w-100 h-100 object-fit-cover opacity-75 bg-blur" style="z-index: -1;">
                 <source src="src/media/background.mp4" type="video/mp4">
             </video>
-            <div class="absolute inset-0 bg-gradient-to-r from-custom-black/50 via-custom-black/30 to-transparent"></div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-to-r from-dark-50 via-dark-30 to-transparent"></div>
         </div>
 
-        <div class="container mx-auto flex flex-col md:flex-row items-center relative z-10">
-            <div class="md:w-1/2 mb-16 md:mb-0">
-                <h2 class="hero-title font-bold mb-6" data-i18n="hero_title" data-aos="fade-left" data-aos-delay="200"></h2>
-                <p class="hero-subtitle text-gray-300 leading-relaxed" data-i18n="hero_subtitle" data-aos="fade-up" data-aos-delay="200"></p>
-                <p class="hero-subtitle text-gray-300 leading-relaxed" data-i18n="hero_subtitle_2" data-aos="fade-up" data-aos-delay="200"></p>
-                <p class="hero-subtitle mb-10 text-gray-300 leading-relaxed" data-i18n="hero_subtitle_3" data-aos="fade-up" data-aos-delay="200"></p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="#services" class="pulse-white bg-custom-color hover:bg-red-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-2xl text-center flex items-center justify-center gap-2 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+        <div class="container d-flex flex-column flex-lg-row align-items-center position-relative" style="z-index: 10;">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h2 class="hero-title fw-bold mb-4" data-i18n="hero_title" data-aos="fade-left" data-aos-delay="100"></h2>
+                <p class="hero-subtitle text-light-emphasis lh-base" data-i18n="hero_subtitle" data-aos="fade-up" data-aos-delay="100"></p>
+                <p class="hero-subtitle text-light-emphasis lh-base" data-i18n="hero_subtitle_2" data-aos="fade-up" data-aos-delay="100"></p>
+                <p class="hero-subtitle mb-5 text-light-emphasis lh-base" data-i18n="hero_subtitle_3" data-aos="fade-up" data-aos-delay="100"></p>
+                <div class="d-flex flex-column flex-sm-row gap-3">
+                    <a href="#services" class="pulse-white btn btn-danger btn-lg d-inline-flex align-items-center justify-content-center gap-2" data-aos="fade-up" data-aos-delay="100">
                         <i class="fas fa-robot"></i> <span data-i18n="hero_button_services"></span>
                     </a>
-                    <a href="#contact" class="border border-custom-color hover:bg-custom-color hover:text-custom-black text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-2xl text-center flex items justify-center gap-2 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#contact" id="contact-btn" class="btn btn-outline-danger btn-lg d-inline-flex align-items-center justify-content-center gap-2" data-aos="fade-up" data-aos-delay="100">
                         <i class="fas fa-comment-dots"></i> <span data-i18n="hero_button_contact"></span>
                     </a>
                 </div>
@@ -319,29 +314,31 @@
     </section>
 
     <!-- Quem Somos Section -->
-    <section id="about" class="py-24 px-6 md:px-12 bg-black-opacity relative z-10" data-aos="fade-up">
-        <div class="container mx-auto">
-            <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-6 md:p-12" data-aos="zoom-in-up">
-                <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-                    <!-- Imagem flutuante da Empresa -->
-                    <div class="md:w-1/2 flex justify-center items-center mb-8 md:mb-0" data-aos="fade-right">
-                        <img src="src/img/company.webp" alt="Alpha Automation and Robotics" class="w-[600px] max-w-full rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-200" style="min-width:200px;"/>
-                    </div>
-                    <div class="md:w-1/2" data-aos="fade-left">
-                        <div class="text-center mb-8 md:mb-0">
-                            <h2 class="text-3xl font-bold mb-4" data-i18n="about_title" data-aos="fade-down"></h2>
-                            <p class="text-gray-300 max-w-4xl leading-relaxed mx-auto" data-i18n="about_body" data-aos="fade-up"></p>  
+    <section id="about" class="py-5 bg-black-opacity position-relative" style="z-index: 10;" data-aos="fade-up">
+        <div class="container">
+            <div class="card text-white border-0 shadow-lg bg-card" data-aos="zoom-in-up">
+                <div class="card-body p-4 p-lg-5">
+                    <div class="row align-items-center justify-content-center g-5">
+                        <!-- Imagem flutuante da Empresa -->
+                        <div class="col-lg-6 d-flex justify-content-center align-items-center mb-4 mb-lg-0" data-aos="fade-right">
+                            <img src="src/img/company.webp" alt="Alpha Automation and Robotics" class="img-fluid rounded-3 hover-scale shadow-lg" style="min-width:200px; max-width:600px;"/>
                         </div>
-                        <div class="flex flex-col sm:flex-row gap-8 items-center justify-center mt-8">
-                            <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
-                                <img src="src/img/teams/team-01.webp" alt="Douglas Heitinger" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-01.webp" />
-                                <span class="text-lg font-semibold text-white">Douglas Heitinger</span>
-                                <span class="text-gray-400 text-sm" data-i18n="team_01"></span>
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <div class="text-center text-lg-start mb-4 mb-lg-0">
+                                <h2 class="display-6 fw-bold mb-4" data-i18n="about_title" data-aos="fade-down"></h2>
+                                <p class="text-light-emphasis lh-base" data-i18n="about_body" data-aos="fade-up"></p>  
                             </div>
-                            <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
-                                <img src="src/img/teams/team-02.webp" alt="Otavio Gomes" class="w-32 h-32 object-cover rounded-full border-4 border-custom-color mb-2 bg-white lazy-image" loading="lazy" data-src="src/img/teams/team-02.webp" />
-                                <span class="text-lg font-semibold text-white">Otavio Gomes</span>
-                                <span class="text-gray-400 text-sm" data-i18n="team_02"></span>
+                            <div class="d-flex flex-column flex-sm-row gap-4 justify-content-center align-items-center mt-4">
+                                <div class="d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
+                                    <img src="src/img/teams/team-01.webp" alt="Douglas Heitinger" class="rounded-circle border border-danger mb-2 bg-white lazy-image" style="width: 128px; height: 128px; object-fit: cover;" loading="lazy" data-src="src/img/teams/team-01.webp" />
+                                    <span class="fs-5 fw-semibold text-white">Douglas Heitinger</span>
+                                    <span class="text-light-emphasis small" data-i18n="team_01"></span>
+                                </div>
+                                <div class="d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
+                                    <img src="src/img/teams/team-02.webp" alt="Otavio Gomes" class="rounded-circle border border-danger mb-2 bg-white lazy-image" style="width: 128px; height: 128px; object-fit: cover;" loading="lazy" data-src="src/img/teams/team-02.webp" />
+                                    <span class="fs-5 fw-semibold text-white">Otavio Gomes</span>
+                                    <span class="text-light-emphasis small" data-i18n="team_02"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -351,56 +348,66 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-24 px-6 md:px-12 bg-black-opacity relative z-10" data-aos="fade-up">
-        <div class="container mx-auto">
+    <section id="services" class="py-5 bg-black-opacity position-relative" style="z-index: 10;" data-aos="fade-up">
+        <div class="container">
             <!-- Card do título e subtítulo -->
-            <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden mb-12 p-6" data-aos="fade-up" data-aos-delay="200">
-                <h2 class="text-3xl font-bold text-center mb-6" data-i18n="services_title" data-aos="fade-down"></h2>
-                <div class="max-w-4xl mx-auto px-8">
-                    <p class="text-left text-gray-300" data-i18n="services_subtitle" data-aos="fade-up" data-aos-delay="200"></p>
+            <div class="card text-white border-0 shadow-lg mb-5 bg-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-body p-4">
+                    <h2 class="display-6 fw-bold text-center mb-4" data-i18n="services_title" data-aos="fade-down"></h2>
+                    <div class="mx-auto px-4">
+                        <p class="text-start text-light-emphasis" data-i18n="services_subtitle" data-aos="fade-up" data-aos-delay="100"></p>
+                    </div>
                 </div>
             </div>
             
             <!-- Grid de 4 cards em 2x2 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="row g-4">
                 <!-- Service 1 Card -->
-                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
-                        <img src="src/img/services/service-01.webp" class="object-cover h-full w-full" loading="lazy">
-                    </div>
-                    <div class="px-8 py-6 flex-1 flex flex-col">
-                        <span class="inline-block bg-blue-100 text-blue-600 text-xs sm:text-sm md:text-base lg:text-lg font-bold px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full mb-3 text-center w-full" data-i18n="service_subtitle_01"></span>
-                        <p class="text-gray-400 mb-4 flex-1" data-i18n="service_body_01"></p>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card service-card text-white border-0 shadow-lg h-100 fade-in-card bg-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card-img-top" style="height: 192px; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
+                            <img src="src/img/services/service-01.webp" class="object-fit-cover h-100 w-100" loading="lazy">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <span class="badge bg-primary text-white fs-6 fw-bold px-3 py-2 rounded-pill mb-3 text-center" data-i18n="service_subtitle_01"></span>
+                            <p class="text-light-emphasis mb-4 flex-fill" data-i18n="service_body_01"></p>
+                        </div>
                     </div>
                 </div>
                 <!-- Service 2 Card -->
-                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
-                        <img src="src/img/services/service-02.webp" class="object-cover h-full w-full" loading="lazy">
-                    </div>
-                    <div class="px-8 py-6 flex-1 flex flex-col">
-                        <span class="inline-block bg-orange-100 text-orange-700 text-xs sm:text-sm md:text-base lg:text-lg font-bold px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full mb-3 text-center w-full" data-i18n="service_subtitle_02"></span>
-                        <p class="text-gray-400 mb-4 flex-1" data-i18n="service_body_02"></p>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card service-card text-white border-0 shadow-lg h-100 fade-in-card bg-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card-img-top" style="height: 192px; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
+                            <img src="src/img/services/service-02.webp" class="object-fit-cover h-100 w-100" loading="lazy">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <span class="badge bg-warning text-dark fs-6 fw-bold px-3 py-2 rounded-pill mb-3 text-center" data-i18n="service_subtitle_02"></span>
+                            <p class="text-light-emphasis mb-4 flex-fill" data-i18n="service_body_02"></p>
+                        </div>
                     </div>
                 </div>
                 <!-- Service 3 Card -->
-                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
-                        <img src="src/img/services/service-03.webp" class="object-cover h-full w-full" loading="lazy">
-                    </div>
-                    <div class="px-8 py-6 flex-1 flex flex-col">
-                        <span class="inline-block bg-green-100 text-green-600 text-xs sm:text-sm md:text-base lg:text-lg font-bold px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full mb-3 text-center w-full" data-i18n="service_subtitle_03"></span>
-                        <p class="text-gray-400 mb-4 flex-1" data-i18n="service_body_03"></p>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card service-card text-white border-0 shadow-lg h-100 fade-in-card bg-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card-img-top" style="height: 192px; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
+                            <img src="src/img/services/service-03.webp" class="object-fit-cover h-100 w-100" loading="lazy">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <span class="badge bg-success text-white fs-6 fw-bold px-3 py-2 rounded-pill mb-3 text-center" data-i18n="service_subtitle_03"></span>
+                            <p class="text-light-emphasis mb-4 flex-fill" data-i18n="service_body_03"></p>
+                        </div>
                     </div>
                 </div>
                 <!-- Service 4 Card -->
-                <div class="service-card bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
-                        <img src="src/img/services/service-04.webp" class="object-cover h-full w-full" loading="lazy">
-                    </div>
-                    <div class="px-8 py-6 flex-1 flex flex-col">
-                        <span class="inline-block bg-red-100 text-red-600 text-xs sm:text-sm md:text-base lg:text-lg font-bold px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full mb-3 text-center w-full" data-i18n="service_subtitle_04"></span>
-                        <p class="text-gray-400 mb-4 flex-1" data-i18n="service_body_04"></p>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card service-card text-white border-0 shadow-lg h-100 fade-in-card bg-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card-img-top" style="height: 192px; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
+                            <img src="src/img/services/service-04.webp" class="object-fit-cover h-100 w-100" loading="lazy">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <span class="badge bg-danger text-white fs-6 fw-bold px-3 py-2 rounded-pill mb-3 text-center" data-i18n="service_subtitle_04"></span>
+                            <p class="text-light-emphasis mb-4 flex-fill" data-i18n="service_body_04"></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -408,59 +415,72 @@
     </section>
 
     <!-- World Map Section -->
-    <section id="world-map" class="py-16 px-4 md:px-6 bg-black-opacity relative z-10" data-aos="fade-up">
-        <div class="container mx-auto">
-            <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-4 md:p-8" data-aos="zoom-in-up">
-                <h2 class="text-3xl font-bold text-center mb-4" data-i18n="where_title" data-aos="fade-down" data-aos-delay="200"></h2>
-                <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto" data-i18n="where_subtitle" data-aos="fade-up" data-aos-delay="200"></p>
-                <div id="map" class="flex justify-center items-center" style="width: 100%; height: 480px; margin: 0 auto; border-radius: 16px; overflow: hidden;"></div>
+    <section id="world-map" class="py-4 bg-black-opacity position-relative" style="z-index: 10;" data-aos="fade-up">
+        <div class="container">
+            <div class="card text-white border-0 shadow-lg bg-card" data-aos="zoom-in-up">
+                <div class="card-body p-4 p-lg-5">
+                    <h2 class="display-6 fw-bold text-center mb-4" data-i18n="where_title" data-aos="fade-down" data-aos-delay="100"></h2>
+                    <p class="text-center text-light-emphasis mb-5 mx-auto" style="max-width: 32rem;" data-i18n="where_subtitle" data-aos="fade-up" data-aos-delay="100"></p>
+                    <div id="map" class="d-flex justify-content-center align-items-center mx-auto" style="width: 100%; height: 480px; border-radius: 16px; overflow: hidden;"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16 px-6 md:px-12 lg:px-16 bg-black-opacity relative z-10" data-aos="fade-up">
-        <div class="container mx-auto">
-            <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-6 md:p-10 lg:p-12" data-aos="zoom-in-up">
-                <h2 class="text-3xl font-bold text-center mb-4" data-i18n="projects_title" data-aos="fade-down" data-aos-delay="200"></h2>
-                <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto" data-i18n="projects_subtitle" data-aos="fade-up" data-aos-delay="200"></p>
+    <section id="projects" class="py-4 bg-black-opacity position-relative" style="z-index: 10;" data-aos="fade-up">
+        <div class="container">
+            <div class="card text-white border-0 shadow-lg bg-card" data-aos="zoom-in-up">
+                <div class="card-body p-4 p-lg-5">
+                    <h2 class="display-6 fw-bold text-center mb-4" data-i18n="projects_title" data-aos="fade-down" data-aos-delay="100"></h2>
+                    <p class="text-center text-light-emphasis mb-5 mx-auto" style="max-width: 42rem;" data-i18n="projects_subtitle" data-aos="fade-up" data-aos-delay="100"></p>
 
-                <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                    <!-- Texto do lado esquerdo -->
-                    <div class="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
-                        <h6 class="text-2xl font-bold mb-4 text-white" data-i18n="projects_body_title" data-aos="fade-right" data-aos-delay="200"></h6>
-                        <h6 class="text-lg font-bold mb-4 text-white" data-i18n="projects_body_subtitle" data-aos="fade-right" data-aos-delay="200"></h6>
-                        <p class="text-gray-300 mb-4 leading-relaxed" data-i18n="projects_body" data-aos="fade-right" data-aos-delay="200"></p>
-                    </div>
-                    
-                    <!-- Carrossel de imagens no lado direito -->
-                    <div class="lg:w-1/2 w-full">
-                        <div class="carousel-container overflow-hidden rounded-xl max-w-2xl mx-auto lg:max-w-none">
-                            <div class="carousel-track flex transition-transform duration-500 ease-in-out" id="projects-carousel-track">
-                                <!-- Project Image 1 -->
-                                <div class="carousel-slide min-w-full flex-shrink-0">
-                                    <img src="src/img/projects/project-01.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
+                    <div class="row align-items-center g-5">
+                        <!-- Texto do lado esquerdo -->
+                        <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                            <h6 class="fs-2 fw-bold mb-4 text-white" data-i18n="projects_body_title" data-aos="fade-right" data-aos-delay="100"></h6>
+                            <h6 class="fs-5 fw-bold mb-4 text-white" data-i18n="projects_body_subtitle" data-aos="fade-right" data-aos-delay="100"></h6>
+                            <p class="text-light-emphasis mb-4 lh-base" data-i18n="projects_body" data-aos="fade-right" data-aos-delay="100"></p>
+                        </div>
+                        
+                        <!-- Carrossel de imagens no lado direito -->
+                        <div class="col-lg-6">
+                            <div class="carousel-container overflow-hidden rounded-3 mx-auto position-relative" style="max-width: 32rem;">
+                                <div class="carousel-track d-flex" id="projects-carousel-track" style="transition: transform 0.5s ease-in-out;">
+                                    <!-- Project Image 1 -->
+                                    <div class="carousel-slide" style="min-width: 100%; flex-shrink: 0;">
+                                        <img src="src/img/projects/project-01.png" class="rounded-3 w-100 h-auto" style="max-height: 500px; object-fit: contain;" loading="lazy" alt="Projeto 1">
+                                    </div>
+                                    <!-- Project Image 2 -->
+                                    <div class="carousel-slide" style="min-width: 100%; flex-shrink: 0;">
+                                        <img src="src/img/projects/project-02.png" class="rounded-3 w-100 h-auto" style="max-height: 500px; object-fit: contain;" loading="lazy" alt="Projeto 2">
+                                    </div>
+                                    <!-- Project Image 3 -->
+                                    <div class="carousel-slide" style="min-width: 100%; flex-shrink-0;">
+                                        <img src="src/img/projects/project-03.png" class="rounded-3 w-100 h-auto" style="max-height: 500px; object-fit: contain;" loading="lazy" alt="Projeto 3">
+                                    </div>
+                                    <!-- Project Image 4 -->
+                                    <div class="carousel-slide" style="min-width: 100%; flex-shrink: 0;">
+                                        <img src="src/img/projects/project-04.png" class="rounded-3 w-100 h-auto" style="max-height: 500px; object-fit: contain;" loading="lazy" alt="Projeto 4">
+                                    </div>
+                                    <!-- Project Image 5 -->
+                                    <div class="carousel-slide" style="min-width: 100%; flex-shrink: 0;">
+                                        <img src="src/img/projects/project-05.png" class="rounded-3 w-100 h-auto" style="max-height: 500px; object-fit: contain;" loading="lazy" alt="Projeto 5">
+                                    </div>
+                                    <!-- Project Image 6 -->
+                                    <div class="carousel-slide" style="min-width: 100%; flex-shrink: 0;">
+                                        <img src="src/img/projects/project-06.png" class="rounded-3 w-100 h-auto" style="max-height: 500px; object-fit: contain;" loading="lazy" alt="Projeto 6">
+                                    </div>
                                 </div>
-                                <!-- Project Image 2 -->
-                                <div class="carousel-slide min-w-full flex-shrink-0">
-                                    <img src="src/img/projects/project-02.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
-                                </div>
-                                <!-- Project Image 3 -->
-                                <div class="carousel-slide min-w-full flex-shrink-0">
-                                    <img src="src/img/projects/project-03.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
-                                </div>
-                                <!-- Project Image 4 -->
-                                <div class="carousel-slide min-w-full flex-shrink-0">
-                                    <img src="src/img/projects/project-04.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
-                                </div>
-                                <!-- Project Image 5 -->
-                                <div class="carousel-slide min-w-full flex-shrink-0">
-                                    <img src="src/img/projects/project-05.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
-                                </div>
-                                <!-- Project Image 6 -->
-                                <div class="carousel-slide min-w-full flex-shrink-0">
-                                    <img src="src/img/projects/project-06.png" class="rounded-xl w-full h-auto max-h-[500px] object-contain" loading="lazy">
-                                </div>
+                                
+                                <!-- Controles de navegação -->
+                                <button class="carousel-control carousel-control-prev position-absolute start-2 top-50 translate-middle-y bg-dark bg-opacity-75 text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; z-index: 10;" onclick="previousProject()" aria-label="Projeto anterior">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="carousel-control carousel-control-next position-absolute end-2 top-50 translate-middle-y bg-dark bg-opacity-75 text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; z-index: 10;" onclick="nextProject()" aria-label="Próximo projeto">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                
                             </div>
                         </div>
                     </div>
@@ -470,129 +490,171 @@
     </section>
 
     <!-- Customers Section -->
-    <section id="customers" class="py-16 px-4 md:px-6 bg-black-opacity relative z-10" data-aos="fade-up">
-        <div class="container mx-auto">
-            <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-4 md:p-8" data-aos="zoom-in-up">
-                <h2 class="text-3xl font-bold text-center mb-4" data-i18n="customers_title" data-aos="fade-down" data-aos-delay="200"></h2>
-                <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto" data-i18n="customers_subtitle" data-aos="fade-up" data-aos-delay="200"></p>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center max-w-4xl mx-auto">
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-01.webp" alt="Empresa Parceira 1" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-01.webp" />
+    <section id="customers" class="py-4 bg-black-opacity position-relative" style="z-index: 10;" data-aos="fade-up">
+        <div class="container">
+            <div class="card text-white border-0 shadow-lg bg-card" data-aos="zoom-in-up">
+                <div class="card-body p-4 p-lg-5">
+                    <h2 class="display-6 fw-bold text-center mb-4" data-i18n="customers_title" data-aos="fade-down" data-aos-delay="100"></h2>
+                    <p class="text-center text-light-emphasis mb-5 mx-auto" data-i18n="customers_subtitle" style="max-width: 42rem;" data-aos="fade-up" data-aos-delay="100"></p>
+                    <div class="row g-4 justify-content-center align-items-center mx-auto" style="max-width: 64rem;">
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-01.webp" alt="Empresa Parceira 1" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-01.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-02.webp" alt="Empresa Parceira 2" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-02.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-03.webp" alt="Empresa Parceira 3" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-03.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-04.webp" alt="Empresa Parceira 4" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-04.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-05.webp" alt="Empresa Parceira 5" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-05.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-06.webp" alt="Empresa Parceira 6" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-06.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-07.webp" alt="Empresa Parceira 7" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-07.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-08.webp" alt="Empresa Parceira 8" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-08.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-09.webp" alt="Empresa Parceira 9" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-09.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-10.webp" alt="Empresa Parceira 10" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-10.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-11.webp" alt="Empresa Parceira 11" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-11.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-12.webp" alt="Empresa Parceira 12" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-12.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-13.webp" alt="Empresa Parceira 13" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-13.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-14.webp" alt="Empresa Parceira 14" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-14.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-15.webp" alt="Empresa Parceira 15" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-15.webp" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <div class="customer-item border border-danger mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="src/img/customers/customer-16.webp" alt="Empresa Parceira 16" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-16.webp" />
+                            </div>
+                        </div>
                     </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-02.webp" alt="Empresa Parceira 2" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-02.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-03.webp" alt="Empresa Parceira 3" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-03.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-04.webp" alt="Empresa Parceira 4" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-04.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-05.webp" alt="Empresa Parceira 5" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-05.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-06.webp" alt="Empresa Parceira 6" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-06.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-07.webp" alt="Empresa Parceira 7" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-07.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-08.webp" alt="Empresa Parceira 8" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-08.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-09.webp" alt="Empresa Parceira 9" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-09.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-10.webp" alt="Empresa Parceira 10" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-10.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-11.webp" alt="Empresa Parceira 11" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-11.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-12.webp" alt="Empresa Parceira 12" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-12.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-13.webp" alt="Empresa Parceira 13" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-13.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-14.webp" alt="Empresa Parceira 14" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-14.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-15.webp" alt="Empresa Parceira 15" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-15.webp" />
-                    </div>
-                    <div class="customer-item border-4 border-custom-color mb-2 bg-white fade-in-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="src/img/customers/customer-16.webp" alt="Empresa Parceira 16" class="lazy-image" loading="lazy" data-src="src/img/customers/customer-16.webp" />
-                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 md:px-6 bg-black-opacity relative z-10" data-aos="fade-up">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4" data-i18n="contact_title" data-aos="fade-down" data-aos-delay="200"></h2>
-            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto" data-i18n="contact_subtitle" data-aos="fade-up" data-aos-delay="200"></p>
-            <div class="flex flex-col lg:flex-row gap-12">
-                <div class="lg:w-1/2 contact-card hover:scale-105 hover:shadow-2xl transition-all duration-200" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-4 md:p-8 h-full">
-                        <form id="contact-form" class="space-y-6 fade-right">
-                            <div data-aos="fade-up">
-                                <label for="name" class="block text-sm font-medium text-gray-300 mb-1" data-i18n="contact_name"></label>
-                                <input type="text" name="user_name" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" data-i18n-placeholder="contact_name_placeholder" required>
-                            </div>
-                            <div data-aos="fade-up" data-aos-delay="200">
-                                <label for="email" class="block text-sm font-medium text-gray-300 mb-1" data-i18n="contact_email"></label>
-                                <input type="email" name="user_email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" data-i18n-placeholder="contact_email_placeholder" required>
-                            </div>
-                            <div data-aos="fade-up" data-aos-delay="200">
-                                <label for="phone" class="block text-sm font-medium text-gray-300 mb-1" data-i18n="contact_phone"></label>
-                                <input type="tel" name="user_phone" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" data-i18n-placeholder="contact_phone_placeholder" required>
-                            </div>
-                            <div data-aos="fade-up" data-aos-delay="200">
-                                <label for="message" class="block text-sm font-medium text-gray-300 mb-1" data-i18n="contact_message"></label>
-                                <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" data-i18n-placeholder="contact_message_placeholder" required></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-custom-color hover:bg-red-600 text-white font-bold py-3 px-4 rounded-lg transition duration-200" data-i18n="contact_submit" data-aos="zoom-in"></button>
-                        </form>
+    <section id="contact" class="py-4 bg-black-opacity position-relative" style="z-index: 10;" data-aos="fade-up">
+        <div class="container">
+            <h2 class="display-6 fw-bold text-center mb-4" data-i18n="contact_title" data-aos="fade-down" data-aos-delay="100"></h2>
+            <p class="text-center text-light-emphasis mb-5 mx-auto" data-i18n="contact_subtitle" style="max-width: 42rem;" data-aos="fade-up" data-aos-delay="100"></p>
+            <div class="row g-5">
+                <div class="col-lg-6 contact-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card bg-card text-white border-0 shadow-lg h-100">
+                        <div class="card-body p-4 p-lg-5">
+                            <form id="contact-form" class="fade-right contact-form" novalidate>
+                                <div class="mb-4" data-aos="fade-up">
+                                    <label for="name" class="form-label" data-i18n="contact_name"></label>
+                                    <input type="text" name="user_name" id="name" class="form-control text-white" data-i18n-placeholder="contact_name_placeholder" required>
+                                </div>
+                                <div class="mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <label for="email" class="form-label" data-i18n="contact_email"></label>
+                                    <input type="email" name="user_email" id="email" class="form-control text-white" data-i18n-placeholder="contact_email_placeholder" required>
+                                </div>
+                                <div class="mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <label for="phone" class="form-label" data-i18n="contact_phone"></label>
+                                    <input type="tel" name="user_phone" id="phone" class="form-control text-white" data-i18n-placeholder="contact_phone_placeholder" required>
+                                </div>
+                                <div class="mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <label for="message" class="form-label" data-i18n="contact_message"></label>
+                                    <textarea name="message" id="message" rows="5" class="form-control text-white" data-i18n-placeholder="contact_message_placeholder" required></textarea>
+                                </div>
+                                <button type="button" onclick="handleFormSubmit(event)" class="btn btn-danger w-100 d-flex align-items-center justify-content-center gap-2" data-aos="zoom-in">
+                                    <i class="fab fa-whatsapp fs-5"></i>
+                                    <span data-i18n="contact_submit"></span>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div class="lg:w-1/2 contact-card hover:scale-105 hover:shadow-2xl transition-all duration-200" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col p-8 h-full fade-left">
-                        <h3 class="text-xl font-bold mb-6" data-i18n="contact_info" data-aos="fade-down"></h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start contact-info-item" data-aos="fade-up" data-aos-delay="200">
-                                <div class="text-custom-color text-xl mr-4 mt-1 flex-shrink-0 icon">
-                                    <i class="fas fa-phone-alt"></i>
+                <div class="col-lg-6 contact-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card bg-card text-white border-0 shadow-lg h-100 fade-left">
+                        <div class="card-body p-5">
+                            <h3 class="fs-4 fw-bold mb-4" data-i18n="contact_info" data-aos="fade-down"></h3>
+                            <div class="d-flex flex-column gap-4">
+                                <div class="d-flex contact-info-item" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="text-danger fs-5 me-3 mt-1 flex-shrink-0 icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="min-w-0 flex-fill content">
+                                        <h4 class="fw-bold mb-1" data-i18n="contact_info_phone"></h4>
+                                        <p class="text-light-emphasis small">Douglas Heitinger</p>
+                                        <p class="text-light-emphasis small" data-i18n="team_01"></p>
+                                        <p class="text-light-emphasis small">+55 (51) 9 95495-614</p>
+                                        <br>
+                                        <p class="text-light-emphasis small">Otavio Gomes</p>
+                                        <p class="text-light-emphasis small" data-i18n="team_02"></p>
+                                        <p class="text-light-emphasis small">+55 (83) 9 8117-2727</p>
+                                    </div>
                                 </div>
-                                <div class="min-w-0 flex-1 content">
-                                    <h4 class="font-bold mb-1"  data-i18n="contact_info_phone"></h4>
-                                    <p class="text-gray-300 text-sm">Douglas Heitinger</p>
-                                    <p class="text-gray-300 text-sm" data-i18n="team_01"></p>
-                                    <p class="text-gray-300 text-sm">+55 (51) 9 95495-614</p>
-                                    <br>
-                                    <p class="text-gray-300 text-sm">Otavio Gomes</p>
-                                    <p class="text-gray-300 text-sm" data-i18n="team_02"></p>
-                                    <p class="text-gray-300 text-sm">+55 (83) 9 8117-2727</p>
+                                <div class="d-flex contact-info-item" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="text-danger fs-5 me-3 mt-1 flex-shrink-0 icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="min-w-0 flex-fill content">
+                                        <h4 class="fw-bold mb-1">E-mail</h4>
+                                        <p class="text-light-emphasis small text-break">douglasheitinger@alphaautomationbr.com</p>
+                                        <p class="text-light-emphasis small text-break">otavio.gomes@alphaautomationbr.com</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex items-start contact-info-item" data-aos="fade-up" data-aos-delay="200">
-                                <div class="text-custom-color text-xl mr-4 mt-1 flex-shrink-0 icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="min-w-0 flex-1 content">
-                                    <h4 class="font-bold mb-1">E-mail</h4>
-                                    <p class="text-gray-300 text-sm break-all">douglasheitinger@alphaautomationbr.com</p>
-                                    <p class="text-gray-300 text-sm break-all">otavio.gomes@alphaautomationbr.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start contact-info-item" data-aos="fade-up" data-aos-delay="200">
-                                <div class="text-custom-color text-xl mr-4 mt-1 flex-shrink-0 icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="min-w-0 flex-1 content">
-                                    <h4 class="font-bold mb-1" data-i18n="contact_info_opening_hours"></h4>
-                                    <p class="text-gray-300 text-sm" data-i18n="contact_info_hours"></p>
+                                <div class="d-flex contact-info-item" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="text-danger fs-5 me-3 mt-1 flex-shrink-0 icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="min-w-0 flex-fill content">
+                                        <h4 class="fw-bold mb-1" data-i18n="contact_info_opening_hours"></h4>
+                                        <p class="text-light-emphasis small" data-i18n="contact_info_hours"></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -603,69 +665,71 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-custom-black py-8 px-6 bg-black relative z-10">
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center mb-6 md:mb-0">
-                    <img src="src/img/logo-2.png" alt="Alpha Automation and Robotics" class="w-46 h-16 mr-2" loading="eager">
+    <footer class="py-4 position-relative" style="z-index: 10; background: rgba(17, 17, 17, 0.90) !important;">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="d-flex align-items-center mb-4 mb-md-0">
+                    <img src="src/img/logo-2.png" alt="Alpha Automation and Robotics" class="me-3 img-fluid" style="max-height: 60px; width: auto;" loading="eager">
                 </div>
                 
-                <div class="flex flex-col items-center md:items-end">
-                    <p class="text-gray-400 mb-4 text-center md:text-right" data-i18n="copyright">© 2017 Alpha Automation and Robotics Ltda. Todos os direitos reservados.</p>
+                <div class="d-flex flex-column align-items-center align-items-md-end">
+                    <p class="text-light-emphasis mb-0 text-center text-md-end" data-i18n="copyright">© 2017 Alpha Automation and Robotics Ltda. Todos os direitos reservados.</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Floating Buttons -->
-    <div class="fixed floating-buttons-container flex flex-col items-center space-y-3 z-50">
+    <div class="position-fixed floating-buttons-container d-flex flex-column align-items-center gap-3" style="right: 1.5rem; bottom: 1.5rem; z-index: 50;">
         <!-- Back to Top Button -->
-        <button id="back-to-top" class="bg-custom-color text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-200 hover:bg-red-600 hover:scale-110 hover:shadow-2xl group cursor-pointer">
-            <i class="fas fa-arrow-up transition-transform duration-200 group-hover:-translate-y-1"></i>
+        <button id="back-to-top" class="btn btn-danger rounded-circle d-flex align-items-center justify-content-center shadow-lg opacity-0 invisible" style="width: 48px; height: 48px; transition: all 0.2s;">
+            <i class="fas fa-arrow-up"></i>
         </button>
         
         <!-- WhatsApp Button -->
-        <button id="whatsapp-button" class="pulse-animation bg-[#f44336] text-white w-14 h-14 rounded-full flex items-center justify-center group relative whatsapp-button hover:scale-105 hover:shadow-2xl transition-all duration-200 cursor-pointer">
-            <i class="fab fa-whatsapp text-2xl relative z-10"></i>
+        <button id="whatsapp-button" class="pulse-animation btn btn-danger rounded-circle d-flex align-items-center justify-content-center whatsapp-button" style="width: 56px; height: 56px; transition: all 0.2s;">
+            <i class="fab fa-whatsapp fs-4"></i>
         </button>
     </div>
 
     <!-- WhatsApp Modal -->
-    <div id="whatsapp-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
-        <div class="bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4" id="modal-content">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-white" data-i18n="contact_choose"></h3>
-                <button id="close-modal" class="text-gray-400 hover:text-white text-2xl focus:outline-none">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <div class="space-y-4">
-                <button class="contact-option w-full bg-gray-700 hover:bg-gray-600 rounded-lg p-4 text-left transition-colors duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer" data-phone="5551995495614" data-name="Douglas Heitinger">
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 bg-custom-color rounded-full flex items-center justify-center mr-4">
-                            <img src="src/img/teams/team-01.webp" alt="Douglas Heitinger" class="w-full h-full object-cover rounded-full">
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white">Douglas Heitinger</h4>
-                            <p class="text-gray-300 text-sm" data-i18n="team_01"></p>
-                            <p class="text-gray-300 text-sm">+55 51 9 95495-614</p>
-                        </div>
-                    </div>
-                </button>
+    <div id="whatsapp-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white" id="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5" data-i18n="contact_choose"></h3>
+                    <button type="button" class="btn-close btn-close-white" id="close-modal" aria-label="Close"></button>
+                </div>
                 
-                <button class="contact-option w-full bg-gray-700 hover:bg-gray-600 rounded-lg p-4 text-left transition-colors duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer" data-phone="5583981172727" data-name="Otavio Gomes">
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 bg-custom-color rounded-full flex items-center justify-center mr-4">
-                            <img src="src/img/teams/team-02.webp" alt="Otavio Gomes" class="w-full h-full object-cover rounded-full">
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white">Otavio Gomes</h4>
-                            <p class="text-gray-300 text-sm" data-i18n="team_02"></p>
-                            <p class="text-gray-300 text-sm">+55 83 9 8117-2727</p>
-                        </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column gap-3">
+                        <button class="contact-option btn btn-outline-secondary w-100 text-start p-3" data-phone="5551995495614" data-name="Douglas Heitinger">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-danger rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px;">
+                                    <img src="src/img/teams/team-01.webp" alt="Douglas Heitinger" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold text-white mb-1">Douglas Heitinger</h4>
+                                    <p class="text-light-emphasis small mb-1" data-i18n="team_01"></p>
+                                    <p class="text-light-emphasis small mb-0">+55 51 9 95495-614</p>
+                                </div>
+                            </div>
+                        </button>
+                        
+                        <button class="contact-option btn btn-outline-secondary w-100 text-start p-3" data-phone="5583981172727" data-name="Otavio Gomes">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-danger rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px;">
+                                    <img src="src/img/teams/team-02.webp" alt="Otavio Gomes" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold text-white mb-1">Otavio Gomes</h4>
+                                    <p class="text-light-emphasis small mb-1" data-i18n="team_02"></p>
+                                    <p class="text-light-emphasis small mb-0">+55 83 9 8117-2727</p>
+                                </div>
+                            </div>
+                        </button>
                     </div>
-                </button>
+                </div>
             </div>
         </div>
     </div>
@@ -674,10 +738,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Custom JS -->
-    <script src="src/js/index.js"></script>
     <!-- i18n JS -->
     <script src="src/js/i18n.js"></script>
+    <!-- Custom JS -->
+    <script src="src/js/index.js"></script>
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <!-- World Map JS -->

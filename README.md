@@ -1,324 +1,188 @@
-## Alpha Automation and Robotics - Website
+# Alpha Automation and Robotics
 
-Landing page moderna e responsiva para a Alpha Automation and Robotics, empresa especializada em automação industrial e robótica fundada em 2017.
+Site oficial da Alpha Automation and Robotics - Especialistas em automação industrial e robótica desde 2017.
 
-## 🚀 Visão Geral
+## 🚀 Sobre o Projeto
 
-Este projeto é uma **landing page institucional** desenvolvida com foco em **performance**, **acessibilidade** e **experiência do usuário**. O site apresenta a empresa, seus serviços, clientes e oferece múltiplas formas de contato, incluindo integração com WhatsApp.
+Este é o site oficial da Alpha Automation and Robotics, uma empresa especializada em automação industrial e robótica. O site apresenta nossos serviços, projetos, equipe e informações de contato de forma moderna e responsiva.
 
-## ✨ Funcionalidades Principais
+## ✨ Características
 
-### 🌍 Internacionalização (i18n)
-
-*   **4 idiomas**: Português, Inglês, Espanhol e Italiano
-*   **Sistema de tradução** completo e persistente
-*   **Tradução dinâmica** do mapa mundial interativo
-*   **Seletor de idiomas** responsivo
-
-### ⚡ Performance e Otimização
-
-*   **Lazy Loading** de imagens com Intersection Observer API
-*   **Placeholders animados** com efeito shimmer durante carregamento
-*   **Fallback** para navegadores mais antigos
-*   **Otimização de imagens** (formato WebP)
-*   **CSS modular** e otimizado
-
-### 📱 Design Responsivo e UX
-
-*   **Mobile-first** design com Tailwind CSS
-*   **Animações suaves** com AOS (Animate On Scroll)
-*   **Tema escuro** profissional
-*   **Menu hambúrguer** para dispositivos móveis
-*   **Botões flutuantes** (WhatsApp e "Voltar ao topo")
-
-### 📧 Sistema de Contato
-
-*   **Formulário de contato** com validação
-*   **Integração com mailto** para envio de emails
-*   **Modal WhatsApp** com seleção de contato
-*   **Feedback visual** de sucesso/erro
-*   **Estado de loading** durante envio
-
-### 🗺️ Mapa Interativo
-
-*   **Mapa mundial** com Leaflet.js
-*   **Países destacados** onde a empresa atua
-*   **Tooltips interativos** com tradução
-*   **Hover effects** personalizados
+- **Design Responsivo**: Funciona perfeitamente em todos os dispositivos
+- **Interface Moderna**: Design limpo e profissional com navbar transparente
+- **Multilíngue**: Suporte para Português, Inglês, Espanhol e Italiano
+- **Animações Suaves**: Efeitos visuais com AOS (Animate On Scroll)
+- **Formulário de Contato**: Integração direta com WhatsApp
+- **Carrossel de Projetos**: Apresentação interativa dos projetos com navegação otimizada
+- **Mapa Mundial**: Visualização dos países onde atuamos
+- **Lazy Loading**: Carregamento otimizado de imagens
+- **Navbar Elegante**: Efeito de hover com sublinhado animado
+- **Modal Mobile Inteligente**: Destaque da seção ativa e navegação otimizada
+- **Acessibilidade Avançada**: Gerenciamento de foco e navegação por teclado
 
 ## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
+- **HTML5**: Estrutura semântica e acessível
+- **CSS3**: Estilos customizados com variáveis CSS
+- **Bootstrap 5.3.0**: Framework CSS para layout responsivo
+- **JavaScript ES6+**: Funcionalidades interativas
+- **Font Awesome 6.4.0**: Ícones vetoriais
 
-*   **HTML5** - Estrutura semântica
-*   **CSS3** - Tailwind CSS + Custom styles
-*   **JavaScript** - Vanilla JS modular
-*   **Bootstrap 5** - Framework CSS
+### Bibliotecas e Plugins
+- **AOS (Animate On Scroll)**: Animações baseadas em scroll
+- **Leaflet**: Mapa interativo mundial
+- **Intersection Observer API**: Lazy loading de imagens
 
-### Bibliotecas e APIs
+### Recursos
+- **Responsividade**: Mobile-first design
+- **Performance**: Otimizações de carregamento
+- **SEO**: Meta tags e structured data
+- **Acessibilidade**: ARIA labels e navegação por teclado
 
-*   **AOS (Animate On Scroll)** - Animações
-*   **Font Awesome** - Ícones
-*   **Leaflet.js** - Mapa interativo
-*   **Intersection Observer API** - Lazy loading
+## 📱 Seções do Site
 
-### Performance
+1. **Header/Navbar**: Navegação principal com seletor de idiomas
+2. **Hero Section**: Apresentação principal com vídeo de fundo
+3. **Quem Somos**: Informações sobre a empresa e equipe
+4. **Serviços**: Nossos serviços de automação e robótica
+5. **Mapa Mundial**: Países onde atuamos
+6. **Projetos**: Carrossel de projetos realizados
+7. **Clientes**: Grid de logos dos clientes
+8. **Contato**: Formulário de contato e informações
+9. **Footer**: Informações de copyright
 
-*   **Lazy Loading** - Carregamento sob demanda
-*   **Image Optimization** - Formatos WebP
-*   **CSS Minification** - Redução de tamanho
-*   **Modular JavaScript** - Código organizado
-
-## 📁 Estrutura do Projeto
-
-```plaintext
-alpha-automation/
-├── index.html              # Página principal
-├── README.md               # Documentação
-├── LICENSE                 # Licença MIT
-└── src/
-    ├── css/
-    │   └── base.css        # Estilos customizados
-    ├── js/
-    │   ├── index.js        # JavaScript principal
-    │   ├── i18n.js         # Sistema de tradução
-    │   └── world-map.js    # Mapa interativo
-    ├── img/
-    │   ├── logo.png        # Favicon
-    │   ├── logo-2.png      # Logo da empresa
-    │   ├── company.webp    # Imagem da empresa
-    │   ├── projects/       # Imagens dos projetos
-    │    ├── services/       # Imagens dos serviços
-    │   ├── teams/          # Fotos da equipe
-    │   └── customers/      # Logos dos clientes
-    └── media/
-        └── background.mp4  # Vídeo de fundo
-```
-
-## 🎯 Seções do Site
-
-### 1\. Hero Section
-
-*   **Vídeo de fundo** com overlay
-*   **Título animado** com typewriter effect
-*   **Call-to-action** buttons
-*   **Design responsivo** e moderno
-
-### 2\. Quem Somos
-
-*   **Apresentação da empresa** (fundada em 2017)
-*   **Fotos da equipe** com cargos
-*   **Texto institucional** traduzível
-
-### 3\. Serviços
-
-*   **Programação de Robôs**
-*   **Programação de CLPs**
-*   **Programação OFF-LINE**
-*   **Desenvolvimento de Sistemas**
-
-### 4\. Projetos
-
-*   **PLC Scrapper**
-
-### 5\. Mapa Mundial
-
-*   **Países onde atuam** destacados
-*   **Tooltips interativos** traduzidos
-*   **Hover effects** personalizados
-
-### 6\. Clientes
-
-*   **Grid responsivo** com 20 logos
-*   **Lazy loading** otimizado
-*   **Hover effects** em cards
-
-### 7\. Contato
-
-*   **Formulário funcional** com validação
-*   **Informações de contato** completas
-*   **Modal WhatsApp** com seleção de contato
-
-## 🚀 Como Usar
+## 🔧 Instalação e Uso
 
 ### Pré-requisitos
-
-*   Navegador web moderno
-*   Servidor web (opcional para desenvolvimento local)
+- Navegador web moderno
+- Servidor web (para desenvolvimento local)
 
 ### Instalação
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/alpha-automation.git
+cd alpha-automation
+```
 
-**Clone o repositório**
-
-**Abra o index.html** em um servidor web
-
-*   Para desenvolvimento local, use um servidor como Live Server (VS Code)
-*   Ou abra diretamente no navegador
+2. Abra o arquivo `index.html` em um servidor web local
 
 ### Desenvolvimento
+Para desenvolvimento local, recomenda-se usar um servidor web simples:
 
-*   **Edite o HTML** em `index.html`
-*   **Modifique estilos** em `src/css/base.css`
-*   **Atualize JavaScript** em `src/js/`
-*   **Adicione traduções** em `src/js/i18n.js`
+```bash
+# Python 3
+python -m http.server 8000
 
-## 📊 Métricas de Performance
+# Node.js
+npx serve .
 
-### Core Web Vitals
+# PHP
+php -S localhost:8000
+```
 
-*   **First Contentful Paint**: \< 1.5s
-*   **Largest Contentful Paint**: \< 2.5s
-*   **Cumulative Layout Shift**: \< 0.1
-*   **First Input Delay**: \< 100ms
+## 🌐 Funcionalidades
 
-### Otimizações Implementadas
+### Sistema de Idiomas
+- Suporte para 4 idiomas (PT, EN, ES, IT)
+- Persistência da escolha do usuário
+- Tradução automática de todo o conteúdo
 
-*   **Lazy Loading** de imagens
-*   **Intersection Observer API** para detecção de visibilidade
-*   **Placeholders animados** durante carregamento
-*   **Fallback** para navegadores antigos
-*   **Cache-friendly** headers
+### Formulário de Contato
+- Validação em tempo real
+- Integração direta com WhatsApp
+- Mensagens de feedback para o usuário
 
-## 🎨 Design System
+### Carrossel de Projetos
+- Navegação por botões e swipe
+- Auto-play em desktop
+- Controles responsivos
+- Debug e otimizações de performance
 
-### Cores
+### Mapa Mundial
+- Visualização interativa dos países
+- Destaque dos países onde atuamos
+- Responsivo para todos os dispositivos
 
-*   **Primária**: #f44336 (Vermelho corporativo)
-*   **Fundo**: #070808 (Preto escuro)
-*   **Texto**: #ffffff (Branco)
-*   **Acentos**: #gray-300, #gray-400
+### Navegação e UI/UX
+- Navbar transparente integrada com hero section
+- Efeito de hover elegante nos nav-links
+- Modal mobile com detecção de seção ativa
+- Transições suaves e animações responsivas
 
-### Tipografia
-
-*   **Família**: Font sans-serif
-*   **Tamanhos**: Responsivos
-*   **Hierarquia**: Bem definida
-
-### Animações
-
-*   **AOS**: Animate On Scroll
-*   **Hover effects**: Transições suaves
-*   **Loading**: Shimmer effect
-
-## 🌍 Internacionalização
-
-### Idiomas Suportados
-
-*   🇧🇷 **Português** (padrão)
-*   🇺🇸 **Inglês**
-*   🇪🇸 **Espanhol**
-*   🇮🇹 **Italiano**
-
-### Funcionalidades
-
-*   **Tradução completa** de todos os textos
-*   **Persistência** da escolha do idioma
-*   **Tradução dinâmica** do mapa
-*   **Placeholders** traduzidos
+### Acessibilidade
+- Gerenciamento correto de foco
+- Navegação por teclado otimizada
+- ARIA labels e atributos apropriados
+- Compatibilidade com tecnologias assistivas
 
 ## 📱 Responsividade
 
-### Breakpoints
+O site é totalmente responsivo e otimizado para:
+- **Desktop**: 1200px+
+- **Tablet**: 768px - 1199px
+- **Mobile**: 320px - 767px
 
-*   **Mobile**: \< 640px
-*   **Tablet**: 640px - 1024px
-*   **Desktop**: > 1024px
+## 🎨 Personalização
 
-### Adaptações Mobile
-
-*   **Menu hambúrguer** responsivo
-*   **Botões flutuantes** otimizados
-*   **Grid adaptativo** para clientes
-*   **Formulário** touch-friendly
-
-## 🔧 Funcionalidades JavaScript
-
-### Lazy Loading
-
-```javascript
-// Implementação com Intersection Observer
-class LazyLoader {
-  constructor() {
-    this.images = document.querySelectorAll('.lazy-image');
-    this.setupIntersectionObserver();
-  }
+### Cores
+As cores principais são definidas como variáveis CSS:
+```css
+:root {
+    --custom-black: #070808;
+    --custom-color: #f44336;
 }
 ```
 
-### Sistema de Tradução
+### Tipografia
+- Fonte principal: Segoe UI
+- Fallbacks: Tahoma, Geneva, Verdana, sans-serif
 
-```javascript
-// Tradução dinâmica
-function setLanguage(lang) {
-  document.querySelectorAll('[data-i18n]').forEach(el =&gt; {
-    const key = el.getAttribute('data-i18n');
-    if (translations[lang] &amp;&amp; translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-}
-```
+## 🚀 Deploy
 
-### Mapa Interativo
-
-```javascript
-// Configuração do Leaflet
-const map = L.map('map', {
-  zoomControl: true,
-  attributionControl: false,
-  scrollWheelZoom: false
-}).setView([20, 0], 2);
-```
-
-## 📞 Informações de Contato
-
-### Alpha Automation and Robotics
-
-*   **Email**: douglasheitinger@alphaautomationbr.com
-*   **WhatsApp**: +55 51 9549-5614
-*   **Endereço**: Rua Telmo Silva, 196, Parque do Itatiaia, Gravataí/RS
-*   **CEP**: 94197-148
-
-### Equipe
-
-*   **Douglas Heitinger** - Gerente de Robótica
-*   **Otavio Gomes** - Gerente de Automação
-
-## 🤝 Contribuição
-
-1.  **Fork** o projeto
-2.  **Crie** uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3.  **Commit** suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4.  **Push** para a branch (`git push origin feature/AmazingFeature`)
-5.  **Abra** um Pull Request
+O site pode ser hospedado em qualquer serviço de hospedagem estática:
+- GitHub Pages
+- Netlify
+- Vercel
+- AWS S3
+- Qualquer servidor web
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a **Licença MIT** - veja o arquivo [LICENSE](./LICENSE) para detalhes.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 🏢 Sobre a Empresa
+## 👥 Equipe
 
-**Alpha Automation and Robotics** é uma empresa especializada em automação industrial e robótica, fundada em 2017. Com mais de 10 anos de experiência no mercado automobilístico nacional e internacional, oferecemos soluções tecnológicas avançadas incluindo programação de robôs e CLPs.
+- **Douglas Heitinger**: Gerente de Robótica
+- **Otavio Gomes**: Gerente de Automação
 
-### Serviços Principais
+## 📞 Contato
 
-*   **Programação de Robôs Industriais**
-*   **Programação de CLPs**
-*   **Programação OFF-LINE**
-*   **Desenvolvimento de Sistemas**
-*   **Automação de Processos**
-*   **Otimização de Produção**
+- **Email**: douglasheitinger@alphaautomationbr.com
+- **Telefone**: +55 (51) 9 95495-614
+- **LinkedIn**: [Alpha Automation and Robotics](https://www.linkedin.com/company/alpha-automation-and-robotics-ltda/)
 
-### Setores de Atuação
+## 🔄 Histórico de Versões
 
-*   **Automotivo**
-*   **Bebidas**
-*   **Manufatura**
-*   **Logística**
+### v2.1.0 - Melhorias de UI/UX e Acessibilidade
+- ✅ Navbar transparente integrada com hero section
+- ✅ Efeito de hover elegante nos nav-links com sublinhado animado
+- ✅ Modal mobile com seção ativa destacada
+- ✅ Correções de acessibilidade (aria-hidden, gerenciamento de foco)
+- ✅ Carrossel de projetos otimizado e debugado
+- ✅ Modais com background custom-black consistente
+- ✅ Hero section transparente para melhor integração visual
 
-© 2017-2025 Alpha Automation and Robotics Ltda. Todos os direitos reservados.
+### v2.0.0 - Migração para Bootstrap
+- ✅ Substituição completa do Tailwind CSS por Bootstrap 5.3.0
+- ✅ Manutenção de toda a estrutura, cores e funcionalidades
+- ✅ Melhorias na responsividade e acessibilidade
+- ✅ Otimizações de performance
 
-```plaintext
-git clone [url-do-repositorio]
-cd alpha-automation
-```
+### v1.4.0 - Versão Anterior
+- Tailwind CSS
+- Funcionalidades básicas implementadas
+
+---
+
+**Alpha Automation and Robotics** - Transformando a indústria através da automação inteligente.
