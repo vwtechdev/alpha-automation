@@ -17,7 +17,7 @@
       "purpose": "any maskable"
     },
     {
-      "src": "src/img/logo-2.png",
+      "src": "src/img/logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -26,7 +26,7 @@
   "categories": ["business", "productivity"],
   "screenshots": [
     {
-      "src": "src/img/logo-2.png",
+      "src": "src/img/logo.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide"
@@ -40,7 +40,7 @@
           "url": "/#services",
           "icons": [
             {
-              "src": "src/img/logo-2.png",
+              "src": "src/img/logo.png",
               "sizes": "96x96"
             }
           ]
@@ -52,7 +52,7 @@
           "url": "/#projects",
           "icons": [
             {
-              "src": "src/img/logo-2.png",
+              "src": "src/img/logo.png",
               "sizes": "96x96"
             }
           ]
@@ -64,7 +64,7 @@
           "url": "/#contact",
           "icons": [
             {
-              "src": "src/img/logo-2.png",
+              "src": "src/img/logo.png",
               "sizes": "96x96"
             }
           ]

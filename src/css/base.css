@@ -392,9 +392,9 @@ section[id="home"] {
 
 /* Botão do formulário de contato */
 #contact-form .btn {
-    min-height: 64px;
-    padding: 1.25rem 2.5rem;
-    font-size: 1.2rem;
+    min-height: 48px;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
@@ -1050,4 +1050,10 @@ section[id="home"] {
     gap: 0.25rem !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* Diminuir espaçamento entre linhas na seção de contato */
+.contact-info-item .text-light-emphasis.small {
+    line-height: 1.4;
+    margin-bottom: 0.2rem;
 }

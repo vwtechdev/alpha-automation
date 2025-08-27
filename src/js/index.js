@@ -32,11 +32,8 @@ function getTranslation(key) {
         if (defaultMessages[key]) {
             return defaultMessages[key];
         }
-        
-        console.warn(`Tradução não encontrada para a chave: ${key}`);
         return key; // Retorna a chave se nenhuma tradução for encontrada
     } catch (error) {
-        console.error('Erro ao obter tradução:', error);
         return key;
     }
 }
@@ -48,7 +45,6 @@ function handleFormSubmit(event) {
     
     const contactForm = document.getElementById('contact-form');
     if (!contactForm) {
-        console.error('Formulário não encontrado!');
         return false;
     }
     
@@ -113,8 +109,6 @@ function handleFormSubmit(event) {
             }, 1000);
             
         } catch (error) {
-            console.error('Erro ao abrir WhatsApp:', error);
-            
             // Restaurar botão
             submitButton.innerHTML = originalText;
             submitButton.disabled = false;
@@ -123,14 +117,6 @@ function handleFormSubmit(event) {
     
     return false; // Previne o envio padrão do formulário
 }
-
-// Aguardar DOM estar carregado antes de inicializar
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicialização silenciosa das traduções
-    if (typeof translations === 'undefined' && typeof window.translations === 'undefined') {
-        console.warn('Traduções não encontradas, usando idioma padrão (pt)');
-    }
-});
 
 // Inicializa AOS (Animate On Scroll)
 AOS.init({
@@ -379,7 +365,6 @@ class LazyLoader {
         tempImage.onerror = () => {
             // Em caso de erro, remover a classe lazy-image para mostrar placeholder
             img.classList.remove('lazy-image');
-            console.warn('Erro ao carregar imagem:', src);
         };
 
         tempImage.src = src;
@@ -671,17 +656,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     }, 1000);
                     
                 } catch (error) {
-                    console.error('Erro ao abrir WhatsApp:', error);
-                    
                     // Restaurar botão
                     submitButton.innerHTML = originalText;
                     submitButton.disabled = false;
                 }
             }, 1000);
         });
-        
-    } else {
-        console.error('Formulário de contato não encontrado!');
     }
 });
 
@@ -767,9 +747,6 @@ function clearFieldError(field) {
         errorElement.remove();
     }
 }
-
-// Notification function
-
 
 // Email validation function
 function isValidEmail(email) {
@@ -917,8 +894,8 @@ document.addEventListener('DOMContentLoaded', handleScrollAnimations);
 window.addEventListener('scroll', handleScrollAnimations);
 
 // Projects Carousel Functionality
-let currentProjectIndex = 0;
-const totalProjects = 6;
+let currentImageIndex = 0;
+let currentImage = isMobileDevice() ? 12 : 9;
 let isAutoPlaying = true;
 let touchStartX = 0;
 let touchEndX = 0;
@@ -931,29 +908,24 @@ function updateProjectCarousel() {
     
     if (track) {
         // Calcular a transformação correta
-        const translateX = -(currentProjectIndex * 100);
+        const translateX = -(currentImageIndex * 100);
         track.style.transform = `translateX(${translateX}%)`;
-        
-        // Debug: verificar se a transformação está correta
-        console.log('Carrossel movido para:', currentProjectIndex, 'Transformação:', translateX + '%');
     }
 }
 
 function nextProject() {
-    currentProjectIndex = (currentProjectIndex + 1) % totalProjects;
-    console.log('Próximo projeto:', currentProjectIndex + 1, 'de', totalProjects);
+    currentImageIndex = (currentImageIndex + 1) % currentImage;
     updateProjectCarousel();
 }
 
 function previousProject() {
-    currentProjectIndex = (currentProjectIndex - 1 + totalProjects) % totalProjects;
-    console.log('Projeto anterior:', currentProjectIndex + 1, 'de', totalProjects);
+    currentImageIndex = (currentImageIndex - 1 + currentImage) % currentImage;
     updateProjectCarousel();
 }
 
 function goToProject(index) {
-    if (index >= 0 && index < totalProjects) {
-        currentProjectIndex = index;
+    if (index >= 0 && index < currentImage) {
+        currentImageIndex = index;
         updateProjectCarousel();
     }
 }
@@ -1042,7 +1014,7 @@ function startCarouselAutoPlay() {
     if (isAutoPlaying && !isMobileDevice()) {
         carouselInterval = setInterval(() => {
             nextProject();
-        }, 3000); // Mudou para 3 segundos para melhor experiência mobile
+        }, 1000);
     }
 }
 
@@ -1067,8 +1039,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const carouselContainer = document.querySelector('.carousel-container');
     
     if (carouselContainer) {
-        // Verificar se todas as imagens estão carregadas
-        verifyCarouselImages();
         
         // Configurar eventos de touch
         setupTouchEvents();
@@ -1103,6 +1073,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Ajustar carrossel quando a orientação mudar
         window.addEventListener('orientationchange', () => {
             setTimeout(() => {
+                // Atualizar currentImage baseado no dispositivo atual
+                currentImage = isMobileDevice() ? 12 : 9;
                 updateProjectCarousel();
             }, 100);
         });
@@ -1110,31 +1082,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Ajustar carrossel quando a tela for redimensionada
         window.addEventListener('resize', () => {
             setTimeout(() => {
+                // Atualizar currentImage baseado no dispositivo atual
+                currentImage = isMobileDevice() ? 12 : 9;
                 updateProjectCarousel();
             }, 100);
         });
     }
 });
-
-// Função para verificar se todas as imagens do carrossel estão carregadas
-function verifyCarouselImages() {
-    const images = document.querySelectorAll('#projects-carousel-track img');
-    console.log('Total de imagens encontradas:', images.length);
-    
-    images.forEach((img, index) => {
-        if (img.complete) {
-            console.log(`Imagem ${index + 1} carregada:`, img.src);
-        } else {
-            console.log(`Imagem ${index + 1} carregando:`, img.src);
-            img.addEventListener('load', () => {
-                console.log(`Imagem ${index + 1} carregada com sucesso:`, img.src);
-            });
-            img.addEventListener('error', () => {
-                console.error(`Erro ao carregar imagem ${index + 1}:`, img.src);
-            });
-        }
-    });
-}
 
 // Projects Section Functionality
 document.addEventListener('DOMContentLoaded', function() {
