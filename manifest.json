@@ -1,64 +1,112 @@
 {
   "name": "Alpha Automation and Robotics",
   "short_name": "Alpha Automation",
-  "description": "Especialistas em automação industrial e robótica desde 2017",
+  "description": "Specialists in industrial automation and robotics since 2017",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#070808",
   "theme_color": "#f44336",
   "orientation": "portrait-primary",
   "scope": "/",
-  "lang": "pt-BR",
+  "lang": "en-US",
   "icons": [
     {
-      "src": "src/img/logo.png",
+      "src": "src/img/logo-3.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "src/img/logo-3.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "src/img/logo-3.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "categories": ["business", "productivity"],
+  "categories": ["business", "productivity", "automation", "robotics", "industrial"],
   "screenshots": [
     {
-      "src": "src/img/logo.png",
-      "sizes": "192x192",
+      "src": "src/img/logo-3.png",
+      "sizes": "512x512",
       "type": "image/png",
       "form_factor": "wide"
     }
   ],
         "shortcuts": [
         {
-          "name": "Serviços",
-          "short_name": "Serviços",
-          "description": "Ver nossos serviços de automação",
+          "name": "Home",
+          "short_name": "Home",
+          "description": "Home",
+          "url": "/#home",
+          "icons": [
+            {
+              "src": "src/img/logo-3.png",
+              "sizes": "96x96"
+            }
+          ]
+        },
+        {
+          "name": "About",
+          "short_name": "About",
+          "description": "About",
+          "url": "/#about",
+          "icons": [
+            {
+              "src": "src/img/logo-3.png",
+              "sizes": "96x96"
+            }
+          ]
+        },  
+        {
+          "name": "Services",
+          "short_name": "Services",
+          "description": "Services",
           "url": "/#services",
           "icons": [
             {
-              "src": "src/img/logo.png",
+              "src": "src/img/logo-3.png",
+              "sizes": "96x96"
+            }
+          ]
+        },
+        {
+          "name": "Where We Work",
+          "short_name": "Where We Work",
+          "description": "Where We Work",
+          "url": "/#world-map",
+          "icons": [
+            {
+              "src": "src/img/logo-3.png",
               "sizes": "96x96"
             }
           ]
         },
             {
-          "name": "Projetos",
-          "short_name": "Projetos",
-          "description": "Ver nossos projetos",
+          "name": "Projects",
+          "short_name": "Projects",
+          "description": "Projects",
           "url": "/#projects",
           "icons": [
             {
-              "src": "src/img/logo.png",
+              "src": "src/img/logo-3.png",
               "sizes": "96x96"
             }
           ]
         },
             {
-          "name": "Contato",
-          "short_name": "Contato",
-          "description": "Entre em contato conosco",
+          "name": "Contact",
+          "short_name": "Contact",
+          "description": "Contact",
           "url": "/#contact",
           "icons": [
             {
-              "src": "src/img/logo.png",
+              "src": "src/img/logo-3.png",
               "sizes": "96x96"
             }
           ]

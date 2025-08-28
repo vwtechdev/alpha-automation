@@ -895,7 +895,7 @@ window.addEventListener('scroll', handleScrollAnimations);
 
 // Projects Carousel Functionality
 let currentImageIndex = 0;
-let currentImage = isMobileDevice() ? 12 : 9;
+let currentImage = 0; // será definido dinamicamente conforme o DOM
 let isAutoPlaying = true;
 let touchStartX = 0;
 let touchEndX = 0;
@@ -907,9 +907,16 @@ function updateProjectCarousel() {
     const track = document.getElementById('projects-carousel-track');
     
     if (track) {
-        // Calcular a transformação correta
-        const translateX = -(currentImageIndex * 100);
-        track.style.transform = `translateX(${translateX}%)`;
+        // Atualiza quantidade total de slides dinamicamente
+        const slides = track.querySelectorAll('.carousel-slide');
+        currentImage = slides.length;
+        if (currentImage === 0) return;
+        // Garantir índice dentro dos limites
+        currentImageIndex = ((currentImageIndex % currentImage) + currentImage) % currentImage;
+        // Calcular deslocamento exato baseado na largura real de cada slide
+        const slideWidth = slides[0] ? slides[0].clientWidth : 0;
+        const translateXpx = -(currentImageIndex * slideWidth);
+        track.style.transform = `translateX(${translateXpx}px)`;
     }
 }
 
@@ -924,7 +931,7 @@ function previousProject() {
 }
 
 function goToProject(index) {
-    if (index >= 0 && index < currentImage) {
+    if (currentImage > 0 && index >= 0 && index < currentImage) {
         currentImageIndex = index;
         updateProjectCarousel();
     }
@@ -1012,9 +1019,10 @@ let carouselInterval;
 
 function startCarouselAutoPlay() {
     if (isAutoPlaying && !isMobileDevice()) {
+        stopCarouselAutoPlay();
         carouselInterval = setInterval(() => {
             nextProject();
-        }, 1000);
+        }, 4000);
     }
 }
 
@@ -1073,8 +1081,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Ajustar carrossel quando a orientação mudar
         window.addEventListener('orientationchange', () => {
             setTimeout(() => {
-                // Atualizar currentImage baseado no dispositivo atual
-                currentImage = isMobileDevice() ? 12 : 9;
                 updateProjectCarousel();
             }, 100);
         });
@@ -1082,11 +1088,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Ajustar carrossel quando a tela for redimensionada
         window.addEventListener('resize', () => {
             setTimeout(() => {
-                // Atualizar currentImage baseado no dispositivo atual
-                currentImage = isMobileDevice() ? 12 : 9;
                 updateProjectCarousel();
             }, 100);
         });
+        
+        // Recalcular posição quando fontes/imagens carregarem e afetarem a largura
+        window.addEventListener('load', updateProjectCarousel);
+        new ResizeObserver(() => updateProjectCarousel()).observe(carouselContainer);
     }
 });
 

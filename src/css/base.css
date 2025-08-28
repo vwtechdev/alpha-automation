@@ -792,20 +792,34 @@ section[id="home"] {
 .carousel-container {
     position: relative;
     width: 100%;
-    height: auto;
-    min-height: 600px;
-    padding: 2.5rem;
+    height: 380px;
+    padding: 1.5rem;
+    overflow: hidden;
 }
 
 .carousel-track {
     display: flex;
     width: 100%;
+    height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
     min-width: 100%;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.carousel-slide img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    margin: 0 auto;
+    display: block;
 }
 
 .carousel-control {
@@ -882,23 +896,23 @@ section[id="home"] {
     }
     
     .carousel-container {
-        min-height: 500px;
-        padding: 1.5rem;
+        height: 300px;
+        padding: 1rem;
     }
     
     .carousel-slide img {
-        max-height: 400px;
+        height: 100% !important;
     }
 }
 
 @media (max-width: 640px) {
     .carousel-container {
-        min-height: 450px;
-        padding: 1rem;
+        height: 260px;
+        padding: 0.75rem;
     }
     
     .carousel-slide img {
-        max-height: 350px;
+        height: 100% !important;
     }
     
     .carousel-control {
