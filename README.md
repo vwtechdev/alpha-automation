@@ -50,7 +50,7 @@ Este é o site oficial da Alpha Automation and Robotics, uma empresa especializa
 6. **Projetos**: Carrossel de projetos realizados
 7. **Clientes**: Grid de logos dos clientes
 8. **Contato**: Formulário de contato e informações
-9. **Footer**: Informações de copyright
+9. **Footer**: Informações de copyright e créditos do desenvolvedor
 
 ## 🔧 Instalação e Uso
 
@@ -161,6 +161,10 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - **Email**: douglasheitinger@alphaautomationbr.com
 - **Telefone**: +55 (51) 9 95495-614
 - **LinkedIn**: [Alpha Automation and Robotics](https://www.linkedin.com/company/alpha-automation-and-robotics-ltda/)
+
+## 💻 Desenvolvimento
+
+Este site foi desenvolvido por [VWTech Dev](https://vwtechdev.com.br/), especializada em soluções web modernas e responsivas.
 
 ## 🔄 Histórico de Versões
 

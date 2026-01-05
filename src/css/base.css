@@ -1071,3 +1071,17 @@ section[id="home"] {
     line-height: 1.4;
     margin-bottom: 0.2rem;
 }
+
+/* Footer Dev Info */
+.footer-dev-info {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer-dev-info a {
+    transition: all 0.3s ease;
+}
+
+.footer-dev-info a:hover {
+    color: var(--custom-color) !important;
+    text-decoration: underline !important;
+}
